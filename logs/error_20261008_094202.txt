@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\main.py", line 63, in main
+    step()
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\main.py", line 51, in <lambda>
+    lambda: feedback_from_sheet.run(cfg, date, dry_run=args.dry_run)),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\feedback_from_sheet.py", line 325, in run
+    feedback = fetch_feedback(cfg, date)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\feedback_from_sheet.py", line 169, in fetch_feedback
+    csv_path = download_feedback_csv(driver, url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\feedback_from_sheet.py", line 95, in download_feedback_csv
+    raise RuntimeError("Feedback CSV did not download (is Chrome signed in to advpromktg@gmail.com?)")
+RuntimeError: Feedback CSV did not download (is Chrome signed in to advpromktg@gmail.com?)

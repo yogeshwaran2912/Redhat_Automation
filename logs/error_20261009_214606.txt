@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\main.py", line 70, in main
+    step()
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\main.py", line 56, in <lambda>
+    lambda: redhat_automation.run(cfg, date, skip_advpro=args.skip_advpro, dry_run=args.dry_run)),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\redhat_automation.py", line 820, in run
+    people = scrape_redhat(cfg, date)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\redhat_automation.py", line 529, in scrape_redhat
+    set_status(driver, cfg.get("redhat", "status"))
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\redhat_automation.py", line 346, in set_status
+    sel = wait_for(driver, STATUS)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\redhat_automation.py", line 292, in wait_for
+    els = [e for e in driver.find_elements(By.CSS_SELECTOR, css) if visible(e)]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 944, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {"using": by, "value": value})["value"] or []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 506, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ADV PRO\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6ACAE38A5+3004357]
+	(No symbol) [0x00007FF6AC779970]
+	(No symbol) [0x00007FF6AC62582A]
+	(No symbol) [0x00007FF6AC5FFA75]
+	(No symbol) [0x00007FF6AC6A2C77]
+	(No symbol) [0x00007FF6AC6BB351]
+	(No symbol) [0x00007FF6AC69B983]
+	(No symbol) [0x00007FF6AC667628]
+	(No symbol) [0x00007FF6AC668791]
+	GetHandleVerifier [0x00007FF6ACB0A00D+3161901]
+	GetHandleVerifier [0x00007FF6ACB5E060+3506048]
+	GetHandleVerifier [0x00007FF6ACB5400D+3465005]
+	GetHandleVerifier [0x00007FF6AC8D0EEB+830987]
+	(No symbol) [0x00007FF6AC78467F]
+	(No symbol) [0x00007FF6AC7809D4]
+	(No symbol) [0x00007FF6AC780B6D]
+	(No symbol) [0x00007FF6AC770149]
+	BaseThreadInitThunk [0x00007FFDA6F87374+20]
+	RtlUserThreadStart [0x00007FFDA7D9CC91+33]
+

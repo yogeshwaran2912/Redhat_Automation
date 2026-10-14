@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\main.py", line 70, in main
+    step()
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\main.py", line 56, in <lambda>
+    lambda: redhat_automation.run(cfg, date, skip_advpro=args.skip_advpro, dry_run=args.dry_run)),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\redhat_automation.py", line 820, in run
+    people = scrape_redhat(cfg, date)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\redhat_automation.py", line 529, in scrape_redhat
+    set_status(driver, cfg.get("redhat", "status"))
+  File "C:\Users\ADV PRO\Desktop\Redhat_Automation\redhat_automation.py", line 347, in set_status
+    if clean_cell_text(sel.text).lower().endswith(status.lower()):
+                       ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'

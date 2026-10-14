@@ -1,0 +1,22 @@
+[
+  {
+    "location": "2093",
+    "name": "Doppalapudi Venkata Amit Chowdary",
+    "email": "amitchowdary.d@gmail.com",
+    "phone": "7675962550",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2940642",
+    "our_student": "n"
+  },
+  {
+    "location": "2337",
+    "name": "Dillibabu K",
+    "email": "kdillibabu91@gmail.com",
+    "phone": "8883069431",
+    "code": "EX280",
+    "status": "retake",
+    "eligibility": "LMS-2930670-RETAKE.1",
+    "our_student": "y"
+  }
+]

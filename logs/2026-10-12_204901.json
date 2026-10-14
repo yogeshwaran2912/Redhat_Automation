@@ -1,0 +1,42 @@
+[
+  {
+    "location": "2093",
+    "name": "Gunasekar Kuppusamy",
+    "email": "calebguna@outlook.com",
+    "phone": "7845944423",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2871807",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "Manoharan Palani",
+    "email": "mano.babu2020@gmail.com",
+    "phone": "9003221757",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2930662",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "Vijay Anand D S",
+    "email": "vijayanand8208@gmail.com",
+    "phone": "63811311406",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2940638",
+    "our_student": "n"
+  },
+  {
+    "location": "2394",
+    "name": "MEGANATHAN RAJENDRAN",
+    "email": "meganathan1927@gmail.com",
+    "phone": "9940496282",
+    "code": "EX316",
+    "status": "y",
+    "eligibility": "LMS-2768952",
+    "our_student": "y"
+  }
+]
