@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+    step()
+    ~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 100, in <lambda>
+    lambda: feedback_from_sheet.run(cfg, date, dry_run=args.dry_run)),
+            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 352, in run
+    feedback = fetch_feedback(cfg, date)
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 194, in fetch_feedback
+    csv_path = download_feedback_csv(driver, url)
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 89, in download_feedback_csv
+    driver.get(export)
+    ~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\webdriver.py", line 586, in get
+    self.execute(Command.GET, {"url": url})
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\webdriver.py", line 566, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\errorhandler.py", line 234, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72B2E38A5+3004357]
+	(No symbol) [0x00007FF72AF79970]
+	(No symbol) [0x00007FF72AE2582A]
+	(No symbol) [0x00007FF72ADFFA75]
+	(No symbol) [0x00007FF72AEA2C77]
+	(No symbol) [0x00007FF72AEBB351]
+	(No symbol) [0x00007FF72AE9B983]
+	(No symbol) [0x00007FF72AE67628]
+	(No symbol) [0x00007FF72AE68791]
+	GetHandleVerifier [0x00007FF72B30A00D+3161901]
+	GetHandleVerifier [0x00007FF72B35E060+3506048]
+	GetHandleVerifier [0x00007FF72B35400D+3465005]
+	GetHandleVerifier [0x00007FF72B0D0EEB+830987]
+	(No symbol) [0x00007FF72AF8467F]
+	(No symbol) [0x00007FF72AF809D4]
+	(No symbol) [0x00007FF72AF80B6D]
+	(No symbol) [0x00007FF72AF70149]
+	BaseThreadInitThunk [0x00007FFED25D7374+20]
+	RtlUserThreadStart [0x00007FFED395CC91+33]
+

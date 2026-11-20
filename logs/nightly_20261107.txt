@@ -1,0 +1,570 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:10] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:10] 
+[23:45:10] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[23:45:18] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:19] Closed 1 old tab(s) of individualexamscheduler
+[23:45:19] Waking up Chrome tabs
+[23:49:10] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[23:50:24] Connected to Chrome
+[23:51:33] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[23:53:20] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageLocationSetting
+[23:53:20] Screenshot of the page saved: logs\exam_deliveries_failed_20261107_235320.png
+[23:53:20] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageLocationSetting (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[23:53:20]    details saved in logs\error_20261107_235320.txt - going to the next step
+[23:53:20] 
+[23:53:20] ========== Step 2/4: Feedback (Google Sheet) ==========
+[23:53:36] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[23:53:39] Waking up Chrome tabs
+[23:54:59] Connected to Chrome
+[23:58:20] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[00:01:03] !! Step 2 failed: ReadTimeoutError: HTTPConnectionPool(host='localhost', port=53540): Read timed out. (read timeout=120)
+[00:01:03]    details saved in logs\error_20261108_000057.txt - going to the next step
+[00:01:03] 
+[00:01:03] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:01:52] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[00:01:52] 
+[00:01:52] ========== Step 4/4: Excel check ==========
+[00:01:59] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[00:01:59] 
+[00:01:59] ========== Summary ==========
+[00:01:59]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageLocationSetting 
+[00:01:59]   Feedback (Google Sheet): FAILED: ReadTimeoutError: HTTPConnectionPool(host='localhost', port=53540): Read timed out. (read timeout=120)
+[00:01:59]   LinkedIn (Outlook): OK
+[00:01:59]   Excel check: OK
+[00:01:59] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:18:52] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:18:52] 
+[00:18:52] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:19:02] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:19:13] Closed 0 old tab(s) of individualexamscheduler
+[00:19:13] Waking up Chrome tabs
+[00:19:31] Connected to Chrome
+[00:19:34] Clicked menu > Exam Deliveries
+[00:19:48] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[00:19:48]    details saved in logs\error_20261108_001948.txt - going to the next step
+[00:19:48] 
+[00:19:48] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:19:57] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:19:59] Waking up Chrome tabs
+[00:21:14] Connected to Chrome
+[00:23:12] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[00:24:29] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[00:24:29] Feedback timestamps are month/day
+[00:24:29] 0 feedback response(s) on 07-Nov-2026
+[00:24:29] No feedback that day - nothing to write
+[00:24:29] 
+[00:24:29] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:24:41] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[00:24:41] 
+[00:24:41] ========== Step 4/4: Excel check ==========
+[00:24:44] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[00:24:44] 
+[00:24:44] ========== Summary ==========
+[00:24:44]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[00:24:44]   Feedback (Google Sheet): OK
+[00:24:44]   LinkedIn (Outlook): OK
+[00:24:44]   Excel check: OK
+[00:24:44] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:29:47] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:29:47] 
+[00:29:47] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:29:56] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:29:57] Closed 2 old tab(s) of individualexamscheduler
+[00:29:57] Waking up Chrome tabs
+[00:30:16] Connected to Chrome
+[00:30:18] Clicked menu > Exam Deliveries
+[00:30:31] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[00:30:31]    details saved in logs\error_20261108_003031.txt - going to the next step
+[00:30:31] 
+[00:30:31] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:30:41] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:30:42] Waking up Chrome tabs
+[00:31:43] Connected to Chrome
+[00:32:27] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[00:32:27] Feedback timestamps are month/day
+[00:32:27] 0 feedback response(s) on 07-Nov-2026
+[00:32:27] No feedback that day - nothing to write
+[00:32:27] 
+[00:32:27] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:32:41] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[00:32:41] 
+[00:32:41] ========== Step 4/4: Excel check ==========
+[00:32:49] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[00:32:49] 
+[00:32:49] ========== Summary ==========
+[00:32:49]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[00:32:49]   Feedback (Google Sheet): OK
+[00:32:49]   LinkedIn (Outlook): OK
+[00:32:49]   Excel check: OK
+[00:32:49] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:42:53] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:42:53] 
+[00:42:53] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:43:01] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:43:02] Closed 1 old tab(s) of individualexamscheduler
+[00:43:02] Waking up Chrome tabs
+[00:43:51] Connected to Chrome
+[00:44:00] Clicked menu > Exam Deliveries
+[00:44:13] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[00:44:13]    details saved in logs\error_20261108_004413.txt - going to the next step
+[00:44:13] 
+[00:44:13] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:44:30] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:44:39] Waking up Chrome tabs
+[00:45:40] Connected to Chrome
+[00:46:31] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[00:46:31] Feedback timestamps are month/day
+[00:46:34] 0 feedback response(s) on 07-Nov-2026
+[00:46:34] No feedback that day - nothing to write
+[00:46:34] 
+[00:46:34] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:46:57] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[00:46:57] 
+[00:46:57] ========== Step 4/4: Excel check ==========
+[00:46:59] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[00:46:59] 
+[00:46:59] ========== Summary ==========
+[00:46:59]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[00:46:59]   Feedback (Google Sheet): OK
+[00:46:59]   LinkedIn (Outlook): OK
+[00:46:59]   Excel check: OK
+[00:46:59] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[01:02:34] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[01:02:34] 
+[01:02:34] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[01:02:44] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[01:02:46] Closed 1 old tab(s) of individualexamscheduler
+[01:02:46] Waking up Chrome tabs
+[01:06:08] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[01:08:09] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[01:09:25] Connected to Chrome
+[01:09:30] Clicked menu > Exam Deliveries
+[01:10:01] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[01:10:01]    details saved in logs\error_20261108_010945.txt - going to the next step
+[01:10:01] 
+[01:10:01] ========== Step 2/4: Feedback (Google Sheet) ==========
+[01:10:26] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[01:10:28] Waking up Chrome tabs
+[01:11:22] Connected to Chrome
+[01:12:56] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[01:14:10] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[01:14:10] Feedback timestamps are month/day
+[01:14:11] 0 feedback response(s) on 07-Nov-2026
+[01:14:11] No feedback that day - nothing to write
+[01:14:11] 
+[01:14:11] ========== Step 3/4: LinkedIn (Outlook) ==========
+[01:14:37] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[01:14:37] 
+[01:14:37] ========== Step 4/4: Excel check ==========
+[01:14:39] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[01:14:39] 
+[01:14:39] ========== Summary ==========
+[01:14:39]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[01:14:39]   Feedback (Google Sheet): OK
+[01:14:39]   LinkedIn (Outlook): OK
+[01:14:39]   Excel check: OK
+[01:14:39] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[01:45:12] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[01:45:12] 
+[01:45:12] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[01:45:38] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[01:45:39] Closed 1 old tab(s) of individualexamscheduler
+[01:45:39] Waking up Chrome tabs
+[01:56:16] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[02:04:08] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[02:11:06] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[02:11:11] !! Step 1 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[02:11:11]    details saved in logs\error_20261108_021109.txt - going to the next step
+[02:11:12] 
+[02:11:12] ========== Step 2/4: Feedback (Google Sheet) ==========
+[02:12:02] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[02:12:12] Waking up Chrome tabs
+[02:14:15] Connected to Chrome
+[02:18:54] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[02:20:59] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[02:20:59] Feedback timestamps are month/day
+[02:20:59] 0 feedback response(s) on 07-Nov-2026
+[02:20:59] No feedback that day - nothing to write
+[02:20:59] 
+[02:20:59] ========== Step 3/4: LinkedIn (Outlook) ==========
+[02:21:15] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[02:21:15] 
+[02:21:15] ========== Step 4/4: Excel check ==========
+[02:21:19] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[02:21:19] 
+[02:21:19] ========== Summary ==========
+[02:21:19]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[02:21:19]   Feedback (Google Sheet): OK
+[02:21:19]   LinkedIn (Outlook): OK
+[02:21:19]   Excel check: OK
+[02:21:19] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[02:51:23] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[02:51:23] 
+[02:51:23] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[02:51:36] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[02:51:38] Closed 1 old tab(s) of individualexamscheduler
+[02:51:38] Waking up Chrome tabs
+[02:58:26] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[03:00:30] Connected to Chrome
+[03:00:43] Clicked menu > Exam Deliveries
+[03:01:32] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[03:01:32]    details saved in logs\error_20261108_030130.txt - going to the next step
+[03:01:33] 
+[03:01:33] ========== Step 2/4: Feedback (Google Sheet) ==========
+[03:02:52] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[03:02:57] Waking up Chrome tabs
+[03:04:34] Connected to Chrome
+[03:09:08] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[03:10:19] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[03:10:19] Feedback timestamps are month/day
+[03:10:20] 0 feedback response(s) on 07-Nov-2026
+[03:10:20] No feedback that day - nothing to write
+[03:10:20] 
+[03:10:20] ========== Step 3/4: LinkedIn (Outlook) ==========
+[03:10:39] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[03:10:39] 
+[03:10:39] ========== Step 4/4: Excel check ==========
+[03:10:41] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[03:10:41] 
+[03:10:41] ========== Summary ==========
+[03:10:41]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[03:10:41]   Feedback (Google Sheet): OK
+[03:10:41]   LinkedIn (Outlook): OK
+[03:10:41]   Excel check: OK
+[03:10:41] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[03:40:46] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[03:40:46] 
+[03:40:46] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[03:40:55] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[03:40:56] Closed 1 old tab(s) of individualexamscheduler
+[03:40:56] Waking up Chrome tabs
+[03:46:57] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[03:49:24] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[03:50:20] Connected to Chrome
+[03:50:24] Clicked menu > Exam Deliveries
+[03:50:38] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[03:50:38]    details saved in logs\error_20261108_035038.txt - going to the next step
+[03:50:38] 
+[03:50:38] ========== Step 2/4: Feedback (Google Sheet) ==========
+[03:51:22] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[03:51:38] Waking up Chrome tabs
+[03:53:08] Connected to Chrome
+[03:53:53] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[03:53:54] Feedback timestamps are month/day
+[03:53:54] 0 feedback response(s) on 07-Nov-2026
+[03:53:54] No feedback that day - nothing to write
+[03:53:54] 
+[03:53:54] ========== Step 3/4: LinkedIn (Outlook) ==========
+[03:54:20] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[03:54:20] 
+[03:54:20] ========== Step 4/4: Excel check ==========
+[03:54:32] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[03:54:32] 
+[03:54:32] ========== Summary ==========
+[03:54:32]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[03:54:32]   Feedback (Google Sheet): OK
+[03:54:32]   LinkedIn (Outlook): OK
+[03:54:32]   Excel check: OK
+[03:54:32] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[04:24:40] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[04:24:40] 
+[04:24:40] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[04:24:50] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[04:24:51] Closed 1 old tab(s) of individualexamscheduler
+[04:24:51] Waking up Chrome tabs
+[04:31:46] Connected to Chrome
+[04:31:50] Clicked menu > Exam Deliveries
+[04:32:38] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[04:32:38]    details saved in logs\error_20261108_043236.txt - going to the next step
+[04:32:38] 
+[04:32:38] ========== Step 2/4: Feedback (Google Sheet) ==========
+[04:33:25] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[04:33:39] Waking up Chrome tabs
+[04:38:45] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[04:42:46] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[04:47:54] Connected to Chrome
+[04:49:30] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[04:51:30] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[04:51:30] Feedback timestamps are month/day
+[04:51:31] 0 feedback response(s) on 07-Nov-2026
+[04:51:31] No feedback that day - nothing to write
+[04:51:31] 
+[04:51:31] ========== Step 3/4: LinkedIn (Outlook) ==========
+[04:52:05] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[04:52:05] 
+[04:52:05] ========== Step 4/4: Excel check ==========
+[04:52:25] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[04:52:25] 
+[04:52:25] ========== Summary ==========
+[04:52:25]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.
+[04:52:25]   Feedback (Google Sheet): OK
+[04:52:25]   LinkedIn (Outlook): OK
+[04:52:25]   Excel check: OK
+[04:52:25] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[05:22:30] Date: 07-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[05:22:30] 
+[05:22:30] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[05:22:41] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[05:22:42] Closed 1 old tab(s) of individualexamscheduler
+[05:22:42] Waking up Chrome tabs
+[05:30:38] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[05:33:48] Connected to Chrome
+[05:33:54] Clicked menu > Exam Deliveries
+[05:34:33] Status = Completed
+[05:34:37] Time Zone = Asia/Calcutta
+[05:34:39] From = 2026-11-07
+[05:34:40] To = 2026-11-07
+[05:34:43] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2093
+[05:34:43] Searching location 2093
+[05:35:04]   0 of 0 result(s)
+[05:35:06] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2337
+[05:35:07] Searching location 2337
+[05:35:26]   0 of 0 result(s)
+[05:35:28] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2394
+[05:35:28] Searching location 2394
+[05:35:44]   0 of 0 result(s)
+[05:35:45] 0 completed exam(s) on 07-Nov-2026
+[05:35:46] No completed exams found - nothing to write
+[05:35:46] 
+[05:35:46] ========== Step 2/4: Feedback (Google Sheet) ==========
+[05:36:27] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[05:36:32] Waking up Chrome tabs
+[05:38:35] Connected to Chrome
+[05:39:13] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[05:39:13] Feedback timestamps are month/day
+[05:39:14] 0 feedback response(s) on 07-Nov-2026
+[05:39:15] No feedback that day - nothing to write
+[05:39:15] 
+[05:39:15] ========== Step 3/4: LinkedIn (Outlook) ==========
+[05:39:39] Sheet NOV: 0 email(s) without a LinkedIn Id on 07-Nov-2026
+[05:39:40] 
+[05:39:40] ========== Step 4/4: Excel check ==========
+[05:39:51] Excel complete for 07-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[05:39:51] 
+[05:39:51] ========== Summary ==========
+[05:39:51]   Exams (Red Hat + Adv Pro): OK
+[05:39:51]   Feedback (Google Sheet): OK
+[05:39:51]   LinkedIn (Outlook): OK
+[05:39:51]   Excel check: OK
+[05:39:51] Done

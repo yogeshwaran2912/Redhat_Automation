@@ -1,3 +1,4 @@
+# Created by YOGESHWARAN TL
 """
 ADV PRO FEEDBACK (Responses) Google Sheet  ->  "redhat exam 2026.xlsx"
 
@@ -32,7 +33,7 @@ import openpyxl
 
 from redhat_automation import (HERE, CONFIG_PATH, ask_date, ask_user, cell_date, chrome_pages, activate_tab,
                                check_excel_closed, clean_cell_text, header_row, is_blank, last_data_row, load_config,
-                               log, month_sheet, open_chrome, phone10)
+                               log, month_sheet, open_chrome, phone10, safe_save)
 
 
 # ---------------------------------------------------------------- google sheet
@@ -60,7 +61,7 @@ def find_feedback_sheet(driver, cfg):
     if "accounts.google.com" in driver.current_url:
         ask_user("Sign in to advpromktg@gmail.com in the Chrome window (only needed once).")
         driver.get("https://drive.google.com/drive/search?q=ADV%20PRO%20FEEDBACK%20(Responses)")
-    ask_user("Double-click 'ADV PRO FEEDBACK (Responses)' in Google Drive so the sheet opens.")
+    ask_user("Double-click 'ADV PRO FEEDBACK from nov 2026 (Responses)' in Google Drive so the sheet opens.")
     port = cfg.getint("chrome", "debug_port")
     for tab in chrome_pages(port):
         if "/spreadsheets/d/" in tab["url"]:
@@ -257,11 +258,13 @@ def update_excel(path, date, feedback, backup_dir, dry_run=False):
     def contact_match(fb, rows):
         p = phone10(fb["phone"])
         email = fb["email"].strip().lower()
+        # email first: a phone number can be shared, so it could find the wrong person
+        for r in rows:
+            if email and email == str(ws.cell(r, cols["email id"]).value or "").strip().lower():
+                return r, "email"
         for r in rows:
             if p and p == phone10(ws.cell(r, cols["phone no"]).value):
                 return r, "phone"
-            if email and email == str(ws.cell(r, cols["email id"]).value or "").strip().lower():
-                return r, "email"
         return None, ""
 
     def name_match(fb):
@@ -323,7 +326,7 @@ def update_excel(path, date, feedback, backup_dir, dry_run=False):
     backup = bdir / f"{Path(path).stem}_{dt.datetime.now():%Y%m%d_%H%M%S}.xlsx"
     shutil.copy2(path, backup)
     log(f"Backup saved: {backup}")
-    wb.save(path)
+    safe_save(wb, path)
     log("Excel file saved")
 
 

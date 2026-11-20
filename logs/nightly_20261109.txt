@@ -1,0 +1,228 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:11] Date: 09-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:11] 
+[23:45:11] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[23:45:19] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:20] Closed 1 old tab(s) of individualexamscheduler
+[23:45:20] Waking up Chrome tabs
+[00:00:31] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[00:16:37] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[00:31:56] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[00:32:06] !! Step 1 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[00:32:06]    details saved in logs\error_20261110_003201.txt - going to the next step
+[00:32:06] 
+[00:32:06] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:42:02] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:42:14] Waking up Chrome tabs
+[00:55:32] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[01:11:47] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[01:34:35] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[01:34:42] !! Step 2 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[01:34:42]    details saved in logs\error_20261110_013440.txt - going to the next step
+[01:34:43] 
+[01:34:43] ========== Step 3/4: LinkedIn (Outlook) ==========
+[01:35:15] Sheet NOV: 0 email(s) without a LinkedIn Id on 09-Nov-2026
+[01:35:15] 
+[01:35:15] ========== Step 4/4: Excel check ==========
+[01:35:23] Excel complete for 09-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[01:35:23] 
+[01:35:23] ========== Summary ==========
+[01:35:23]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[01:35:23]   Feedback (Google Sheet): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[01:35:23]   LinkedIn (Outlook): OK
+[01:35:23]   Excel check: OK
+[01:35:23] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[02:36:39] Date: 09-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[02:36:39] 
+[02:36:39] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[02:36:51] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[02:36:53] Closed 2 old tab(s) of individualexamscheduler
+[02:36:53] Waking up Chrome tabs
+[02:52:46] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[03:11:07] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[03:28:18] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[03:28:20] !! Step 1 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[03:28:20]    details saved in logs\error_20261110_032819.txt - going to the next step
+[03:28:20] 
+[03:28:20] ========== Step 2/4: Feedback (Google Sheet) ==========
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[03:28:56] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[03:28:58] Waking up Chrome tabs
+[03:47:17] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[04:06:56] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[04:25:26] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[04:25:31] !! Step 2 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[04:25:31]    details saved in logs\error_20261110_042528.txt - going to the next step
+[04:25:31] 
+[04:25:31] ========== Step 3/4: LinkedIn (Outlook) ==========
+[04:25:54] Sheet NOV: 0 email(s) without a LinkedIn Id on 09-Nov-2026
+[04:25:54] 
+[04:25:54] ========== Step 4/4: Excel check ==========
+[04:26:00] Excel complete for 09-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[04:26:00] 
+[04:26:00] ========== Summary ==========
+[04:26:00]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[04:26:00]   Feedback (Google Sheet): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[04:26:00]   LinkedIn (Outlook): OK
+[04:26:00]   Excel check: OK
+[04:26:00] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[05:25:08] Date: 09-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[05:25:08] 
+[05:25:08] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[05:25:22] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[05:25:23] Closed 1 old tab(s) of individualexamscheduler
+[05:25:23] Waking up Chrome tabs
+[05:50:18] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[06:09:04] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[06:26:14] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[06:26:15] !! Step 1 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[06:26:15]    details saved in logs\error_20261110_062614.txt - going to the next step
+[06:26:15] 
+[06:26:15] ========== Step 2/4: Feedback (Google Sheet) ==========
+[06:27:04] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[06:27:13] Waking up Chrome tabs
+[06:44:54] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[07:03:01] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[07:21:44] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[07:21:45] !! Step 2 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[07:21:45]    details saved in logs\error_20261110_072144.txt - going to the next step
+[07:21:45] 
+[07:21:45] ========== Step 3/4: LinkedIn (Outlook) ==========
+[07:22:18] Sheet NOV: 0 email(s) without a LinkedIn Id on 09-Nov-2026
+[07:22:18] 
+[07:22:18] ========== Step 4/4: Excel check ==========
+[07:22:32] Excel complete for 09-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[07:22:32] 
+[07:22:32] ========== Summary ==========
+[07:22:32]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[07:22:32]   Feedback (Google Sheet): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[07:22:32]   LinkedIn (Outlook): OK
+[07:22:32]   Excel check: OK
+[07:22:32] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[08:20:15] Date: 09-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[08:20:15] 
+[08:20:15] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[08:20:34] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[08:20:35] Closed 1 old tab(s) of individualexamscheduler
+[08:20:35] Waking up Chrome tabs
+[08:37:17] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[08:58:20] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[09:16:46] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[09:16:47] !! Step 1 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[09:16:47]    details saved in logs\error_20261110_091646.txt - going to the next step
+[09:16:47] 
+[09:16:47] ========== Step 2/4: Feedback (Google Sheet) ==========
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[09:17:22] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[09:17:23] Waking up Chrome tabs
+[09:33:50] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[09:51:32] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[10:10:32] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[10:10:33] !! Step 2 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[10:10:33]    details saved in logs\error_20261110_101033.txt - going to the next step
+[10:10:33] 
+[10:10:33] ========== Step 3/4: LinkedIn (Outlook) ==========
+[10:10:54] Sheet NOV: 0 email(s) without a LinkedIn Id on 09-Nov-2026
+[10:10:54] 
+[10:10:54] ========== Step 4/4: Excel check ==========
+[10:11:03] Excel complete for 09-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[10:11:03] 
+[10:11:03] ========== Summary ==========
+[10:11:03]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[10:11:03]   Feedback (Google Sheet): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[10:11:03]   LinkedIn (Outlook): OK
+[10:11:03]   Excel check: OK
+[10:11:03] Done

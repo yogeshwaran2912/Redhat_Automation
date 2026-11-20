@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 98, in <lambda>
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 1037, in run
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 628, in scrape_redhat
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 444, in set_status
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 62, in ask_user
+RuntimeError: Needs a person at the computer: Could not choose Status 'Completed'. Please choose it in Chrome.

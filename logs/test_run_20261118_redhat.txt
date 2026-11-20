@@ -1,0 +1,140 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check + kiosk table
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+    4. No feedback -> company + designation from LinkedIn (Arish Chrome)
+    5. Google reviews of the last 24 hours (Advantage pro Chrome)
+  Days before it with a step not finished are done first.
+======================================================================
+[04:07:07] Date: 18-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[04:07:07] 
+[04:07:07] ========== 18-Nov-2026  Step 1/6: Exams (Red Hat + Adv Pro) ==========
+[04:07:10] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[04:07:11] Closed 0 old tab(s) of individualexamscheduler
+[04:07:11] Waking up Chrome tabs
+[04:07:24] Connected to Chrome
+[04:07:26] Clicked menu > Exam Deliveries
+[04:07:28] Status = Completed
+[04:07:30] Time Zone = Asia/Calcutta
+[04:07:31] From = 2026-11-18
+[04:07:32] To = 2026-11-18
+[04:07:33] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2093
+[04:07:34] Searching location 2093
+[04:07:40]   1 - 2 of 2 result(s)
+[04:07:40]   skipped (status No Show): Sindhuja Mohan
+[04:07:40]   GOKULNATH PL | 9940264072 | gokulnath297@gmail.com | EX200 | LMS-2968584 -> y
+[04:07:42] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2337
+[04:07:42] Searching location 2337
+[04:07:49]   0 of 0 result(s)
+[04:07:51] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2394
+[04:07:51] Searching location 2394
+[04:07:57]   0 of 0 result(s)
+[04:07:57] 1 completed exam(s) on 18-Nov-2026
+[04:07:58] Status = Scheduled
+[04:08:00] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2093
+[04:08:00] Searching location 2093
+[04:08:07]   0 of 0 result(s)
+[04:08:09] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2337
+[04:08:09] Searching location 2337
+[04:08:15]   0 of 0 result(s)
+[04:08:17] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2394
+[04:08:17] Searching location 2394
+[04:08:24]   0 of 0 result(s)
+[04:08:24]   kiosk 2093: 2 exam(s) - GOKULNATH PL (Completed), Sindhuja Mohan (No Show)
+[04:08:24]   kiosk 2337: 0 exam(s)
+[04:08:24]   kiosk 2394: 0 exam(s)
+[04:08:24] Kiosk 18-Nov-2026: 2093: 2, 2337: 0, 2394: 0, total 2 (nothing new for the table)
+[04:08:27] Opening Adv Pro
+[04:08:29] Adv Pro: logged in
+[04:08:30] Adv Pro: Master > Registration > Display
+[04:08:31] Adv Pro: Filter By = PresentPhoneNo
+[04:08:35]   Adv Pro 9940264072 GOKULNATH PL: y
+[04:08:35] Adv Pro closed
+[04:08:36]   already in sheet: GOKULNATH PL
+[04:08:36] Sheet NOV: 0 row(s) added
+[04:08:36] Nothing changed - Excel file not saved
+[04:08:38] Closed 2 Chrome tab(s) this step opened
+[04:08:38] 
+[04:08:38] ========== 18-Nov-2026  Step 2/6: Feedback (Google Sheet) ==========
+[04:08:41] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[04:08:42] Waking up Chrome tabs
+[04:08:45] Connected to Chrome
+[04:08:57] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[04:08:57] Feedback timestamps are month/day
+[04:08:57] 7 feedback response(s) on 18-Nov-2026
+[04:08:57] 7 response(s) not in the Red Hat sheet (Pearson VUE or other exams):
+[04:08:57]     - Aruna N | 8939150095 | nagalakshmi.nainappan@gmail.com
+[04:08:57]     - Hari Kishore M | 9585833202 | kishorehari228@gmail.com
+[04:08:57]     - jeevitha | 9884850111 | gjeevitha89@gmail.com
+[04:08:57]     - Madhuri gopal | 988492257 | gopal.madhuri@gmail.com
+[04:08:57]     - Madhavan R | 6383413857 | rangansubamadhavan@gmail.com
+[04:08:57]     - Duvvuri Avinash | 6380258120 | avinashhazarathbabu@gmail.com
+[04:08:57]     - Abdul Rahman | 9791094468 | abdulasifrahman94@gmail.com
+[04:08:57] Sheet NOV: 0 row(s) updated with feedback
+[04:08:57] Nothing changed - Excel file not saved
+[04:08:59] Closed 2 Chrome tab(s) this step opened
+[04:08:59] 
+[04:08:59] ========== 18-Nov-2026  Step 3/6: LinkedIn (Outlook) ==========
+[04:09:00] Sheet NOV: 1 person(s) without a LinkedIn Id on 18-Nov-2026
+[04:09:00]   row 50: GOKULNATH PL | gokulnath297@gmail.com | (no company)
+[04:09:04] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[04:09:05] Waking up Chrome tabs
+[04:09:23] Connected to Chrome
+[04:09:29] Clicked New mail
+[04:09:33] [1/1] GOKULNATH PL | gokulnath297@gmail.com
+[04:09:51]     no 'See profile on LinkedIn' (no LinkedIn match for this email?)
+[04:09:51]     LinkedIn: (not found)
+[04:09:54] --- Google search for 1 person(s) still without a LinkedIn Id
+[04:09:54] [Google 1/1] GOKULNATH PL: no usable company name in the sheet ('') - skipped
+[04:09:58] Draft discarded
+[04:09:58] LinkedIn found for 0 of 1 person(s)
+[04:09:58]   ! not found: GOKULNATH PL | gokulnath297@gmail.com | (no company)
+[04:09:58] No LinkedIn URLs found - Excel file not changed
+[04:10:00] Closed 2 Chrome tab(s) this step opened
+[04:10:00] 
+[04:10:00] ========== 18-Nov-2026  Step 4/6: Company (LinkedIn profile) ==========
+[04:10:01] Sheet NOV: 0 person(s) without feedback who have a LinkedIn Id on 18-Nov-2026
+[04:10:01] 
+[04:10:01] ========== 18-Nov-2026  Step 5/6: Google reviews ==========
+[04:10:05] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[04:10:06] Waking up Chrome tabs
+[04:10:09] Connected to Chrome
+[04:10:17] Google Maps: Reviews -> Sort -> Newest
+[04:10:24] 2 Google review(s) in the last 29 hours
+[04:10:24]   Madhuri Gopal | 5 star | 12 hours ago | Test started on time. Good ventilation , lighting overall excellent
+[04:10:24]   Aruna Nainappan | 5 star | Edited 17 hours ago | Technical glitch while submitting
+[04:10:24] 2 review(s) did not match a candidate (other courses/exams, or a different name on Google):
+[04:10:24]     - Madhuri Gopal | 5 star | 12 hours ago
+[04:10:24]     - Aruna Nainappan | 5 star | Edited 17 hours ago
+[04:10:24] Google reviews for 18-Nov-2026: 0 of 1 candidate(s) (0%)
+[04:10:24] Nothing new to write - Excel file not changed
+[04:10:26] Closed 1 Chrome tab(s) this step opened
+[04:10:26] 
+[04:10:26] ========== 18-Nov-2026  Step 6/6: Excel check ==========
+[04:10:28] Excel complete for 18-Nov-2026: 1 row(s) in sheet NOV, 1 found on Red Hat
+[04:10:28] 
+[04:10:28] ========== Summary ==========
+[04:10:28]   Exams (Red Hat + Adv Pro): OK
+[04:10:28]   Feedback (Google Sheet): OK
+[04:10:28]   LinkedIn (Outlook): OK
+[04:10:28]   Company (LinkedIn profile): OK
+[04:10:28]   Google reviews: OK
+[04:10:28]   Excel check: OK
+[04:10:28] Done

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 100, in <lambda>
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 350, in run
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 792, in check_excel_closed
+FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'

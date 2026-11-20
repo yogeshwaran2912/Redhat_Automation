@@ -1,0 +1,52 @@
+[
+  {
+    "location": "2093",
+    "name": "Senthil Kumar S P",
+    "email": "senthil.s_p@nokia.com",
+    "phone": "8939758117",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2540573",
+    "our_student": "y"
+  },
+  {
+    "location": "2093",
+    "name": "Vignesh S",
+    "email": "vigneshsssivakumar@gmail.com",
+    "phone": "6381009192",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2918848",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "ARUL JOSEPH I",
+    "email": "arul.joseph@nokia.com",
+    "phone": "9500972459",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2540575",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "Mekala Garvikesh Reddy",
+    "email": "garvikeshreddy100@gmail.com",
+    "phone": "8977274755",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2940629",
+    "our_student": "n"
+  },
+  {
+    "location": "2394",
+    "name": "Suresh NA",
+    "email": "suresh.1.sankar@nokia.com",
+    "phone": "8939911857",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2540582",
+    "our_student": "y"
+  }
+]

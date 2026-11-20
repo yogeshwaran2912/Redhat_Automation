@@ -1,0 +1,286 @@
+[04-11-2026 23:45:01] Watcher started for 2026-11-04
+[04-11-2026 23:45:01] Started the program (process 14776)
+[04-11-2026 23:48:42] Finished: the Excel file is complete for 2026-11-04
+[05-11-2026 23:45:02] Watcher started for 2026-11-05
+[05-11-2026 23:45:02] Started the program (process 2636)
+[05-11-2026 23:50:36] Finished: the Excel file is complete for 2026-11-05
+[06-11-2026 23:45:02] Watcher started for 2026-11-06
+[06-11-2026 23:45:02] Started the program (process 10776)
+[06-11-2026 23:51:10] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[06-11-2026 23:53:15] Waiting for the other program to finish with Chrome
+[06-11-2026 23:53:35] Started the program (process 8016)
+[06-11-2026 23:55:47] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[07-11-2026 00:00:47] Waiting until 00:15 for the Daily_automation jobs
+[07-11-2026 00:15:07] Started the program (process 824)
+[07-11-2026 00:17:38] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[07-11-2026 00:27:38] Started the program (process 10684)
+[07-11-2026 00:29:46] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[07-11-2026 00:44:46] Started the program (process 2324)
+[07-11-2026 00:47:32] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[07-11-2026 01:17:33] Started the program (process 13580)
+[07-11-2026 01:22:00] Not complete (exit code 3, try 6) - trying again in 30 minutes
+[07-11-2026 01:52:00] Started the program (process 6000)
+[07-11-2026 02:00:57] Not complete (exit code 3, try 7) - trying again in 30 minutes
+[07-11-2026 02:30:58] Started the program (process 5624)
+[07-11-2026 02:35:53] Not complete (exit code 3, try 8) - trying again in 30 minutes
+[07-11-2026 03:05:53] Started the program (process 6996)
+[07-11-2026 03:13:55] Not complete (exit code 3, try 9) - trying again in 30 minutes
+[07-11-2026 03:43:56] Started the program (process 9032)
+[07-11-2026 03:49:58] Not complete (exit code 3, try 10) - trying again in 30 minutes
+[07-11-2026 04:19:59] Started the program (process 1308)
+[07-11-2026 04:26:37] Not complete (exit code 3, try 11) - trying again in 30 minutes
+[07-11-2026 04:56:37] Started the program (process 7888)
+[07-11-2026 05:02:29] Not complete (exit code 3, try 12) - trying again in 30 minutes
+[07-11-2026 05:32:29] Started the program (process 14140)
+[07-11-2026 05:39:52] Not complete (exit code 3, try 13) - trying again in 30 minutes
+[07-11-2026 06:09:52] Started the program (process 2204)
+[07-11-2026 06:18:53] Finished: the Excel file is complete for 2026-11-06
+[07-11-2026 23:45:02] Watcher started for 2026-11-07
+[07-11-2026 23:45:02] Started the program (process 10436)
+[08-11-2026 00:01:59] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[08-11-2026 00:04:20] Waiting for the other program to finish with Chrome
+[08-11-2026 00:18:49] Started the program (process 15460)
+[08-11-2026 00:24:45] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[08-11-2026 00:29:45] Started the program (process 10412)
+[08-11-2026 00:32:50] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[08-11-2026 00:42:50] Started the program (process 14088)
+[08-11-2026 00:47:00] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[08-11-2026 01:02:00] Started the program (process 3408)
+[08-11-2026 01:14:40] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[08-11-2026 01:44:51] Started the program (process 6476)
+[08-11-2026 02:21:21] Not complete (exit code 3, try 6) - trying again in 30 minutes
+[08-11-2026 02:51:21] Started the program (process 1588)
+[08-11-2026 03:10:43] Not complete (exit code 3, try 7) - trying again in 30 minutes
+[08-11-2026 03:40:44] Started the program (process 12124)
+[08-11-2026 03:54:36] Not complete (exit code 3, try 8) - trying again in 30 minutes
+[08-11-2026 04:24:36] Started the program (process 8604)
+[08-11-2026 04:52:27] Not complete (exit code 3, try 9) - trying again in 30 minutes
+[08-11-2026 05:22:28] Started the program (process 13752)
+[08-11-2026 05:39:53] Finished: the Excel file is complete for 2026-11-07
+[08-11-2026 23:45:03] Watcher started for 2026-11-08
+[08-11-2026 23:45:03] Started the program (process 15704)
+[09-11-2026 01:05:46] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[09-11-2026 01:21:33] Waiting for the other program to finish with Chrome
+[09-11-2026 01:39:34] Started the program (process 15680)
+[09-11-2026 01:59:52] Finished: the Excel file is complete for 2026-11-08
+[09-11-2026 23:45:03] Watcher started for 2026-11-09
+[09-11-2026 23:45:03] Started the program (process 8392)
+[10-11-2026 01:35:31] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[10-11-2026 02:33:06] Waiting for the other program to finish with Chrome
+[10-11-2026 02:36:27] Started the program (process 16556)
+[10-11-2026 04:26:02] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[10-11-2026 05:22:18] Waiting for the other program to finish with Chrome
+[10-11-2026 05:24:56] Started the program (process 12088)
+[10-11-2026 07:22:35] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[10-11-2026 07:59:17] Waiting for the other program to finish with Chrome
+[10-11-2026 08:19:59] Started the program (process 9272)
+[10-11-2026 10:11:06] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[10-11-2026 10:26:06] Gave up at 08:00: the Excel file is NOT complete for 2026-11-09 (4 failed, 0 stopped) - see logs\error_*.txt
+[10-11-2026 23:45:03] Watcher started for 2026-11-10
+[10-11-2026 23:45:03] Started the program (process 12852)
+[11-11-2026 01:36:24] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[11-11-2026 01:56:17] Waiting for the other program to finish with Chrome
+[11-11-2026 03:12:25] Started the program (process 4892)
+[11-11-2026 04:29:33] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[11-11-2026 04:34:33] Started the program (process 1328)
+[11-11-2026 04:40:53] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[11-11-2026 04:50:53] Started the program (process 17068)
+[11-11-2026 04:55:20] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[11-11-2026 05:10:21] Started the program (process 15204)
+[11-11-2026 05:15:06] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[11-11-2026 05:45:06] Started the program (process 13184)
+[11-11-2026 05:52:18] Not complete (exit code 3, try 6) - trying again in 30 minutes
+[11-11-2026 06:22:18] Started the program (process 15340)
+[11-11-2026 06:26:55] Not complete (exit code 3, try 7) - trying again in 30 minutes
+[11-11-2026 06:56:56] Started the program (process 7724)
+[11-11-2026 07:03:50] Not complete (exit code 3, try 8) - trying again in 30 minutes
+[11-11-2026 07:33:50] Started the program (process 1636)
+[11-11-2026 07:39:02] Not complete (exit code 3, try 9) - trying again in 30 minutes
+[11-11-2026 08:09:02] Gave up at 08:00: the Excel file is NOT complete for 2026-11-10 (9 failed, 0 stopped) - see logs\error_*.txt
+[11-11-2026 23:45:03] Watcher started for 2026-11-11
+[11-11-2026 23:45:03] Started the program (process 7592)
+[11-11-2026 23:49:55] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[11-11-2026 23:51:55] Started the program (process 2476)
+[11-11-2026 23:57:28] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[12-11-2026 00:02:31] Waiting for the other program to finish with Chrome
+[12-11-2026 00:16:35] Started the program (process 4396)
+[12-11-2026 00:22:49] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[12-11-2026 00:32:50] Started the program (process 240)
+[12-11-2026 00:39:24] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[12-11-2026 00:54:24] Started the program (process 11072)
+[12-11-2026 01:00:32] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[12-11-2026 01:30:32] Started the program (process 10652)
+[12-11-2026 01:33:12] Not complete (exit code 3, try 6) - trying again in 30 minutes
+[12-11-2026 02:03:12] Started the program (process 5340)
+[12-11-2026 02:05:27] Not complete (exit code 3, try 7) - trying again in 30 minutes
+[12-11-2026 02:35:27] Started the program (process 4664)
+[12-11-2026 02:38:33] Not complete (exit code 3, try 8) - trying again in 30 minutes
+[12-11-2026 03:08:34] Started the program (process 3128)
+[12-11-2026 03:10:48] Not complete (exit code 3, try 9) - trying again in 30 minutes
+[12-11-2026 03:40:48] Started the program (process 10660)
+[12-11-2026 03:43:29] Not complete (exit code 3, try 10) - trying again in 30 minutes
+[12-11-2026 04:13:29] Started the program (process 13100)
+[12-11-2026 04:15:43] Not complete (exit code 3, try 11) - trying again in 30 minutes
+[12-11-2026 04:45:43] Started the program (process 10368)
+[12-11-2026 04:47:58] Not complete (exit code 3, try 12) - trying again in 30 minutes
+[12-11-2026 05:17:58] Started the program (process 9332)
+[12-11-2026 05:20:12] Not complete (exit code 3, try 13) - trying again in 30 minutes
+[12-11-2026 05:50:12] Started the program (process 10632)
+[12-11-2026 05:52:27] Not complete (exit code 3, try 14) - trying again in 30 minutes
+[12-11-2026 06:22:27] Started the program (process 13172)
+[12-11-2026 06:24:41] Not complete (exit code 3, try 15) - trying again in 30 minutes
+[12-11-2026 06:54:41] Started the program (process 15324)
+[12-11-2026 07:03:59] Not complete (exit code 3, try 16) - trying again in 30 minutes
+[12-11-2026 07:33:59] Started the program (process 15032)
+[12-11-2026 07:36:42] Not complete (exit code 3, try 17) - trying again in 30 minutes
+[12-11-2026 08:06:42] Gave up at 08:00: the Excel file is NOT complete for 2026-11-11 (17 failed, 0 stopped) - see logs\error_*.txt
+[12-11-2026 23:45:03] Watcher started for 2026-11-12
+[12-11-2026 23:45:03] Started the program (process 12688)
+[12-11-2026 23:51:46] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[12-11-2026 23:53:46] Started the program (process 9488)
+[12-11-2026 23:59:22] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[13-11-2026 00:04:22] Waiting until 00:15 for the Daily_automation jobs
+[13-11-2026 00:15:04] Started the program (process 7628)
+[13-11-2026 00:17:21] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[13-11-2026 00:27:21] Started the program (process 3420)
+[13-11-2026 00:31:54] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[13-11-2026 00:46:54] Started the program (process 14396)
+[13-11-2026 00:51:59] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[13-11-2026 01:21:59] Started the program (process 11124)
+[13-11-2026 01:27:47] Not complete (exit code 3, try 6) - trying again in 30 minutes
+[13-11-2026 01:57:47] Started the program (process 14852)
+[13-11-2026 02:06:31] Not complete (exit code 3, try 7) - trying again in 30 minutes
+[13-11-2026 02:36:31] Started the program (process 13604)
+[13-11-2026 02:44:18] Not complete (exit code 3, try 8) - trying again in 30 minutes
+[13-11-2026 03:14:19] Started the program (process 11780)
+[13-11-2026 03:23:22] Not complete (exit code 3, try 9) - trying again in 30 minutes
+[13-11-2026 03:53:23] Started the program (process 13356)
+[13-11-2026 04:01:34] Not complete (exit code 3, try 10) - trying again in 30 minutes
+[13-11-2026 04:31:34] Started the program (process 12056)
+[13-11-2026 04:41:17] Not complete (exit code 3, try 11) - trying again in 30 minutes
+[13-11-2026 05:11:18] Started the program (process 11044)
+[13-11-2026 05:22:00] Not complete (exit code 3, try 12) - trying again in 30 minutes
+[13-11-2026 05:52:00] Started the program (process 13756)
+[13-11-2026 06:00:31] Not complete (exit code 3, try 13) - trying again in 30 minutes
+[13-11-2026 06:30:32] Started the program (process 15900)
+[13-11-2026 06:39:41] Not complete (exit code 3, try 14) - trying again in 30 minutes
+[13-11-2026 07:09:42] Started the program (process 15744)
+[13-11-2026 07:15:55] Not complete (exit code 3, try 15) - trying again in 30 minutes
+[13-11-2026 07:45:55] Started the program (process 12996)
+[13-11-2026 07:51:49] Not complete (exit code 3, try 16) - trying again in 30 minutes
+[13-11-2026 08:21:49] Gave up at 08:00: the Excel file is NOT complete for 2026-11-12 (16 failed, 0 stopped) - see logs\error_*.txt
+[13-11-2026 23:45:03] Watcher started for 2026-11-13
+[13-11-2026 23:45:03] Started the program (process 14348)
+[13-11-2026 23:48:50] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[13-11-2026 23:50:50] Started the program (process 16564)
+[13-11-2026 23:53:55] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[13-11-2026 23:59:00] Waiting for the other program to finish with Chrome
+[14-11-2026 00:00:21] The other program's lock was left behind - removing it
+[14-11-2026 00:00:21] Waiting until 00:15 for the Daily_automation jobs
+[14-11-2026 00:15:01] Started the program (process 11232)
+[14-11-2026 00:17:58] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[14-11-2026 00:27:58] Started the program (process 13144)
+[14-11-2026 00:30:49] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[14-11-2026 00:45:49] Started the program (process 11256)
+[14-11-2026 00:49:16] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[14-11-2026 01:19:20] Started the program (process 9136)
+[14-11-2026 01:22:44] Not complete (exit code 3, try 6) - trying again in 30 minutes
+[14-11-2026 01:52:44] Started the program (process 15484)
+[14-11-2026 01:56:38] Not complete (exit code 3, try 7) - trying again in 30 minutes
+[14-11-2026 02:26:38] Started the program (process 16156)
+[14-11-2026 02:31:44] Not complete (exit code 3, try 8) - trying again in 30 minutes
+[14-11-2026 03:01:44] Started the program (process 12272)
+[14-11-2026 03:08:53] Not complete (exit code 3, try 9) - trying again in 30 minutes
+[14-11-2026 03:38:53] Started the program (process 15816)
+[14-11-2026 03:47:30] Not complete (exit code 3, try 10) - trying again in 30 minutes
+[14-11-2026 04:17:30] Started the program (process 8228)
+[14-11-2026 04:26:58] Not complete (exit code 3, try 11) - trying again in 30 minutes
+[14-11-2026 04:56:59] Started the program (process 10096)
+[14-11-2026 05:08:02] Not complete (exit code 3, try 12) - trying again in 30 minutes
+[14-11-2026 05:38:02] Started the program (process 16736)
+[14-11-2026 05:51:39] Not complete (exit code 3, try 13) - trying again in 30 minutes
+[14-11-2026 06:21:39] Started the program (process 7536)
+[14-11-2026 06:33:32] Not complete (exit code 3, try 14) - trying again in 30 minutes
+[14-11-2026 07:03:32] Started the program (process 13904)
+[14-11-2026 07:04:07] Not complete (exit code 3, try 15) - trying again in 30 minutes
+[14-11-2026 07:34:07] Started the program (process 17236)
+[14-11-2026 07:37:15] Not complete (exit code 3, try 16) - trying again in 30 minutes
+[14-11-2026 08:07:15] Gave up at 08:00: the Excel file is NOT complete for 2026-11-13 (16 failed, 0 stopped) - see logs\error_*.txt
+[14-11-2026 23:45:03] Watcher started for 2026-11-14
+[14-11-2026 23:45:03] Started the program (process 8616)
+[14-11-2026 23:51:15] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[14-11-2026 23:53:21] Waiting for the other program to finish with Chrome
+[14-11-2026 23:54:53] Started the program (process 15652)
+[15-11-2026 00:01:25] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[15-11-2026 00:06:29] Waiting for the other program to finish with Chrome
+[15-11-2026 00:17:02] Started the program (process 4280)
+[15-11-2026 00:24:09] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[15-11-2026 00:34:09] Started the program (process 4468)
+[15-11-2026 00:41:05] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[15-11-2026 00:56:05] Started the program (process 17176)
+[15-11-2026 01:02:58] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[15-11-2026 01:32:59] Started the program (process 16088)
+[15-11-2026 01:37:16] Not complete (exit code 3, try 6) - trying again in 30 minutes
+[15-11-2026 02:15:28] Watcher started for 2026-11-14
+[15-11-2026 02:15:38] Waiting for the other program to finish with Chrome
+[15-11-2026 02:17:29] Started the program (process 724)
+[15-11-2026 02:22:29] Finished: the Excel file is complete for 2026-11-14
+[15-11-2026 23:45:04] Watcher started for 2026-11-15
+[15-11-2026 23:45:04] Started the program (process 13600)
+[15-11-2026 23:47:22] Finished: the Excel file is complete for 2026-11-15
+[16-11-2026 23:45:02] Watcher started for 2026-11-16
+[16-11-2026 23:45:02] Started the program (process 20360)
+[16-11-2026 23:45:03] Not complete (exit code 1, try 1) - trying again in 2 minutes
+[16-11-2026 23:47:03] Started the program (process 21628)
+[16-11-2026 23:47:04] Not complete (exit code 1, try 2) - trying again in 5 minutes
+[16-11-2026 23:52:21] Started the program (process 8308)
+[16-11-2026 23:54:43] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[17-11-2026 00:04:44] Waiting until 00:15 for the Daily_automation jobs
+[17-11-2026 00:15:13] Started the program (process 13008)
+[17-11-2026 00:15:19] Finished: the Excel file is complete for 2026-11-16
+[17-11-2026 21:00:47] Watcher started for 2026-11-17
+[17-11-2026 21:00:47] Started the program (process 21252)
+[17-11-2026 21:00:54] Not complete (exit code 3221225786, try 1) - trying again in 2 minutes
+[17-11-2026 21:02:54] Started the program (process 16860)
+[17-11-2026 21:03:11] Not complete (exit code 3221225786, try 2) - trying again in 5 minutes
+[17-11-2026 21:08:11] Started the program (process 7264)
+[17-11-2026 21:11:31] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[17-11-2026 21:21:34] Started the program (process 17432)
+[17-11-2026 21:23:28] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[17-11-2026 21:38:30] Started the program (process 22412)
+[17-11-2026 21:41:58] Not complete (exit code 3, try 5) - trying again in 30 minutes
+[17-11-2026 22:11:58] Started the program (process 20860)
+[17-11-2026 22:12:55] Not complete (exit code 3221225786, try 6) - trying again in 30 minutes
+[17-11-2026 22:42:55] Started the program (process 23372)
+[17-11-2026 22:43:00] Not complete (exit code 3221225786, try 7) - trying again in 30 minutes
+[17-11-2026 23:13:00] Started the program (process 9084)
+[17-11-2026 23:13:47] Not complete (exit code 3, try 8) - trying again in 30 minutes
+[17-11-2026 23:43:47] Started the program (process 21484)
+[17-11-2026 23:45:02] Not complete (exit code 3, try 9) - trying again in 30 minutes
+[18-11-2026 00:15:06] Waiting for the other program to finish with Chrome
+[18-11-2026 00:18:19] Started the program (process 16556)
+[18-11-2026 00:19:13] Finished: the Excel file is complete for 2026-11-17
+[18-11-2026 00:25:17] Watcher started for 2026-11-17
+[18-11-2026 00:25:23] Waiting for the other program to finish with Chrome
+[18-11-2026 00:25:43] Started the program (process 22144)
+[18-11-2026 00:27:13] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[18-11-2026 00:29:14] Started the program (process 12240)
+[18-11-2026 00:30:42] Stopped by stop.bat
+[18-11-2026 23:45:23] Watcher started for 2026-11-18
+[18-11-2026 23:45:23] Started the program (process 21296)
+[18-11-2026 23:50:47] Finished: the Excel file is complete for 2026-11-18
+[19-11-2026 23:45:02] Watcher started for 2026-11-19
+[19-11-2026 23:45:03] Started the program (process 1944)
+[19-11-2026 23:57:27] Not complete (exit code 3, try 1) - trying again in 2 minutes
+[19-11-2026 23:59:33] Waiting for the other program to finish with Chrome
+[20-11-2026 00:30:58] Started the program (process 23800)
+[20-11-2026 00:37:08] Not complete (exit code 3, try 2) - trying again in 5 minutes
+[20-11-2026 00:43:07] Waiting for the other program to finish with Chrome
+[20-11-2026 00:59:11] Started the program (process 17996)
+[20-11-2026 01:04:07] Not complete (exit code 3, try 3) - trying again in 10 minutes
+[20-11-2026 01:14:19] Waiting for the other program to finish with Chrome
+[20-11-2026 01:23:59] Started the program (process 22996)
+[20-11-2026 01:29:12] Not complete (exit code 3, try 4) - trying again in 15 minutes
+[20-11-2026 01:44:23] Waiting for the other program to finish with Chrome
+[20-11-2026 01:58:42] Started the program (process 17212)
+[20-11-2026 02:04:05] Finished: the Excel file is complete for 2026-11-19

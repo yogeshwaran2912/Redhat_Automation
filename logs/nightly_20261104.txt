@@ -1,0 +1,110 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:05] Date: 04-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:05] 
+[23:45:05] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[23:45:10] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:11] Closed 2 old tab(s) of individualexamscheduler
+[23:45:11] Waking up Chrome tabs
+[23:45:21] Connected to Chrome
+[23:45:23] Clicked menu > Exam Deliveries
+[23:45:25] Status = Completed
+[23:45:27] Time Zone = Asia/Calcutta
+[23:45:28] From = 2026-11-04
+[23:45:29] To = 2026-11-04
+[23:45:31] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2093
+[23:45:31] Searching location 2093
+[23:45:37]   1 - 1 of 1 result(s)
+[23:45:37]   skipped (status No Show): Pooja V A
+[23:45:39] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2337
+[23:45:39] Searching location 2337
+[23:45:46]   1 - 2 of 2 result(s)
+[23:45:46]   yesuraja s | 9566820572 | yryesuraja@gmail.com | EX280 | LMS-2936147 -> y
+[23:45:46]   Ann Sunil | 7510843931 | ann.s.madathumpadikal@gmail.com | EX200 | LMS-2940654 -> y
+[23:45:48] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2394
+[23:45:48] Searching location 2394
+[23:45:54]   1 - 1 of 1 result(s)
+[23:45:54]   Pooja Chandrasekaran | 9043179871 | pujac2820@gmail.com | EX294 | LMS-2880506 -> y
+[23:45:54] 3 completed exam(s) on 04-Nov-2026
+[23:46:01] Opening Adv Pro
+[23:46:04] Adv Pro: logged in
+[23:46:06] Adv Pro: Master > Registration > Display
+[23:46:14] Adv Pro: Filter By = PresentPhoneNo
+[23:46:18]   Adv Pro 9566820572 yesuraja s: y
+[23:46:21]   Adv Pro 7510843931 Ann Sunil: n
+[23:46:23]   Adv Pro 9043179871 Pooja Chandrasekaran: y
+[23:46:24]   row 32: yesuraja s | 9566820572 | yryesuraja@gmail.com | EX280 | y | our student y  (2337)
+[23:46:24]   row 33: Ann Sunil | 7510843931 | ann.s.madathumpadikal@gmail.com | EX200 | y | our student n  (2337)
+[23:46:24]   row 34: Pooja Chandrasekaran | 9043179871 | pujac2820@gmail.com | EX294 | y | our student y  (2394)
+[23:46:24] Sheet NOV: 3 row(s) added
+[23:46:24] Backup saved: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\backups\redhat exam 2026_20261104_234624.xlsx
+[23:46:26] Excel file saved
+[23:46:26] 
+[23:46:26] ========== Step 2/4: Feedback (Google Sheet) ==========
+[23:46:30] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[23:46:31] Waking up Chrome tabs
+[23:47:03] Connected to Chrome
+[23:47:11] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[23:47:11] Feedback timestamps are month/day
+[23:47:11] 4 feedback response(s) on 04-Nov-2026
+[23:47:14]   row 32 yesuraja s <- feedback 'Yesuraja s' (matched by email): company 'Capgemini' | designation 'Linux admin' | remark 'Really good thank you'
+[23:47:14]   row 34 Pooja Chandrasekaran <- feedback 'Pooja' (matched by email): company 'Voya' | designation 'Senior software engineer' | remark 'Its good'
+[23:47:14] 2 response(s) not in the Red Hat sheet (Pearson VUE or other exams):
+[23:47:14]     - Tamilarasan | 7092080318 | arasu348@gmail.com
+[23:47:14]     - Ineavan M | 9566197617 | ineavancnd@gmail.com
+[23:47:14] Sheet NOV: 2 row(s) updated with feedback
+[23:47:14] Backup saved: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\backups\redhat exam 2026_20261104_234714.xlsx
+[23:47:16] Excel file saved
+[23:47:16] 
+[23:47:16] ========== Step 3/4: LinkedIn (Outlook) ==========
+[23:47:17] Sheet NOV: 3 email(s) without a LinkedIn Id on 04-Nov-2026
+[23:47:17]   row 32: yesuraja s | yryesuraja@gmail.com
+[23:47:17]   row 33: Ann Sunil | ann.s.madathumpadikal@gmail.com
+[23:47:17]   row 34: Pooja Chandrasekaran | pujac2820@gmail.com
+[23:47:21] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[23:47:22] Waking up Chrome tabs
+[23:47:45] Connected to Chrome
+[23:47:51] Clicked New mail
+[23:47:55] [1/3] yesuraja s | yryesuraja@gmail.com
+[23:48:06]     LinkedIn: https://www.linkedin.com/in/yesuraja-s-7294b638/
+[23:48:08] [2/3] Ann Sunil | ann.s.madathumpadikal@gmail.com
+[23:48:17]     LinkedIn: https://www.linkedin.com/in/ann-sunil/
+[23:48:19] [3/3] Pooja Chandrasekaran | pujac2820@gmail.com
+[23:48:28]     LinkedIn: https://www.linkedin.com/in/pooja-chandrasekaran-740b491b1/
+[23:48:32] Draft discarded
+[23:48:32] LinkedIn found for 3 of 3 email(s)
+[23:48:35]   row 32: yesuraja s -> https://www.linkedin.com/in/yesuraja-s-7294b638/
+[23:48:35]   row 33: Ann Sunil -> https://www.linkedin.com/in/ann-sunil/
+[23:48:35]   row 34: Pooja Chandrasekaran -> https://www.linkedin.com/in/pooja-chandrasekaran-740b491b1/
+[23:48:35] Backup saved: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\backups\redhat exam 2026_20261104_234835.xlsx
+[23:48:37] Excel file saved - 3 LinkedIn URL(s) written to sheet NOV
+[23:48:37] 
+[23:48:37] ========== Step 4/4: Excel check ==========
+[23:48:40] Excel complete for 04-Nov-2026: 3 row(s) in sheet NOV, 3 found on Red Hat
+[23:48:40] 
+[23:48:40] ========== Summary ==========
+[23:48:40]   Exams (Red Hat + Adv Pro): OK
+[23:48:40]   Feedback (Google Sheet): OK
+[23:48:40]   LinkedIn (Outlook): OK
+[23:48:40]   Excel check: OK
+[23:48:40] Done

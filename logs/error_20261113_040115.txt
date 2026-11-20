@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 100, in <lambda>
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 352, in run
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 190, in fetch_feedback
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 315, in open_chrome
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 251, in attach_driver
+RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds

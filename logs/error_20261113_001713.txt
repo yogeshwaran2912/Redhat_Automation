@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 100, in <lambda>
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 352, in run
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 191, in fetch_feedback
+TypeError: argument of type 'NoneType' is not iterable

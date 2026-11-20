@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 100, in <lambda>
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 352, in run
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 194, in fetch_feedback
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 97, in download_feedback_csv
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\feedback_from_sheet.py", line 114, in fetch_feedback_csv
+  File "C:\Users\ADV PRO\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 635, in execute_async_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 506, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ADV PRO\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7AFB638A5+3004357]
+	(No symbol) [0x00007FF7AF7F9970]
+	(No symbol) [0x00007FF7AF6A582A]
+	(No symbol) [0x00007FF7AF67FA75]
+	(No symbol) [0x00007FF7AF722C77]
+	(No symbol) [0x00007FF7AF73B351]
+	(No symbol) [0x00007FF7AF71B983]
+	(No symbol) [0x00007FF7AF6E7628]
+	(No symbol) [0x00007FF7AF6E8791]
+	GetHandleVerifier [0x00007FF7AFB8A00D+3161901]
+	GetHandleVerifier [0x00007FF7AFBDE060+3506048]
+	GetHandleVerifier [0x00007FF7AFBD400D+3465005]
+	GetHandleVerifier [0x00007FF7AF950EEB+830987]
+	(No symbol) [0x00007FF7AF80467F]
+	(No symbol) [0x00007FF7AF8009D4]
+	(No symbol) [0x00007FF7AF800B6D]
+	(No symbol) [0x00007FF7AF7F0149]
+	BaseThreadInitThunk [0x00007FFA1BB97374+20]
+	RtlUserThreadStart [0x00007FFA1D53CC91+33]
+

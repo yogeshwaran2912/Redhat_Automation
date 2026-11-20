@@ -1,3 +1,4 @@
+# Created by YOGESHWARAN TL
 """
 Red Hat Exam Scheduler + Adv Pro  ->  "redhat exam 2026.xlsx"
 
@@ -12,6 +13,9 @@ Steps
      PresentPhoneNo and search every phone number: found = "y" (our student),
      not found = "n".
   4. Back up the Excel file, add the rows to the month sheet, save.
+  5. Kiosk table at the top of the month sheet (Date | 2093 | 2337 | 2394 | exam number):
+     every exam of the day at each location (Completed + Scheduled search, also
+     No Show), and the total. Empty cells only.
 
 Usage
   python redhat_automation.py                    # asks for the date (Enter = today)
@@ -23,11 +27,13 @@ import argparse
 import configparser
 import datetime as dt
 import json
+import os
 import re
 import shutil
 import socket
 import subprocess
 import sys
+import threading
 import time
 import urllib.request
 import warnings
@@ -37,6 +43,7 @@ from pathlib import Path
 import openpyxl
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
@@ -53,6 +60,10 @@ def log(msg):
 
 
 def ask_user(msg):
+    # In the nightly run nobody can do what is asked, and the Enter key presses fed
+    # from a file would make the script carry on as if it had been done.
+    if not sys.stdin or not sys.stdin.isatty():
+        raise RuntimeError(f"Needs a person at the computer: {msg}")
     input(f"\n>>> {msg}\n    Press Enter when done... ")
 
 
@@ -145,13 +156,15 @@ def shortcut_profile(name):
     for desktop in (Path.home() / "Desktop", Path(r"C:\Users\Public\Desktop")):
         lnk = desktop / name
         if lnk.exists():
-            args = subprocess.run(
-                ["powershell", "-NoProfile", "-Command",
-                 f"(New-Object -ComObject WScript.Shell).CreateShortcut('{lnk}').Arguments"],
-                capture_output=True, text=True).stdout
-            m = re.search(r'--profile-directory=(?:"([^"]+)"|(\S+))', args)
-            if m:
-                return m.group(1) or m.group(2)
+            for attempt in range(3):  # PowerShell sometimes comes back empty; the next try works
+                args = subprocess.run(
+                    ["powershell", "-NoProfile", "-Command",
+                     f"(New-Object -ComObject WScript.Shell).CreateShortcut('{lnk}').Arguments"],
+                    capture_output=True, text=True).stdout
+                m = re.search(r'--profile-directory=(?:"([^"]+)"|(\S+))', args)
+                if m:
+                    return m.group(1) or m.group(2)
+                time.sleep(2)
             raise RuntimeError(f"No --profile-directory in shortcut {lnk}")
     raise RuntimeError(f"Shortcut not found on the Desktop: {name}")
 
@@ -183,18 +196,73 @@ def activate_tab(port, tab_id):
         pass
 
 
+def close_tab(port, tab_id):
+    try:
+        urllib.request.urlopen(f"http://127.0.0.1:{port}/json/close/{tab_id}", timeout=10).close()
+    except Exception:
+        pass
+
+
 def wake_tabs(port):
     """Chrome freezes background tabs and ChromeDriver hangs on a frozen tab;
     bringing each tab to the front for a moment wakes it up."""
-    for t in chrome_pages(port):
-        if t["url"].startswith("http"):
-            activate_tab(port, t["id"])
-            time.sleep(0.3)
+    for t in chrome_pages(port):  # every tab: a frozen chrome://newtab hangs it too
+        activate_tab(port, t["id"])
+        time.sleep(0.3)
 
 
-def open_chrome(cfg, section, start_url, match):
+_DRIVERS = []  # ChromeDriver sessions opened by this program (stopped by step_cleanup)
+
+
+def try_attach(port, target_id, wait):
+    """One try at connecting ChromeDriver -> (driver, None) or (None, why it failed)."""
+    opts = Options()
+    opts.add_experimental_option("debuggerAddress", f"127.0.0.1:{port}")
+    service = Service()
+    result = {}
+
+    def connect():
+        try:
+            driver = webdriver.Chrome(service=service, options=opts)
+            driver.switch_to.window(target_id)
+            result["driver"] = driver
+        except Exception as e:
+            result["error"] = f"{type(e).__name__}: {(str(e).splitlines() or [''])[0][:120]}"
+
+    thread = threading.Thread(target=connect, daemon=True)
+    thread.start()
+    thread.join(wait)
+    if "driver" in result:
+        _DRIVERS.append(result["driver"])
+        return result["driver"], None
+    process = getattr(service, "process", None)
+    if process:
+        try:
+            process.kill()  # also frees the thread if it is stuck
+        except Exception:
+            pass
+    return None, result.get("error") or f"no answer in {wait} seconds"
+
+
+def attach_driver(port, target_id, tries=3, wait=60):
+    """ChromeDriver can hang on a frozen tab and Selenium would only give up after
+    120 seconds, failing the step - so give up sooner, wake the tabs and try again."""
+    for attempt in range(1, tries + 1):
+        driver, why = try_attach(port, target_id, wait)
+        if driver:
+            return driver
+        log(f"Could not connect to Chrome (try {attempt} of {tries}): {why}")
+        if attempt < tries:
+            wake_tabs(port)
+            activate_tab(port, target_id)
+            time.sleep(2)
+    raise RuntimeError(f"Could not connect to Chrome after {tries} tries: {why}")
+
+
+def open_chrome(cfg, section, start_url, match, close_old=None):
     """Open start_url in the Chrome profile of the section's Desktop shortcut and
-    return the Selenium driver switched to that tab.
+    return the Selenium driver switched to that tab. close_old: every other tab
+    with this text in its address is closed, so only the new tab is left.
 
     Chrome is started with a debug port so the script can control it. That only
     works if Chrome was fully closed before the first launch.
@@ -228,11 +296,13 @@ def open_chrome(cfg, section, start_url, match):
 
     # find the tab that just opened start_url (newest first) without touching the others
     target = None
-    end = time.time() + 30
+    start = time.time()
+    end = start + 30
     while time.time() < end and not target:
         pages = [t for t in chrome_pages(port) if match in t["url"]]
         new = [t for t in pages if t["id"] not in before]
-        target = (new or pages or [None])[0]
+        # give the new tab time to show its address before settling for an old one
+        target = (new or (pages if time.time() - start > 10 else []) or [None])[0]
         if not target:
             time.sleep(1)
     if not target:
@@ -241,14 +311,17 @@ def open_chrome(cfg, section, start_url, match):
         if not target:
             raise RuntimeError(f"No Chrome tab with {match}")
 
+    if close_old:
+        old = [t for t in chrome_pages(port) if close_old in t["url"] and t["id"] != target["id"]]
+        for t in old:
+            close_tab(port, t["id"])
+        log(f"Closed {len(old)} old tab(s) of {close_old}")
+
     log("Waking up Chrome tabs")
     wake_tabs(port)
     activate_tab(port, target["id"])
-    opts = Options()
-    opts.add_experimental_option("debuggerAddress", f"127.0.0.1:{port}")
-    driver = webdriver.Chrome(options=opts)
+    driver = attach_driver(port, target["id"])
     log("Connected to Chrome")
-    driver.switch_to.window(target["id"])
     return driver
 
 
@@ -296,6 +369,14 @@ def wait_for(driver, css, timeout=20):
     return None
 
 
+def need(driver, css, label, timeout=20):
+    """wait_for, but a missing box is an error that says what is missing."""
+    el = wait_for(driver, css, timeout=timeout)
+    if not el:
+        raise RuntimeError(f"{label} box not found on the page: {driver.current_url}")
+    return el
+
+
 def type_into(el, value):
     el.click()
     el.send_keys(Keys.CONTROL, "a")
@@ -313,20 +394,38 @@ DATE_TO = "input[formcontrolname=searchToDateControl]"
 
 
 def open_exam_deliveries(driver):
-    end = time.time() + 30
-    while time.time() < end and not driver.find_elements(By.CSS_SELECTOR, ".menuIconCls"):
-        if "sso.redhat.com" in driver.current_url or "login" in driver.current_url.lower():
-            ask_user("Please log in to Red Hat in the Chrome window.")
-            end = time.time() + 30
-        time.sleep(1)
-    menu = wait_for(driver, ".menuIconCls", timeout=5)
-    if menu:
-        click(driver, menu)
-        time.sleep(1)
-    if click_text(driver, "Exam Deliveries", timeout=10):
-        log("Clicked menu > Exam Deliveries")
-    if not wait_for(driver, STATUS, timeout=20):
-        ask_user("Could not open 'Exam Deliveries'. Click the 3 lines (top left) > Exam Deliveries.")
+    for attempt in (1, 2):
+        end = time.time() + 30
+        while time.time() < end and not driver.find_elements(By.CSS_SELECTOR, ".menuIconCls"):
+            if "sso.redhat.com" in driver.current_url or "login" in driver.current_url.lower():
+                ask_user("Please log in to Red Hat in the Chrome window.")
+                end = time.time() + 30
+            time.sleep(1)
+        menu = wait_for(driver, ".menuIconCls", timeout=5)
+        if menu:
+            click(driver, menu)
+            time.sleep(1)
+        if click_text(driver, "Exam Deliveries", timeout=10):
+            log("Clicked menu > Exam Deliveries")
+        if wait_for(driver, STATUS, timeout=20):
+            time.sleep(1)
+            return
+        log(f"'Exam Deliveries' did not open (try {attempt} of 2) - page: {driver.current_url}")
+        if attempt == 1:
+            driver.refresh()
+
+    page = f"{driver.current_url} ({driver.title})"
+    shot = HERE / "logs" / f"exam_deliveries_failed_{dt.datetime.now():%Y%m%d_%H%M%S}.png"
+    try:
+        shot.parent.mkdir(exist_ok=True)
+        driver.save_screenshot(str(shot))
+        log(f"Screenshot of the page saved: logs\\{shot.name}")
+    except Exception:
+        pass
+    ask_user(f"Could not open 'Exam Deliveries' (page: {page}). "
+             "Click the 3 lines (top left) > Exam Deliveries.")
+    if not wait_for(driver, STATUS, timeout=10):
+        raise RuntimeError(f"'Exam Deliveries' did not open - page: {page}")
     time.sleep(1)
 
 
@@ -343,7 +442,7 @@ def pick_option(driver, text, timeout=10):
 
 
 def set_status(driver, status):
-    sel = wait_for(driver, STATUS)
+    sel = need(driver, STATUS, "Status")
     if clean_cell_text(sel.text).lower().endswith(status.lower()):
         return
     click(driver, sel)
@@ -355,7 +454,7 @@ def set_status(driver, status):
 
 
 def set_autocomplete(driver, css, typed, option_text, label):
-    el = wait_for(driver, css)
+    el = need(driver, css, label)
     type_into(el, typed)
     time.sleep(1)
     if not pick_option(driver, option_text):
@@ -365,7 +464,7 @@ def set_autocomplete(driver, css, typed, option_text, label):
 
 
 def set_date(driver, css, date, label):
-    el = wait_for(driver, css)
+    el = need(driver, css, label)
     type_into(el, date.isoformat())
     el.send_keys(Keys.TAB)
     time.sleep(0.5)
@@ -429,6 +528,9 @@ def read_page(driver, done_before=None, must_ask=True, settle=1.0, timeout=30):
                 break
             time.sleep(0.3)
         else:
+            # the table still shows the last search: reading it could look like "no exams"
+            if must_ask:
+                raise RuntimeError("The Red Hat page did not answer the search in time")
             log("  (the page did not answer in time - reading the table anyway)")
     last = None
     while True:
@@ -473,7 +575,8 @@ def click_button(driver, text, timeout=5):
     return False
 
 
-def search_location(driver, cfg, date, code):
+def search_rows(driver, code):
+    """Search one location (with the Status already chosen) -> every row of every page."""
     set_autocomplete(driver, LOCATION, code, f"- {code}", "Location")
     before = requests_done(driver)
     if not click_button(driver, "SEARCH"):
@@ -497,11 +600,23 @@ def search_location(driver, cfg, date, code):
         seen_pages.add(page["label"])
         rows += page["rows"]
     log(f"  {page['label'] or len(rows)} result(s)")
+    return rows
 
+
+def is_test_booking(r):
+    # Red Hat's own test booking, not a candidate
+    return exam_code(r["examCodeName"]) == "EX999" or clean_cell_text(r["candidateEmail"]).lower().endswith("@redhat.com")
+
+
+def search_location(driver, cfg, date, code, rows=None):
+    rows = search_rows(driver, code) if rows is None else rows
     people = []
     status = cfg.get("redhat", "status").lower()
     for r in rows:
         name = clean_cell_text(r["candidateName"])
+        if is_test_booking(r):
+            log(f"  skipped (Red Hat test booking): {name} | {r['candidateEmail']}")
+            continue
         # safety: only that location, that day and that status
         if code not in r["locationName"]:
             log(f"  skipped (other location): {name} | {r['locationName']}")
@@ -524,18 +639,44 @@ def search_location(driver, cfg, date, code):
 
 
 def scrape_redhat(cfg, date):
-    driver = open_chrome(cfg, "redhat", cfg.get("redhat", "url"), "rhtapps.redhat.com")
+    driver = open_chrome(cfg, "redhat", cfg.get("redhat", "url"), "rhtapps.redhat.com",
+                         close_old="individualexamscheduler")
     open_exam_deliveries(driver)
     set_status(driver, cfg.get("redhat", "status"))
     tz = cfg.get("redhat", "time_zone")
     set_autocomplete(driver, TIMEZONE, tz, tz, "Time Zone")
     set_date(driver, DATE_FROM, date, "From")
     set_date(driver, DATE_TO, date, "To")
-    people = []
-    for code in [c.strip() for c in cfg.get("redhat", "locations").split(",") if c.strip()]:
-        people += search_location(driver, cfg, date, code)
+    codes = [c.strip() for c in cfg.get("redhat", "locations").split(",") if c.strip()]
+    people, kiosk = [], {c: {} for c in codes}
+    for code in codes:
+        rows = search_rows(driver, code)
+        people += search_location(driver, cfg, date, code, rows)
+        add_kiosk(kiosk, date, code, rows)
     log(f"{len(people)} completed exam(s) on {date:%d-%b-%Y}")
-    return people
+    # the kiosk table counts every exam of the day, so also the ones still "Scheduled"
+    for status in [s.strip() for s in cfg.get("redhat", "kiosk_statuses", fallback="Scheduled").split(",") if s.strip()]:
+        if status.lower() == cfg.get("redhat", "status").lower():
+            continue
+        set_status(driver, status)
+        for code in codes:
+            add_kiosk(kiosk, date, code, search_rows(driver, code))
+    counts = {c: len(v) for c, v in kiosk.items()}
+    for c, v in kiosk.items():
+        log(f"  kiosk {c}: {len(v)} exam(s)" + (f" - {', '.join(sorted(v.values()))}" if v else ""))
+    return people, counts
+
+
+def add_kiosk(kiosk, date, code, rows):
+    """Count each exam of the day at this location once (any status except cancelled)."""
+    for r in rows:
+        if is_test_booking(r) or code not in r["locationName"] or not r["examStartDateTime"].startswith(date.isoformat()):
+            continue
+        if "cancel" in r["statusDisplay"].lower():
+            continue
+        key = (clean_cell_text(r["eligibilityCode"]) or clean_cell_text(r["candidateName"]).lower(),
+               exam_code(r["examCodeName"]), r["examStartDateTime"])
+        kiosk[code][key] = f"{clean_cell_text(r['candidateName'])} ({r['statusDisplay']})"
 
 
 # ---------------------------------------------------------------- adv pro
@@ -554,14 +695,16 @@ class AdvPro:
         exe = cfg.get("advpro", "exe")
         try:
             self.app = Application(backend="win32").connect(path=Path(exe).name, timeout=2)
+            self.opened = False
             log("Adv Pro is already open")
         except Exception:
             log("Opening Adv Pro")
             self.app = Application(backend="win32").start(f'"{exe}"', work_dir=str(Path(exe).parent))
+            self.opened = True
         self.main = self.app.window(class_name="ThunderRT6MDIForm")
         self.login()
         self.form = self.open_display()
-        self.grid = self.form.child_window(class_name=self.GRID).wrapper_object()
+        self.grid = self.find_grid()
         self.search = self.form.child_window(class_name="ThunderRT6TextBox", control_id=51).wrapper_object()
         combo = self.form.child_window(class_name="ThunderRT6ComboBox", control_id=52).wrapper_object()
         combo.select("PresentPhoneNo")
@@ -593,10 +736,27 @@ class AdvPro:
         log("Adv Pro: logged in")
 
     def display_form(self):
+        """The Registration > Display screen: it has the search box (51), Filter By (52) and
+        a list. Another screen left open by someone (it may have many lists on hidden tabs)
+        is not it - then Display is opened from the menu next to it."""
         for child in self.main.children(class_name="ThunderRT6FormDC"):
-            if child.is_visible() and child.children(class_name=self.GRID):
+            if not child.is_visible():
+                continue
+            kinds = {(c.class_name(), c.control_id()) for c in child.children()}
+            if (("ThunderRT6TextBox", 51) in kinds and ("ThunderRT6ComboBox", 52) in kinds
+                    and any(k == self.GRID for k, _ in kinds)):
                 return self.main.child_window(handle=child.handle)
         return None
+
+    def find_grid(self):
+        """The list that is really on the screen (hidden tabs move theirs far off to the left)."""
+        form = self.form.wrapper_object()
+        fr = form.rectangle()
+        grids = [g for g in form.children() if g.class_name() == self.GRID and g.is_visible()]
+        shown = [g for g in grids if g.rectangle().left >= fr.left and g.rectangle().right <= fr.right + 5]
+        if not (shown or grids):
+            raise RuntimeError("Adv Pro: no list found on the Registration Display screen")
+        return (shown or grids)[0]
 
     def open_display(self):
         form = self.display_form()
@@ -643,6 +803,26 @@ class AdvPro:
             pixels = None
         return uia, pixels
 
+    def close(self):
+        """Close Adv Pro when this program opened it (left open if someone had it open)."""
+        if not getattr(self, "opened", False):
+            log("Adv Pro was already open before - left open")
+            return
+        try:
+            self.main.close()
+            for _ in range(10):
+                time.sleep(0.5)
+                if not self.app.is_process_running():
+                    break
+            else:
+                self.app.kill()  # an "exit?" question or a stuck window
+        except Exception:
+            try:
+                self.app.kill()
+            except Exception:
+                pass
+        log("Adv Pro closed")
+
     def is_student(self, phone):
         p = phone10(phone)
         if not p:
@@ -661,6 +841,9 @@ class AdvPro:
         if uia is not None and pixels is not None and uia != pixels:
             log(f"  ? Adv Pro {p}: unsure (list check {uia}, screen check {pixels}) - check by hand")
         found = uia if uia is not None else pixels
+        if found is None:  # neither check worked - that is not the same as "not our student"
+            log(f"  ? Adv Pro {p}: could not read the list - 'Our Student' left blank")
+            return ""
         return "y" if found else "n"
 
 
@@ -669,23 +852,36 @@ def check_advpro(cfg, people):
     if not todo:
         return
     adv = AdvPro(cfg)
-    adv.main.set_focus()  # keep it in front for the screen check
-    for p in people:
-        if not phone10(p["phone"]):
-            log(f"  Adv Pro: {p['name']} has no phone number - 'Our Student' left blank")
-            continue
-        p["our_student"] = adv.is_student(p["phone"])
-        log(f"  Adv Pro {phone10(p['phone'])} {p['name']}: {p['our_student']}")
+    try:
+        adv.main.set_focus()  # keep it in front for the screen check
+        for p in people:
+            if not phone10(p["phone"]):
+                log(f"  Adv Pro: {p['name']} has no phone number - 'Our Student' left blank")
+                continue
+            p["our_student"] = adv.is_student(p["phone"])
+            log(f"  Adv Pro {phone10(p['phone'])} {p['name']}: {p['our_student']}")
+    finally:
+        adv.close()
 
 
 # ---------------------------------------------------------------- excel
 
-def check_excel_closed(path):
-    try:
-        with open(path, "r+b"):
-            pass
-    except PermissionError:
-        sys.exit(f"The Excel file is open on some computer. Close it and run again:\n  {path}")
+def check_excel_closed(path, wait_seconds=300):
+    """Wait a while for the Excel file to be closed. An error (not sys.exit), so
+    main.py still runs the other steps."""
+    end = time.time() + wait_seconds
+    told = False
+    while True:
+        try:
+            with open(path, "r+b"):
+                return
+        except PermissionError:
+            if time.time() >= end:
+                raise RuntimeError(f"The Excel file is open on some computer. Close it and run again: {path}")
+            if not told:
+                log(f"The Excel file is open on some computer - close it. Waiting up to {wait_seconds // 60} minutes...")
+                told = True
+            time.sleep(15)
 
 
 def month_sheet(wb, date):
@@ -693,7 +889,50 @@ def month_sheet(wb, date):
     for ws in wb.worksheets:
         if ws.title.strip().upper().startswith(abbr):
             return ws
-    raise RuntimeError(f"No sheet for {abbr} in the Excel file - add it first (copy last month's).")
+    return new_month_sheet(wb, date, abbr)
+
+
+def new_month_sheet(wb, date, abbr):
+    """New month: copy the last month's sheet, with no candidates and no exam counts,
+    and the new month's dates (Monday to Friday) in the count table at the top."""
+    prev = [ws for ws in wb.worksheets if ws.title.strip().upper()[:3] in MONTHS][-1]
+    ws = wb.copy_worksheet(prev)
+    ws.title = abbr
+    hr = header_row(ws)
+    last = last_data_row(ws, hr)
+    if last > hr + 1:
+        ws.delete_rows(hr + 2, last - hr - 1)
+    for c in range(1, ws.max_column + 1):  # this empty row keeps the formatting for the new rows
+        ws.cell(hr + 1, c).value = None
+    if isinstance(ws["A1"].value, str):
+        ws["A1"].value = re.sub(r"^\s*[A-Za-z]+", date.strftime("%B"), ws["A1"].value, count=1)
+
+    table = []
+    for r in range(3, hr):
+        if any(str(ws.cell(r, c).value or "").strip().lower() == "total" for c in range(1, 6)):
+            break
+        table.append(r)
+    first = date.replace(day=1)
+    days = [first + dt.timedelta(days=i) for i in range(31)]
+    days = [d for d in days if d.month == date.month and d.weekday() < 5]
+    for r in table:
+        for c in (1, 2, 3, 4):  # the date and the 3 location counts; "exam number" keeps its formula
+            ws.cell(r, c).value = None
+    for r, day in zip(table, days):
+        ws.cell(r, 1).value = dt.datetime(day.year, day.month, day.day)
+    if len(days) > len(table):
+        log(f"  ! The count table has room for {len(table)} of the {len(days)} working days - add the rest by hand")
+    log(f"Created new sheet {abbr} from {prev.title}")
+    return ws
+
+
+def check_workbook_year(path, date):
+    """The sheets are only named by month: a January 2027 run would add its rows to
+    January 2026 in the 2026 file."""
+    m = re.search(r"20\d\d", Path(path).stem)
+    if m and int(m.group(0)) != date.year:
+        raise RuntimeError(f"The Excel file is for {m.group(0)} but the date is {date:%d-%b-%Y} - "
+                           "start the new year's file and change [excel] path in config.ini")
 
 
 def header_row(ws):
@@ -711,6 +950,8 @@ def sheet_columns(ws, hr):
         h = str(ws.cell(hr, c).value or "").strip().lower()
         if h:
             cols.setdefault(h, c)
+    if "exem code" in cols:  # spelled this way in the JAN-SEP sheets
+        cols.setdefault("exam code", cols["exem code"])
     for need in ("date", "name", "phone no", "email id", "exam code", "exam status", "our student y/n"):
         if need not in cols:
             raise RuntimeError(f"Column '{need}' not found in sheet {ws.title}")
@@ -732,6 +973,21 @@ def last_data_row(ws, hr):
     return hr
 
 
+def safe_save(wb, path):
+    """Save to a new file, check it, then swap it in: being stopped halfway
+    through a save can't damage the real Excel file."""
+    path = Path(path)
+    for stale in path.parent.glob(f"~tmp_{path.stem}_*.xlsx"):  # left by a run that was stopped
+        stale.unlink(missing_ok=True)
+    tmp = path.with_name(f"~tmp_{path.stem}_{os.getpid()}.xlsx")
+    try:
+        wb.save(tmp)
+        openpyxl.load_workbook(tmp, read_only=True).close()
+        os.replace(tmp, path)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+
 def update_excel(path, date, people, backup_dir, dry_run=False):
     wb = openpyxl.load_workbook(path)
     ws = month_sheet(wb, date)
@@ -743,16 +999,29 @@ def update_excel(path, date, people, backup_dir, dry_run=False):
                 if cell_date(ws.cell(r, cols["date"]).value) == date]
 
     def same_person(r, p):
+        # the same person can take two different exams on one day: those are two rows
+        code = str(ws.cell(r, cols["exam code"]).value or "").strip().upper()
+        if code and p["code"] and code[:5] != p["code"][:5]:
+            return False
         email = p["email"].lower()
-        return ((email and email == str(ws.cell(r, cols["email id"]).value or "").strip().lower())
-                or (phone10(p["phone"]) and phone10(p["phone"]) == phone10(ws.cell(r, cols["phone no"]).value))
-                or norm_name(p["name"]) == norm_name(ws.cell(r, cols["name"]).value))
+        row_email = str(ws.cell(r, cols["email id"]).value or "").strip().lower()
+        if (email and email == row_email) or norm_name(p["name"]) == norm_name(ws.cell(r, cols["name"]).value):
+            return True
+        # a shared number (family, company) with another name and email is another person
+        return not row_email and phone10(p["phone"]) and phone10(p["phone"]) == phone10(ws.cell(r, cols["phone no"]).value)
 
-    added = 0
+    added = filled = 0
     for p in people:
         rows = day_rows()
-        if any(same_person(r, p) for r in rows if not is_blank(ws.cell(r, cols["name"]).value)):
+        existing = next((r for r in rows if not is_blank(ws.cell(r, cols["name"]).value) and same_person(r, p)), None)
+        if existing:
             log(f"  already in sheet: {p['name']}")
+            # a run whose Adv Pro check failed left this blank - fill it now
+            student = ws.cell(existing, cols["our student y/n"])
+            if p["our_student"] and is_blank(student.value):
+                student.value = p["our_student"]
+                filled += 1
+                log(f"  row {existing}: {p['name']} our student {p['our_student']}")
             continue
         # use the empty row already made for this date, else add one after that date's rows
         blank = [r for r in rows if is_blank(ws.cell(r, cols["name"]).value)]
@@ -780,11 +1049,11 @@ def update_excel(path, date, people, backup_dir, dry_run=False):
         log(f"  row {row}: {p['name']} | {p['phone']} | {p['email']} | {p['code']} | "
             f"{p['status']} | our student {p['our_student'] or '-'}  ({p['location']})")
 
-    log(f"Sheet {ws.title}: {added} row(s) added")
+    log(f"Sheet {ws.title}: {added} row(s) added" + (f", {filled} 'Our Student' filled in" if filled else ""))
     if dry_run:
         log("Dry run - Excel file NOT saved")
         return
-    if not added:
+    if not added and not filled:
         log("Nothing changed - Excel file not saved")
         return
     bdir = HERE / backup_dir
@@ -792,8 +1061,145 @@ def update_excel(path, date, people, backup_dir, dry_run=False):
     backup = bdir / f"{Path(path).stem}_{dt.datetime.now():%Y%m%d_%H%M%S}.xlsx"
     shutil.copy2(path, backup)
     log(f"Backup saved: {backup}")
-    wb.save(path)
+    safe_save(wb, path)
     log("Excel file saved")
+
+
+def check_day_complete(cfg, date, skip_advpro=False):
+    """Read the saved Excel file back: everyone found on Red Hat has a row for the date,
+    with 'Our Student Y/N' if they have a phone number. Raises if not.
+    An empty linkedin id or feedback cell is normal (nothing found, or no form filled in)."""
+    wb = openpyxl.load_workbook(cfg.get("excel", "path"))
+    ws = month_sheet(wb, date)
+    hr = header_row(ws)
+    cols = sheet_columns(ws, hr)
+    rows = [r for r in range(hr + 1, last_data_row(ws, hr) + 1)
+            if cell_date(ws.cell(r, cols["date"]).value) == date and not is_blank(ws.cell(r, cols["name"]).value)]
+    saved = sorted((HERE / "logs").glob(f"{date}_*.json"), key=lambda p: p.stat().st_mtime)
+    people = json.loads(saved[-1].read_text(encoding="utf-8")) if saved else []
+    missing, unchecked = [], []
+    for p in people:
+        email = p["email"].lower()
+        row = next((r for r in rows if norm_name(ws.cell(r, cols["name"]).value) == norm_name(p["name"])
+                    or (email and email == str(ws.cell(r, cols["email id"]).value or "").strip().lower())), None)
+        if not row:
+            missing.append(p["name"])
+        elif not skip_advpro and phone10(p["phone"]) and is_blank(ws.cell(row, cols["our student y/n"]).value):
+            unchecked.append(p["name"])
+    problems = []
+    if missing:
+        problems.append(f"not on the sheet: {', '.join(missing)}")
+    if unchecked:
+        problems.append(f"no 'Our Student Y/N': {', '.join(unchecked)}")
+    if problems:
+        raise RuntimeError(f"Excel not complete for {date:%d-%b-%Y} - " + "; ".join(problems))
+    log(f"Excel complete for {date:%d-%b-%Y}: {len(rows)} row(s) in sheet {ws.title}, {len(people)} found on Red Hat")
+
+
+# ---------------------------------------------------------------- kiosk table
+
+def kiosk_table(ws, hr, codes):
+    """The count table above the candidates: header row (Date | 2093 | 2337 | 2394 | exam number)
+    -> (header row, {location: column}, total column, [table rows])"""
+    for r in range(1, hr):
+        if str(ws.cell(r, 1).value or "").strip().lower() != "date":
+            continue
+        heads = {str(ws.cell(r, c).value or "").strip().lower(): c for c in range(2, 12)}
+        cols = {code: heads[code] for code in codes if code in heads}
+        if not cols:
+            continue
+        total = next((c for h, c in heads.items() if "exam number" in h or h == "total"), None)
+        rows = []
+        for rr in range(r + 1, hr):
+            if any(str(ws.cell(rr, c).value or "").strip().lower() == "total" for c in range(1, 6)):
+                break
+            rows.append(rr)
+        return r, cols, total, rows
+    raise RuntimeError(f"Kiosk table (Date | {' | '.join(codes)}) not found at the top of sheet {ws.title}")
+
+
+def update_kiosk(path, date, counts, backup_dir, dry_run=False):
+    """counts {location: number of exams} -> that date's row of the kiosk table (blank = 0)."""
+    if not dry_run:
+        check_excel_closed(path)
+    wb = openpyxl.load_workbook(path)
+    ws = month_sheet(wb, date)
+    hr = header_row(ws)
+    top, cols, total_col, rows = kiosk_table(ws, hr, list(counts))
+    cells = [1, *cols.values()] + ([total_col] if total_col else [])
+    row = next((r for r in rows if cell_date(ws.cell(r, 1).value) == date), None)
+    if not row:  # e.g. a Saturday: use the first empty row after the last date
+        dated = [r for r in rows if cell_date(ws.cell(r, 1).value)]
+        free = [r for r in rows if (not dated or r > dated[-1]) and all(is_blank(ws.cell(r, c).value) for c in cells)]
+        free = [r for r in free if r < hr - 1]  # keep a blank line above the candidates
+        if not free:
+            raise RuntimeError(f"No row for {date:%d-%b-%Y} in the kiosk table and no empty row to add it")
+        row = free[0]
+        if row - 1 > top:
+            for c in cells:
+                if ws.cell(row - 1, c).has_style:
+                    ws.cell(row, c)._style = copy(ws.cell(row - 1, c)._style)
+        ws.cell(row, 1).value = dt.datetime(date.year, date.month, date.day)
+        log(f"  kiosk table: {date:%d-%b-%Y} added in row {row}")
+    total = sum(counts.values())
+    wanted = {cols[c]: (n or None) for c, n in counts.items() if c in cols}
+    if total_col:
+        cell = ws.cell(row, total_col)
+        if not (isinstance(cell.value, str) and cell.value.startswith("=")):  # a formula adds them itself
+            wanted[total_col] = total or None
+    changed = False
+    for c, value in wanted.items():
+        cell = ws.cell(row, c)
+        old = cell.value
+        if is_blank(old):
+            if value is not None:
+                cell.value = value
+                changed = True
+        elif str(old).strip() != str(value or "").strip():
+            log(f"  kiosk table row {row}: '{ws.cell(top, c).value}' already says {old}, "
+                f"Red Hat says {value or 0} - left as it is")
+    log(f"Kiosk {date:%d-%b-%Y}: " + ", ".join(f"{c}: {n}" for c, n in counts.items()) + f", total {total}"
+        + ("" if changed else " (nothing new for the table)"))
+    if dry_run:
+        log("Dry run - kiosk table NOT saved")
+        return
+    if not changed:
+        return
+    bdir = HERE / backup_dir
+    bdir.mkdir(exist_ok=True)
+    backup = bdir / f"{Path(path).stem}_{dt.datetime.now():%Y%m%d_%H%M%S}.xlsx"
+    shutil.copy2(path, backup)
+    safe_save(wb, path)
+    log(f"Excel file saved - kiosk table row {row}")
+
+
+# ---------------------------------------------------------------- step cleanup
+
+def chrome_tab_ids(cfg):
+    port = cfg.getint("chrome", "debug_port")
+    return {t["id"] for t in chrome_pages(port)} if port_open(port) else set()
+
+
+def step_cleanup(cfg, tabs_before):
+    """After a step: close the Chrome tabs it opened and let go of ChromeDriver,
+    so the next step starts clean. Tabs that were open before are left alone."""
+    port = cfg.getint("chrome", "debug_port")
+    for d in _DRIVERS:
+        try:
+            d.service.stop()  # only ChromeDriver; Chrome itself stays open
+        except Exception:
+            pass
+    _DRIVERS.clear()
+    if not port_open(port):
+        return
+    pages = chrome_pages(port)
+    new = [t for t in pages if t["id"] not in tabs_before]
+    if new and len(new) == len(pages):
+        new = new[:-1]  # never close the last tab: that would close Chrome
+    for t in new:
+        close_tab(port, t["id"])
+    if new:
+        log(f"Closed {len(new)} Chrome tab(s) this step opened")
 
 
 # ---------------------------------------------------------------- main
@@ -815,11 +1221,21 @@ def main():
 def run(cfg, date, skip_advpro=False, dry_run=False):
     """Red Hat completed exams of `date` + Adv Pro check -> new rows in the Excel file."""
     excel = cfg.get("excel", "path")
-    check_excel_closed(excel)
+    check_workbook_year(excel, date)
+    if not dry_run:
+        check_excel_closed(excel)
 
-    people = scrape_redhat(cfg, date)
+    people, kiosk = scrape_redhat(cfg, date)
+    try:
+        update_kiosk(excel, date, kiosk, cfg.get("excel", "backup_dir"), dry_run=dry_run)
+    except Exception as e:  # the exam rows matter more - keep going
+        log(f"!! Kiosk table not updated: {type(e).__name__}: {e}")
     if people and not skip_advpro:
-        check_advpro(cfg, people)
+        try:
+            check_advpro(cfg, people)
+        except Exception as e:  # keep the exams already read from Red Hat
+            log(f"!! Adv Pro check failed: {type(e).__name__}: {e}")
+            log("   Saving the rows anyway - run this date again to fill the blank 'Our Student' cells")
 
     logs = HERE / "logs"
     logs.mkdir(exist_ok=True)
@@ -829,8 +1245,13 @@ def run(cfg, date, skip_advpro=False, dry_run=False):
     if not people:
         log("No completed exams found - nothing to write")
         return
-    check_excel_closed(excel)
+    if not dry_run:
+        check_excel_closed(excel)
     update_excel(excel, date, people, cfg.get("excel", "backup_dir"), dry_run=dry_run)
+    if not skip_advpro:
+        unchecked = [p["name"] for p in people if phone10(p["phone"]) and not p["our_student"]]
+        if unchecked:  # the rows are saved; this step must run again to fill these in
+            raise RuntimeError(f"'Our Student' not checked in Adv Pro for: {', '.join(unchecked)}")
 
 
 if __name__ == "__main__":

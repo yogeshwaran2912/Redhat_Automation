@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+    step()
+    ~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 102, in <lambda>
+    lambda: linkedin_from_outlook.run(cfg, date, date, ask=args.ask, dry_run=args.dry_run)),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\linkedin_from_outlook.py", line 448, in run
+    raise RuntimeError(f"{errors} email(s) could not be looked up")
+RuntimeError: 1 email(s) could not be looked up

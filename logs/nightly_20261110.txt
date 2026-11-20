@@ -1,0 +1,511 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:12] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:12] 
+[23:45:12] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[23:45:20] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:21] Closed 1 old tab(s) of individualexamscheduler
+[23:45:21] Waking up Chrome tabs
+[00:02:54] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[00:21:06] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[00:40:05] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[00:40:08] !! Step 1 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[00:40:08]    details saved in logs\error_20261111_004008.txt - going to the next step
+[00:40:08] 
+[00:40:08] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:40:18] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:40:20] Waking up Chrome tabs
+[00:55:59] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+[01:15:46] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[01:33:40] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[01:33:56] !! Step 2 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[01:33:57]    details saved in logs\error_20261111_013349.txt - going to the next step
+[01:33:57] 
+[01:33:57] ========== Step 3/4: LinkedIn (Outlook) ==========
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[01:35:45] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[01:35:46] 
+[01:35:46] ========== Step 4/4: Excel check ==========
+[01:36:21] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[01:36:21] 
+[01:36:21] ========== Summary ==========
+[01:36:21]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[01:36:21]   Feedback (Google Sheet): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[01:36:21]   LinkedIn (Outlook): OK
+[01:36:21]   Excel check: OK
+[01:36:21] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[03:12:47] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[03:12:47] 
+[03:12:47] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[03:12:58] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[03:13:00] Closed 1 old tab(s) of individualexamscheduler
+[03:13:00] Waking up Chrome tabs
+[03:45:03] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[04:25:26] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[04:26:33] Could not connect to Chrome (try 3 of 3): no answer in 60 seconds
+[04:26:33] !! Step 1 failed: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[04:26:33]    details saved in logs\error_20261111_042633.txt - going to the next step
+[04:26:33] 
+[04:26:33] ========== Step 2/4: Feedback (Google Sheet) ==========
+[04:26:44] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[04:26:47] Waking up Chrome tabs
+[04:26:50] Connected to Chrome
+[04:29:21] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[04:29:21] Feedback timestamps are month/day
+[04:29:21] 0 feedback response(s) on 10-Nov-2026
+[04:29:21] No feedback that day - nothing to write
+[04:29:21] 
+[04:29:21] ========== Step 3/4: LinkedIn (Outlook) ==========
+[04:29:30] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[04:29:30] 
+[04:29:30] ========== Step 4/4: Excel check ==========
+[04:29:32] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[04:29:32] 
+[04:29:32] ========== Summary ==========
+[04:29:32]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: no answer in 60 seconds
+[04:29:32]   Feedback (Google Sheet): OK
+[04:29:32]   LinkedIn (Outlook): OK
+[04:29:32]   Excel check: OK
+[04:29:32] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[04:34:34] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[04:34:34] 
+[04:34:34] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[04:34:42] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[04:34:43] Closed 0 old tab(s) of individualexamscheduler
+[04:34:43] Waking up Chrome tabs
+[04:34:46] Connected to Chrome
+[04:35:52] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[04:37:02] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[04:37:02] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_043702.png
+[04:37:02] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[04:37:02]    details saved in logs\error_20261111_043702.txt - going to the next step
+[04:37:02] 
+[04:37:02] ========== Step 2/4: Feedback (Google Sheet) ==========
+[04:37:10] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[04:37:11] Waking up Chrome tabs
+[04:37:13] Connected to Chrome
+[04:39:22] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[04:40:41] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[04:40:41] Feedback timestamps are month/day
+[04:40:41] 0 feedback response(s) on 10-Nov-2026
+[04:40:41] No feedback that day - nothing to write
+[04:40:41] 
+[04:40:41] ========== Step 3/4: LinkedIn (Outlook) ==========
+[04:40:51] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[04:40:51] 
+[04:40:51] ========== Step 4/4: Excel check ==========
+[04:40:52] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[04:40:52] 
+[04:40:52] ========== Summary ==========
+[04:40:52]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat
+[04:40:52]   Feedback (Google Sheet): OK
+[04:40:52]   LinkedIn (Outlook): OK
+[04:40:52]   Excel check: OK
+[04:40:52] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[04:50:54] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[04:50:54] 
+[04:50:54] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[04:51:02] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[04:51:03] Closed 1 old tab(s) of individualexamscheduler
+[04:51:03] Waking up Chrome tabs
+[04:51:07] Connected to Chrome
+[04:52:13] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[04:53:23] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[04:53:23] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_045323.png
+[04:53:23] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[04:53:23]    details saved in logs\error_20261111_045323.txt - going to the next step
+[04:53:23] 
+[04:53:23] ========== Step 2/4: Feedback (Google Sheet) ==========
+[04:53:31] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[04:53:32] Waking up Chrome tabs
+[04:53:35] Connected to Chrome
+[04:55:09] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[04:55:09] Feedback timestamps are month/day
+[04:55:09] 0 feedback response(s) on 10-Nov-2026
+[04:55:09] No feedback that day - nothing to write
+[04:55:09] 
+[04:55:09] ========== Step 3/4: LinkedIn (Outlook) ==========
+[04:55:18] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[04:55:18] 
+[04:55:18] ========== Step 4/4: Excel check ==========
+[04:55:20] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[04:55:20] 
+[04:55:20] ========== Summary ==========
+[04:55:20]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat
+[04:55:20]   Feedback (Google Sheet): OK
+[04:55:20]   LinkedIn (Outlook): OK
+[04:55:20]   Excel check: OK
+[04:55:20] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[05:10:22] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[05:10:22] 
+[05:10:22] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[05:10:31] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[05:10:32] Closed 1 old tab(s) of individualexamscheduler
+[05:10:32] Waking up Chrome tabs
+[05:10:36] Connected to Chrome
+[05:11:42] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[05:13:15] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[05:13:15] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_051315.png
+[05:13:15] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[05:13:15]    details saved in logs\error_20261111_051315.txt - going to the next step
+[05:13:15] 
+[05:13:15] ========== Step 2/4: Feedback (Google Sheet) ==========
+[05:13:22] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[05:13:23] Waking up Chrome tabs
+[05:13:27] Connected to Chrome
+[05:14:53] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[05:14:53] Feedback timestamps are month/day
+[05:14:53] 0 feedback response(s) on 10-Nov-2026
+[05:14:53] No feedback that day - nothing to write
+[05:14:53] 
+[05:14:53] ========== Step 3/4: LinkedIn (Outlook) ==========
+[05:15:04] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[05:15:04] 
+[05:15:04] ========== Step 4/4: Excel check ==========
+[05:15:05] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[05:15:05] 
+[05:15:05] ========== Summary ==========
+[05:15:05]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat
+[05:15:05]   Feedback (Google Sheet): OK
+[05:15:05]   LinkedIn (Outlook): OK
+[05:15:05]   Excel check: OK
+[05:15:05] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[05:45:08] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[05:45:08] 
+[05:45:08] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[05:45:16] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[05:45:18] Closed 1 old tab(s) of individualexamscheduler
+[05:45:18] Waking up Chrome tabs
+[05:46:24] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[05:47:29] Could not connect to Chrome (try 2 of 3): no answer in 60 seconds
+[05:47:37] Connected to Chrome
+[05:48:44] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[05:50:21] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[05:50:21] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_055021.png
+[05:50:21] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[05:50:21]    details saved in logs\error_20261111_055021.txt - going to the next step
+[05:50:21] 
+[05:50:21] ========== Step 2/4: Feedback (Google Sheet) ==========
+[05:50:29] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[05:50:30] Waking up Chrome tabs
+[05:50:34] Connected to Chrome
+[05:51:57] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[05:51:57] Feedback timestamps are month/day
+[05:51:57] 0 feedback response(s) on 10-Nov-2026
+[05:51:57] No feedback that day - nothing to write
+[05:51:57] 
+[05:51:57] ========== Step 3/4: LinkedIn (Outlook) ==========
+[05:52:12] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[05:52:12] 
+[05:52:12] ========== Step 4/4: Excel check ==========
+[05:52:17] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[05:52:17] 
+[05:52:17] ========== Summary ==========
+[05:52:17]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat
+[05:52:17]   Feedback (Google Sheet): OK
+[05:52:17]   LinkedIn (Outlook): OK
+[05:52:17]   Excel check: OK
+[05:52:17] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[06:22:20] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[06:22:20] 
+[06:22:20] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[06:22:29] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[06:22:30] Closed 1 old tab(s) of individualexamscheduler
+[06:22:30] Waking up Chrome tabs
+[06:22:38] Connected to Chrome
+[06:23:46] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[06:25:07] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[06:25:07] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_062507.png
+[06:25:07] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[06:25:07]    details saved in logs\error_20261111_062507.txt - going to the next step
+[06:25:07] 
+[06:25:07] ========== Step 2/4: Feedback (Google Sheet) ==========
+[06:25:14] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[06:25:15] Waking up Chrome tabs
+[06:25:21] Connected to Chrome
+[06:26:44] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[06:26:44] Feedback timestamps are month/day
+[06:26:44] 0 feedback response(s) on 10-Nov-2026
+[06:26:44] No feedback that day - nothing to write
+[06:26:44] 
+[06:26:44] ========== Step 3/4: LinkedIn (Outlook) ==========
+[06:26:54] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[06:26:54] 
+[06:26:54] ========== Step 4/4: Excel check ==========
+[06:26:55] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[06:26:55] 
+[06:26:55] ========== Summary ==========
+[06:26:55]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat
+[06:26:55]   Feedback (Google Sheet): OK
+[06:26:55]   LinkedIn (Outlook): OK
+[06:26:55]   Excel check: OK
+[06:26:55] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[06:56:57] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[06:56:57] 
+[06:56:57] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[06:57:06] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[06:57:08] Closed 1 old tab(s) of individualexamscheduler
+[06:57:08] Waking up Chrome tabs
+[06:58:16] Could not connect to Chrome (try 1 of 3): no answer in 60 seconds
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[06:59:17] Connected to Chrome
+[07:00:24] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[07:02:00] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[07:02:00] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_070200.png
+[07:02:00] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[07:02:00]    details saved in logs\error_20261111_070200.txt - going to the next step
+[07:02:00] 
+[07:02:00] ========== Step 2/4: Feedback (Google Sheet) ==========
+[07:02:10] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[07:02:11] Waking up Chrome tabs
+[07:02:24] Connected to Chrome
+[07:03:38] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[07:03:38] Feedback timestamps are month/day
+[07:03:38] 0 feedback response(s) on 10-Nov-2026
+[07:03:38] No feedback that day - nothing to write
+[07:03:38] 
+[07:03:38] ========== Step 3/4: LinkedIn (Outlook) ==========
+[07:03:47] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[07:03:47] 
+[07:03:47] ========== Step 4/4: Excel check ==========
+[07:03:49] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[07:03:49] 
+[07:03:49] ========== Summary ==========
+[07:03:49]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat
+[07:03:49]   Feedback (Google Sheet): OK
+[07:03:49]   LinkedIn (Outlook): OK
+[07:03:49]   Excel check: OK
+[07:03:49] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[07:33:52] Date: 10-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[07:33:52] 
+[07:33:52] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[07:34:01] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[07:34:05] Closed 1 old tab(s) of individualexamscheduler
+[07:34:05] Waking up Chrome tabs
+[07:35:04] Connected to Chrome
+[07:36:11] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[07:37:30] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser
+[07:37:30] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_073730.png
+[07:37:30] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat Exam Scheduler)). Click the 3 lines (top left) > Exam Deliveries.
+[07:37:30]    details saved in logs\error_20261111_073730.txt - going to the next step
+[07:37:30] 
+[07:37:30] ========== Step 2/4: Feedback (Google Sheet) ==========
+[07:37:37] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[07:37:38] Waking up Chrome tabs
+[07:37:52] Connected to Chrome
+[07:38:46] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[07:38:46] Feedback timestamps are month/day
+[07:38:46] 0 feedback response(s) on 10-Nov-2026
+[07:38:46] No feedback that day - nothing to write
+[07:38:46] 
+[07:38:46] ========== Step 3/4: LinkedIn (Outlook) ==========
+[07:38:59] Sheet NOV: 0 email(s) without a LinkedIn Id on 10-Nov-2026
+[07:38:59] 
+[07:38:59] ========== Step 4/4: Excel check ==========
+[07:39:00] Excel complete for 10-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[07:39:00] 
+[07:39:00] ========== Summary ==========
+[07:39:00]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AuthenticateUser (Red Hat
+[07:39:00]   Feedback (Google Sheet): OK
+[07:39:00]   LinkedIn (Outlook): OK
+[07:39:00]   Excel check: OK
+[07:39:00] Done

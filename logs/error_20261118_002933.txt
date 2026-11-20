@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+    step()
+    ~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 98, in <lambda>
+    lambda: redhat_automation.run(cfg, date, skip_advpro=args.skip_advpro, dry_run=args.dry_run)),
+            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 1037, in run
+    people = scrape_redhat(cfg, date)
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 631, in scrape_redhat
+    set_date(driver, DATE_FROM, date, "From")
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 461, in set_date
+    el.send_keys(Keys.TAB)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\webelement.py", line 272, in send_keys
+    self._execute(
+    ~~~~~~~~~~~~~^
+        Command.SEND_KEYS_TO_ELEMENT, {"text": "".join(keys_to_typing(value)), "value": keys_to_typing(value)}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\webelement.py", line 505, in _execute
+    return self._parent.execute(command, params)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\webdriver.py", line 566, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\errorhandler.py", line 234, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60C9238A5+3004357]
+	(No symbol) [0x00007FF60C5B9970]
+	(No symbol) [0x00007FF60C46582A]
+	(No symbol) [0x00007FF60C43FA75]
+	(No symbol) [0x00007FF60C4E2C77]
+	(No symbol) [0x00007FF60C4FB351]
+	(No symbol) [0x00007FF60C4DB983]
+	(No symbol) [0x00007FF60C4A7628]
+	(No symbol) [0x00007FF60C4A8791]
+	GetHandleVerifier [0x00007FF60C94A00D+3161901]
+	GetHandleVerifier [0x00007FF60C99E060+3506048]
+	GetHandleVerifier [0x00007FF60C99400D+3465005]
+	GetHandleVerifier [0x00007FF60C710EEB+830987]
+	(No symbol) [0x00007FF60C5C467F]
+	(No symbol) [0x00007FF60C5C09D4]
+	(No symbol) [0x00007FF60C5C0B6D]
+	(No symbol) [0x00007FF60C5B0149]
+	BaseThreadInitThunk [0x00007FFED25D7374+20]
+	RtlUserThreadStart [0x00007FFED395CC91+33]
+

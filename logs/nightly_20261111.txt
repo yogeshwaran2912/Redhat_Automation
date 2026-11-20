@@ -1,0 +1,877 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:09] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:09] 
+[23:45:09] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+
+>>> Chrome is already running (maybe in the background).
+    The script must restart it. Close Chrome now? Open tabs come back
+    with Ctrl+Shift+T. [Y/n]: [23:45:15] Chrome closed
+[23:45:17] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:18] Closed 0 old tab(s) of individualexamscheduler
+[23:45:18] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[23:45:39] Connected to Chrome
+[23:46:51] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[23:48:04] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[23:48:04] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_234804.png
+[23:48:04] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (rhtapps.redhat.com)). Click the 3 lines (top left) > Exam Deliveries.
+[23:48:04]    details saved in logs\error_20261111_234804.txt - going to the next step
+[23:48:04] 
+[23:48:04] ========== Step 2/4: Feedback (Google Sheet) ==========
+[23:48:10] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[23:48:15] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[23:48:18] Connected to Chrome
+[23:49:49] !! Step 2 failed: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67C2F38A5+3004357]
+	(No symbol) [0x00007FF67BF89970]
+	(No symbol) [0x00007FF67BE3582A]
+	(No symbol) [0x00007FF67BE0FA75]
+	(No symbol) [0x00007FF67BEB2C77]
+	(No symbol) [0x00007FF67BECB351]
+	(No symbol) [0x00007FF67BEAB983]
+	(No symbol) [0x00007FF67BE77628]
+	(No symbol) [0x00007FF67BE78791]
+	GetHandleVerifier [0x00007FF67C31A00D+3161901]
+	GetHandleVerifier [0x00007FF67C36E060+3506048]
+	GetHandleVerifier [0x00007FF67C36400D+3465005]
+	GetHandleVerifier [0x00007FF67C0E0EEB+830987]
+	(No symbol) [0x00007FF67BF9467F]
+	(No symbol) [0x00007FF67BF909D4]
+	(No symbol) [0x00007FF67BF90B6D]
+	(No symbol) [0x00007FF67BF80149]
+	BaseThreadInitThunk [0x00007FFA1BB97374+20]
+	RtlUserThreadStart [0x00007FFA1D53CC91+33]
+
+[23:49:49]    details saved in logs\error_20261111_234948.txt - going to the next step
+[23:49:49] 
+[23:49:49] ========== Step 3/4: LinkedIn (Outlook) ==========
+[23:49:53] Sheet NOV: 0 email(s) without a LinkedIn Id on 11-Nov-2026
+[23:49:53] 
+[23:49:53] ========== Step 4/4: Excel check ==========
+[23:49:54] Excel complete for 11-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[23:49:54] 
+[23:49:54] ========== Summary ==========
+[23:49:54]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (r
+[23:49:54]   Feedback (Google Sheet): FAILED: NoSuchWindowException: Message: no such window: target window already closed
+[23:49:54]   LinkedIn (Outlook): OK
+[23:49:54]   Excel check: OK
+[23:49:54] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:51:56] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:51:56] 
+[23:51:56] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[23:52:00] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:52:01] Closed 1 old tab(s) of individualexamscheduler
+[23:52:01] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[23:52:15] Connected to Chrome
+[23:53:21] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[23:54:40] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[23:54:40] Screenshot of the page saved: logs\exam_deliveries_failed_20261111_235440.png
+[23:54:40] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (rhtapps.redhat.com)). Click the 3 lines (top left) > Exam Deliveries.
+[23:54:40]    details saved in logs\error_20261111_235440.txt - going to the next step
+[23:54:40] 
+[23:54:40] ========== Step 2/4: Feedback (Google Sheet) ==========
+[23:54:43] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[23:54:44] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[23:54:46] Connected to Chrome
+[23:57:01] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[23:57:22] !! Step 2 failed: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[23:57:22]    details saved in logs\error_20261111_235722.txt - going to the next step
+[23:57:22] 
+[23:57:22] ========== Step 3/4: LinkedIn (Outlook) ==========
+[23:57:27] Sheet NOV: 0 email(s) without a LinkedIn Id on 11-Nov-2026
+[23:57:27] 
+[23:57:27] ========== Step 4/4: Excel check ==========
+[23:57:28] Excel complete for 11-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[23:57:28] 
+[23:57:28] ========== Summary ==========
+[23:57:28]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (r
+[23:57:28]   Feedback (Google Sheet): FAILED: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[23:57:28]   LinkedIn (Outlook): OK
+[23:57:28]   Excel check: OK
+[23:57:28] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:16:36] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:16:36] 
+[00:16:36] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:16:39] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:16:40] Closed 1 old tab(s) of individualexamscheduler
+[00:16:40] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[00:16:42] Connected to Chrome
+[00:18:04] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[00:19:29] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[00:19:29] Screenshot of the page saved: logs\exam_deliveries_failed_20261112_001929.png
+[00:19:29] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (rhtapps.redhat.com)). Click the 3 lines (top left) > Exam Deliveries.
+[00:19:29]    details saved in logs\error_20261112_001929.txt - going to the next step
+[00:19:29] 
+[00:19:29] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:19:33] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:19:34] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[00:19:49] Connected to Chrome
+[00:21:33] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[00:22:44] !! Step 2 failed: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[00:22:44]    details saved in logs\error_20261112_002244.txt - going to the next step
+[00:22:44] 
+[00:22:44] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:22:49] Sheet NOV: 0 email(s) without a LinkedIn Id on 11-Nov-2026
+[00:22:49] 
+[00:22:49] ========== Step 4/4: Excel check ==========
+[00:22:49] Excel complete for 11-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[00:22:49] 
+[00:22:49] ========== Summary ==========
+[00:22:49]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (r
+[00:22:49]   Feedback (Google Sheet): FAILED: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[00:22:49]   LinkedIn (Outlook): OK
+[00:22:49]   Excel check: OK
+[00:22:49] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:32:50] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:32:50] 
+[00:32:50] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:32:54] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:32:55] Closed 1 old tab(s) of individualexamscheduler
+[00:32:55] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[00:33:16] Connected to Chrome
+[00:34:22] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[00:35:47] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[00:35:47] Screenshot of the page saved: logs\exam_deliveries_failed_20261112_003547.png
+[00:35:47] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (rhtapps.redhat.com)). Click the 3 lines (top left) > Exam Deliveries.
+[00:35:47]    details saved in logs\error_20261112_003547.txt - going to the next step
+[00:35:47] 
+[00:35:47] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:35:51] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:35:52] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[00:35:56] Connected to Chrome
+[00:38:34] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[00:39:18] !! Step 2 failed: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[00:39:18]    details saved in logs\error_20261112_003918.txt - going to the next step
+[00:39:18] 
+[00:39:18] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:39:19] !! Step 3 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[00:39:19]    details saved in logs\error_20261112_003919.txt - going to the next step
+[00:39:19] 
+[00:39:19] ========== Step 4/4: Excel check ==========
+[00:39:20] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[00:39:20]    details saved in logs\error_20261112_003919.txt - going to the next step
+[00:39:20] 
+[00:39:20] ========== Summary ==========
+[00:39:20]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (r
+[00:39:20]   Feedback (Google Sheet): FAILED: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[00:39:20]   LinkedIn (Outlook): FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[00:39:20]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[00:39:20] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:54:25] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:54:25] 
+[00:54:25] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:54:29] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:54:30] Closed 1 old tab(s) of individualexamscheduler
+[00:54:30] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[00:54:48] Connected to Chrome
+[00:55:54] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[00:57:07] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[00:57:07] Screenshot of the page saved: logs\exam_deliveries_failed_20261112_005707.png
+[00:57:07] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (rhtapps.redhat.com)). Click the 3 lines (top left) > Exam Deliveries.
+[00:57:07]    details saved in logs\error_20261112_005707.txt - going to the next step
+[00:57:07] 
+[00:57:07] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:57:12] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:57:15] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[00:57:20] Connected to Chrome
+[00:59:25] Export link refused - reading the sheet another way (phone numbers typed with spaces come out blank; email and name still match)
+[01:00:27] !! Step 2 failed: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[01:00:27]    details saved in logs\error_20261112_010027.txt - going to the next step
+[01:00:27] 
+[01:00:27] ========== Step 3/4: LinkedIn (Outlook) ==========
+[01:00:28] !! Step 3 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:00:28]    details saved in logs\error_20261112_010028.txt - going to the next step
+[01:00:28] 
+[01:00:28] ========== Step 4/4: Excel check ==========
+[01:00:28] !! Step 4 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:00:28]    details saved in logs\error_20261112_010028.txt - going to the next step
+[01:00:28] 
+[01:00:28] ========== Summary ==========
+[01:00:28]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (r
+[01:00:28]   Feedback (Google Sheet): FAILED: RuntimeError: Feedback sheet could not be read (is Chrome signed in to advpromktg@gmail.com?) - TypeError: Failed to fetch
+[01:00:28]   LinkedIn (Outlook): FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:00:28]   Excel check: FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:00:28] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[01:30:34] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[01:30:34] 
+[01:30:34] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[01:30:37] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[01:30:38] Closed 1 old tab(s) of individualexamscheduler
+[01:30:38] Waking up Chrome tabs
+There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+[01:30:57] Connected to Chrome
+[01:32:03] 'Exam Deliveries' did not open (try 1 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[01:33:09] 'Exam Deliveries' did not open (try 2 of 2) - page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities
+[01:33:09] Screenshot of the page saved: logs\exam_deliveries_failed_20261112_013309.png
+[01:33:09] !! Step 1 failed: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (rhtapps.redhat.com)). Click the 3 lines (top left) > Exam Deliveries.
+[01:33:09]    details saved in logs\error_20261112_013309.txt - going to the next step
+[01:33:09] 
+[01:33:09] ========== Step 2/4: Feedback (Google Sheet) ==========
+[01:33:09] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:33:09]    details saved in logs\error_20261112_013309.txt - going to the next step
+[01:33:09] 
+[01:33:09] ========== Step 3/4: LinkedIn (Outlook) ==========
+[01:33:09] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:33:09]    details saved in logs\error_20261112_013309.txt - going to the next step
+[01:33:09] 
+[01:33:09] ========== Step 4/4: Excel check ==========
+[01:33:09] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:33:09]    details saved in logs\error_20261112_013309.txt - going to the next step
+[01:33:09] 
+[01:33:09] ========== Summary ==========
+[01:33:09]   Exams (Red Hat + Adv Pro): FAILED: RuntimeError: Needs a person at the computer: Could not open 'Exam Deliveries' (page: https://rhtapps.redhat.com/individualexamscheduler/#/AdmManageEligibilities (r
+[01:33:09]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:33:09]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:33:09]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[01:33:09] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[02:03:15] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[02:03:15] 
+[02:03:15] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[02:03:48] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:03:48]    details saved in logs\error_20261112_020348.txt - going to the next step
+[02:03:48] 
+[02:03:48] ========== Step 2/4: Feedback (Google Sheet) ==========
+[02:04:21] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:04:21]    details saved in logs\error_20261112_020421.txt - going to the next step
+[02:04:21] 
+[02:04:21] ========== Step 3/4: LinkedIn (Outlook) ==========
+[02:04:54] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:04:54]    details saved in logs\error_20261112_020454.txt - going to the next step
+[02:04:54] 
+[02:04:54] ========== Step 4/4: Excel check ==========
+[02:05:27] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:05:27]    details saved in logs\error_20261112_020527.txt - going to the next step
+[02:05:27] 
+[02:05:27] ========== Summary ==========
+[02:05:27]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:05:27]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:05:27]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:05:27]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:05:27] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[02:35:32] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[02:35:32] 
+[02:35:32] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[02:36:36] !! Step 1 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:36:36]    details saved in logs\error_20261112_023636.txt - going to the next step
+[02:36:36] 
+[02:36:36] ========== Step 2/4: Feedback (Google Sheet) ==========
+[02:37:09] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:37:09]    details saved in logs\error_20261112_023709.txt - going to the next step
+[02:37:09] 
+[02:37:09] ========== Step 3/4: LinkedIn (Outlook) ==========
+[02:37:59] !! Step 3 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:37:59]    details saved in logs\error_20261112_023759.txt - going to the next step
+[02:37:59] 
+[02:37:59] ========== Step 4/4: Excel check ==========
+[02:38:32] !! Step 4 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:38:32]    details saved in logs\error_20261112_023832.txt - going to the next step
+[02:38:32] 
+[02:38:32] ========== Summary ==========
+[02:38:32]   Exams (Red Hat + Adv Pro): FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:38:32]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:38:32]   LinkedIn (Outlook): FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:38:32]   Excel check: FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[02:38:32] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[03:08:35] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[03:08:35] 
+[03:08:35] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[03:09:08] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:09:08]    details saved in logs\error_20261112_030908.txt - going to the next step
+[03:09:08] 
+[03:09:08] ========== Step 2/4: Feedback (Google Sheet) ==========
+[03:09:41] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:09:41]    details saved in logs\error_20261112_030941.txt - going to the next step
+[03:09:41] 
+[03:09:41] ========== Step 3/4: LinkedIn (Outlook) ==========
+[03:10:14] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:10:14]    details saved in logs\error_20261112_031014.txt - going to the next step
+[03:10:14] 
+[03:10:14] ========== Step 4/4: Excel check ==========
+[03:10:47] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:10:47]    details saved in logs\error_20261112_031047.txt - going to the next step
+[03:10:47] 
+[03:10:47] ========== Summary ==========
+[03:10:47]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:10:47]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:10:47]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:10:47]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:10:47] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[03:40:49] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[03:40:49] 
+[03:40:49] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[03:41:49] !! Step 1 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:41:49]    details saved in logs\error_20261112_034149.txt - going to the next step
+[03:41:49] 
+[03:41:49] ========== Step 2/4: Feedback (Google Sheet) ==========
+[03:42:22] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:42:22]    details saved in logs\error_20261112_034222.txt - going to the next step
+[03:42:22] 
+[03:42:22] ========== Step 3/4: LinkedIn (Outlook) ==========
+[03:42:55] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:42:55]    details saved in logs\error_20261112_034255.txt - going to the next step
+[03:42:55] 
+[03:42:55] ========== Step 4/4: Excel check ==========
+[03:43:28] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:43:28]    details saved in logs\error_20261112_034328.txt - going to the next step
+[03:43:28] 
+[03:43:28] ========== Summary ==========
+[03:43:28]   Exams (Red Hat + Adv Pro): FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:43:28]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:43:28]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:43:28]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[03:43:28] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[04:13:30] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[04:13:30] 
+[04:13:30] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[04:14:03] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:14:03]    details saved in logs\error_20261112_041403.txt - going to the next step
+[04:14:03] 
+[04:14:03] ========== Step 2/4: Feedback (Google Sheet) ==========
+[04:14:36] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:14:36]    details saved in logs\error_20261112_041436.txt - going to the next step
+[04:14:36] 
+[04:14:36] ========== Step 3/4: LinkedIn (Outlook) ==========
+[04:15:09] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:15:09]    details saved in logs\error_20261112_041509.txt - going to the next step
+[04:15:09] 
+[04:15:09] ========== Step 4/4: Excel check ==========
+[04:15:42] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:15:42]    details saved in logs\error_20261112_041542.txt - going to the next step
+[04:15:42] 
+[04:15:42] ========== Summary ==========
+[04:15:42]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:15:42]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:15:42]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:15:42]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:15:42] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[04:45:45] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[04:45:45] 
+[04:45:45] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[04:46:18] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:46:18]    details saved in logs\error_20261112_044618.txt - going to the next step
+[04:46:18] 
+[04:46:18] ========== Step 2/4: Feedback (Google Sheet) ==========
+[04:46:51] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:46:51]    details saved in logs\error_20261112_044651.txt - going to the next step
+[04:46:51] 
+[04:46:51] ========== Step 3/4: LinkedIn (Outlook) ==========
+[04:47:24] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:47:24]    details saved in logs\error_20261112_044724.txt - going to the next step
+[04:47:24] 
+[04:47:24] ========== Step 4/4: Excel check ==========
+[04:47:57] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:47:57]    details saved in logs\error_20261112_044757.txt - going to the next step
+[04:47:57] 
+[04:47:57] ========== Summary ==========
+[04:47:57]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:47:57]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:47:57]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:47:57]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[04:47:57] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[05:18:00] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[05:18:00] 
+[05:18:00] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[05:18:33] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:18:33]    details saved in logs\error_20261112_051833.txt - going to the next step
+[05:18:33] 
+[05:18:33] ========== Step 2/4: Feedback (Google Sheet) ==========
+[05:19:06] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:19:06]    details saved in logs\error_20261112_051906.txt - going to the next step
+[05:19:06] 
+[05:19:06] ========== Step 3/4: LinkedIn (Outlook) ==========
+[05:19:39] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:19:39]    details saved in logs\error_20261112_051939.txt - going to the next step
+[05:19:39] 
+[05:19:39] ========== Step 4/4: Excel check ==========
+[05:20:12] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:20:12]    details saved in logs\error_20261112_052012.txt - going to the next step
+[05:20:12] 
+[05:20:12] ========== Summary ==========
+[05:20:12]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:20:12]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:20:12]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:20:12]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:20:12] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[05:50:14] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[05:50:14] 
+[05:50:14] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[05:50:47] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:50:47]    details saved in logs\error_20261112_055047.txt - going to the next step
+[05:50:47] 
+[05:50:47] ========== Step 2/4: Feedback (Google Sheet) ==========
+[05:51:20] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:51:20]    details saved in logs\error_20261112_055120.txt - going to the next step
+[05:51:20] 
+[05:51:20] ========== Step 3/4: LinkedIn (Outlook) ==========
+[05:51:53] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:51:53]    details saved in logs\error_20261112_055153.txt - going to the next step
+[05:51:53] 
+[05:51:53] ========== Step 4/4: Excel check ==========
+[05:52:26] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:52:26]    details saved in logs\error_20261112_055226.txt - going to the next step
+[05:52:26] 
+[05:52:26] ========== Summary ==========
+[05:52:26]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:52:26]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:52:26]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:52:26]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[05:52:26] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[06:22:28] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[06:22:28] 
+[06:22:28] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[06:23:01] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:23:01]    details saved in logs\error_20261112_062301.txt - going to the next step
+[06:23:01] 
+[06:23:01] ========== Step 2/4: Feedback (Google Sheet) ==========
+[06:23:34] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:23:34]    details saved in logs\error_20261112_062334.txt - going to the next step
+[06:23:34] 
+[06:23:34] ========== Step 3/4: LinkedIn (Outlook) ==========
+[06:24:07] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:24:07]    details saved in logs\error_20261112_062407.txt - going to the next step
+[06:24:07] 
+[06:24:07] ========== Step 4/4: Excel check ==========
+[06:24:40] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:24:40]    details saved in logs\error_20261112_062440.txt - going to the next step
+[06:24:40] 
+[06:24:40] ========== Summary ==========
+[06:24:40]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:24:40]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:24:40]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:24:40]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:24:40] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[06:54:43] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[06:54:43] 
+[06:54:43] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[06:57:44] !! Step 1 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[06:57:44]    details saved in logs\error_20261112_065744.txt - going to the next step
+[06:57:44] 
+[06:57:44] ========== Step 2/4: Feedback (Google Sheet) ==========
+[07:00:04] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:00:04]    details saved in logs\error_20261112_070004.txt - going to the next step
+[07:00:04] 
+[07:00:04] ========== Step 3/4: LinkedIn (Outlook) ==========
+[07:01:38] !! Step 3 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:01:38]    details saved in logs\error_20261112_070138.txt - going to the next step
+[07:01:38] 
+[07:01:38] ========== Step 4/4: Excel check ==========
+[07:03:59] !! Step 4 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:03:59]    details saved in logs\error_20261112_070359.txt - going to the next step
+[07:03:59] 
+[07:03:59] ========== Summary ==========
+[07:03:59]   Exams (Red Hat + Adv Pro): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:03:59]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:03:59]   LinkedIn (Outlook): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:03:59]   Excel check: FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:03:59] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[07:34:02] Date: 11-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[07:34:02] 
+[07:34:02] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[07:35:03] !! Step 1 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:35:03]    details saved in logs\error_20261112_073503.txt - going to the next step
+[07:35:03] 
+[07:35:03] ========== Step 2/4: Feedback (Google Sheet) ==========
+[07:35:52] !! Step 2 failed: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:35:52]    details saved in logs\error_20261112_073552.txt - going to the next step
+[07:35:52] 
+[07:35:52] ========== Step 3/4: LinkedIn (Outlook) ==========
+[07:36:25] !! Step 3 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:36:25]    details saved in logs\error_20261112_073625.txt - going to the next step
+[07:36:25] 
+[07:36:25] ========== Step 4/4: Excel check ==========
+[07:36:42] !! Step 4 failed: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:36:42]    details saved in logs\error_20261112_073642.txt - going to the next step
+[07:36:42] 
+[07:36:42] ========== Summary ==========
+[07:36:42]   Exams (Red Hat + Adv Pro): FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:36:42]   Feedback (Google Sheet): FAILED: FileNotFoundError: [Errno 2] No such file or directory: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:36:42]   LinkedIn (Outlook): FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:36:42]   Excel check: FAILED: OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'
+[07:36:42] Done

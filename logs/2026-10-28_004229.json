@@ -1,0 +1,32 @@
+[
+  {
+    "location": "2093",
+    "name": "RedHat Certification",
+    "email": "rhie-support@redhat.com",
+    "phone": "0",
+    "code": "EX999",
+    "status": "y",
+    "eligibility": "IES-1760454245",
+    "our_student": ""
+  },
+  {
+    "location": "2093",
+    "name": "Annarajan T",
+    "email": "annarajan2022@gmail.com",
+    "phone": "9994028823",
+    "code": "EX380",
+    "status": "retake",
+    "eligibility": "LMS-2925624-RETAKE.1",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "Karthi S",
+    "email": "sskarthi683@gmail.com",
+    "phone": "7094509467",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2887502",
+    "our_student": "y"
+  }
+]

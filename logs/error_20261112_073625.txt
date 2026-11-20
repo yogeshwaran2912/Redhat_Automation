@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 102, in <lambda>
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\linkedin_from_outlook.py", line 370, in run
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 792, in check_excel_closed
+OSError: [Errno 22] Invalid argument: '\\\\192.168.0.129\\test\\Exam count\\redhat exam 2026.xlsx'

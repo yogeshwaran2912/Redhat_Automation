@@ -1,0 +1,32 @@
+[
+  {
+    "location": "2093",
+    "name": "Muizur Rahiman",
+    "email": "muizur.f@gmail.com",
+    "phone": "9940354610",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2930661",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "Karthikeyan Govindan",
+    "email": "tgkarthikeyan@gmail.com",
+    "phone": "9940410002",
+    "code": "EX280",
+    "status": "y",
+    "eligibility": "LMS-2967134",
+    "our_student": "y"
+  },
+  {
+    "location": "2394",
+    "name": "Duraivelu Santhalingam",
+    "email": "duraivelu.santh@hcltech.com",
+    "phone": "9003818155",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2921011",
+    "our_student": "n"
+  }
+]

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 104, in <lambda>
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 1011, in check_day_complete
+RuntimeError: Excel not complete for 06-Nov-2026 - no 'Our Student Y/N': Pooja Chandrasekaran

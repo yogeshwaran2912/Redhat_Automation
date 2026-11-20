@@ -1,0 +1,32 @@
+[
+  {
+    "location": "2093",
+    "name": "Yagashree Ramachandran",
+    "email": "yagashree1995@gmail.com",
+    "phone": "9566516590",
+    "code": "EX200",
+    "status": "retake",
+    "eligibility": "LMS-2477459-RETAKE.1",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "Saravanan S",
+    "email": "saravanan337@outlook.com",
+    "phone": "9843944452",
+    "code": "EX294",
+    "status": "y",
+    "eligibility": "LMS-2463786",
+    "our_student": "y"
+  },
+  {
+    "location": "2394",
+    "name": "Devapriya SR",
+    "email": "devapriyasr6@gmail.com",
+    "phone": "9074543399",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2940646",
+    "our_student": "n"
+  }
+]

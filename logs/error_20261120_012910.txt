@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 119, in run_date
+    step()
+    ~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 95, in <lambda>
+    lambda: redhat_automation.check_day_complete(cfg, date, skip_advpro=args.skip_advpro)),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 1077, in check_day_complete
+    raise RuntimeError(f"Excel not complete for {date:%d-%b-%Y} - " + "; ".join(problems))
+RuntimeError: Excel not complete for 19-Nov-2026 - no 'Our Student Y/N': Rajesh M

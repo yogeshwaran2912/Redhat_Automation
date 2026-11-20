@@ -1,0 +1,9 @@
+===== Google Review report - 19-Nov-2026 (sheet NOV) =====
+                        Day   Month
+Total candidates          1      22
+Genuine reviews           0       0
+Pending                   1      22
+Reminder Sent             0       0
+Unable to Verify          0       0
+Review percentage        0%      0%
+New reviews received this run: 0

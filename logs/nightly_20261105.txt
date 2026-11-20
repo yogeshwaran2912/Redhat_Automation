@@ -1,0 +1,129 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:09] Date: 05-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:09] 
+[23:45:09] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+
+>>> Chrome is already running (maybe in the background).
+    The script must restart it. Close Chrome now? Open tabs come back
+    with Ctrl+Shift+T. [Y/n]: [23:45:17] Chrome closed
+[23:45:19] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:21] Closed 0 old tab(s) of individualexamscheduler
+[23:45:21] Waking up Chrome tabs
+[23:45:30] Connected to Chrome
+[23:45:33] Clicked menu > Exam Deliveries
+[23:45:35] Status = Completed
+[23:45:37] Time Zone = Asia/Calcutta
+[23:45:38] From = 2026-11-05
+[23:45:39] To = 2026-11-05
+[23:45:41] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2093
+[23:45:41] Searching location 2093
+[23:45:47]   1 - 2 of 2 result(s)
+[23:45:47]   Senthil Kumar S P | 8939758117 | senthil.s_p@nokia.com | EX200 | LMS-2540573 -> y
+[23:45:47]   Vignesh S | 6381009192 | vigneshsssivakumar@gmail.com | EX200 | LMS-2918848 -> y
+[23:45:49] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2337
+[23:45:50] Searching location 2337
+[23:45:56]   1 - 2 of 2 result(s)
+[23:45:56]   ARUL JOSEPH I | 9500972459 | arul.joseph@nokia.com | EX200 | LMS-2540575 -> y
+[23:45:56]   Mekala Garvikesh Reddy | 8977274755 | garvikeshreddy100@gmail.com | EX200 | LMS-2940629 -> y
+[23:45:58] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2394
+[23:45:58] Searching location 2394
+[23:46:05]   1 - 1 of 1 result(s)
+[23:46:05]   Suresh NA | 8939911857 | suresh.1.sankar@nokia.com | EX200 | LMS-2540582 -> y
+[23:46:05] 5 completed exam(s) on 05-Nov-2026
+[23:46:11] Opening Adv Pro
+[23:46:13] Adv Pro: logged in
+[23:46:14] Adv Pro: Master > Registration > Display
+[23:46:23] Adv Pro: Filter By = PresentPhoneNo
+[23:46:26]   Adv Pro 8939758117 Senthil Kumar S P: y
+[23:46:29]   Adv Pro 6381009192 Vignesh S: y
+[23:46:32]   Adv Pro 9500972459 ARUL JOSEPH I: y
+[23:46:35]   Adv Pro 8977274755 Mekala Garvikesh Reddy: n
+[23:46:38]   Adv Pro 8939911857 Suresh NA: y
+[23:46:39]   row 35: Senthil Kumar S P | 8939758117 | senthil.s_p@nokia.com | EX200 | y | our student y  (2093)
+[23:46:39]   row 36: Vignesh S | 6381009192 | vigneshsssivakumar@gmail.com | EX200 | y | our student y  (2093)
+[23:46:39]   row 37: ARUL JOSEPH I | 9500972459 | arul.joseph@nokia.com | EX200 | y | our student y  (2337)
+[23:46:39]   row 38: Mekala Garvikesh Reddy | 8977274755 | garvikeshreddy100@gmail.com | EX200 | y | our student n  (2337)
+[23:46:39]   row 39: Suresh NA | 8939911857 | suresh.1.sankar@nokia.com | EX200 | y | our student y  (2394)
+[23:46:39] Sheet NOV: 5 row(s) added
+[23:46:39] Backup saved: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\backups\redhat exam 2026_20261105_234639.xlsx
+[23:46:40] Excel file saved
+[23:46:40] 
+[23:46:40] ========== Step 2/4: Feedback (Google Sheet) ==========
+[23:46:43] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[23:46:44] Waking up Chrome tabs
+[23:46:46] Connected to Chrome
+[23:47:06] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[23:47:06] Feedback timestamps are month/day
+[23:47:06] 4 feedback response(s) on 05-Nov-2026
+[23:47:06]   row 36 Vignesh S <- feedback 'Vignesh' (matched by email): company 'Lebara' | designation 'Junior Data Ops' | remark 'No'
+[23:47:06] 3 response(s) not in the Red Hat sheet (Pearson VUE or other exams):
+[23:47:06]     - Manoj Praveen Thiagarajan | 7358207104 | manojpraveen.t.8.96@gmail.com
+[23:47:06]     - Rajesh.S.S | 9342841242 | senthilrajesh33in@gmail.com
+[23:47:06]     - Dhanush | 9176062439 | dhanushkumar36@gmail.com
+[23:47:06] Sheet NOV: 1 row(s) updated with feedback
+[23:47:06] Backup saved: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\backups\redhat exam 2026_20261105_234706.xlsx
+[23:47:10] Excel file saved
+[23:47:10] 
+[23:47:10] ========== Step 3/4: LinkedIn (Outlook) ==========
+[23:47:11] Sheet NOV: 5 email(s) without a LinkedIn Id on 05-Nov-2026
+[23:47:11]   row 35: Senthil Kumar S P | senthil.s_p@nokia.com
+[23:47:11]   row 36: Vignesh S | vigneshsssivakumar@gmail.com
+[23:47:11]   row 37: ARUL JOSEPH I | arul.joseph@nokia.com
+[23:47:11]   row 38: Mekala Garvikesh Reddy | garvikeshreddy100@gmail.com
+[23:47:11]   row 39: Suresh NA | suresh.1.sankar@nokia.com
+[23:47:16] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[23:47:17] Waking up Chrome tabs
+[23:47:30] Connected to Chrome
+[23:47:54] Clicked New mail
+[23:48:25] [1/5] Senthil Kumar S P | senthil.s_p@nokia.com
+[23:49:00]     no 'See profile on LinkedIn' (no LinkedIn match for this email?)
+[23:49:00]     LinkedIn: (not found)
+[23:49:02] [2/5] Vignesh S | vigneshsssivakumar@gmail.com
+[23:49:13]     LinkedIn: https://www.linkedin.com/in/vignesh-sivakumar12/
+[23:49:16] [3/5] ARUL JOSEPH I | arul.joseph@nokia.com
+[23:49:56]     LinkedIn: https://www.linkedin.com/in/arul-joseph-153991193/
+[23:49:58] [4/5] Mekala Garvikesh Reddy | garvikeshreddy100@gmail.com
+[23:50:07]     LinkedIn: https://www.linkedin.com/in/garvikesh-reddy-40bb05379/
+[23:50:09] [5/5] Suresh NA | suresh.1.sankar@nokia.com
+[23:50:25]     no 'See profile on LinkedIn' (no LinkedIn match for this email?)
+[23:50:25]     LinkedIn: (not found)
+[23:50:29] Draft discarded
+[23:50:29] LinkedIn found for 3 of 5 email(s)
+[23:50:29]   ! not found: Senthil Kumar S P | senthil.s_p@nokia.com
+[23:50:29]   ! not found: Suresh NA | suresh.1.sankar@nokia.com
+[23:50:30]   row 36: Vignesh S -> https://www.linkedin.com/in/vignesh-sivakumar12/
+[23:50:30]   row 37: ARUL JOSEPH I -> https://www.linkedin.com/in/arul-joseph-153991193/
+[23:50:30]   row 38: Mekala Garvikesh Reddy -> https://www.linkedin.com/in/garvikesh-reddy-40bb05379/
+[23:50:30] Backup saved: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\backups\redhat exam 2026_20261105_235030.xlsx
+[23:50:32] Excel file saved - 3 LinkedIn URL(s) written to sheet NOV
+[23:50:32] 
+[23:50:32] ========== Step 4/4: Excel check ==========
+[23:50:36] Excel complete for 05-Nov-2026: 5 row(s) in sheet NOV, 5 found on Red Hat
+[23:50:36] 
+[23:50:36] ========== Summary ==========
+[23:50:36]   Exams (Red Hat + Adv Pro): OK
+[23:50:36]   Feedback (Google Sheet): OK
+[23:50:36]   LinkedIn (Outlook): OK
+[23:50:36]   Excel check: OK
+[23:50:36] Done

@@ -1,0 +1,42 @@
+[10:31:35] Repair tool --quick - C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation
+
+[10:31:35] == Stopping the automation if it is stuck
+[10:31:44]    OK      no automation program was running
+
+[10:31:44] == Locks
+[10:31:44]    OK      no Chrome turn lock
+[10:31:44]    FIXED   old Daily Chrome lock (.chrome_in_use.lock) removed
+
+[10:31:44] == Cleaning temporary files
+[10:31:44]    FIXED   1 temporary item(s) removed
+
+[10:31:44] == Python and packages
+[10:31:44]    OK      'python' = Python 3.11.5
+[10:31:47]    OK      'python' has all packages for Redhat_Automation
+
+[10:31:47] == .bat launchers (.pyc Python version)
+[10:31:48]    FIXED   Redhat_Automation\run.bat: .pyc now started with the matching Python (old file .repairbak)
+[10:31:48]    FIXED   Redhat_Automation\run_all.bat: .pyc now started with the matching Python (old file .repairbak)
+[10:31:48]    FIXED   Redhat_Automation\run_feedback.bat: .pyc now started with the matching Python (old file .repairbak)
+[10:31:48]    FIXED   Redhat_Automation\run_linkedin.bat: .pyc now started with the matching Python (old file .repairbak)
+[10:31:48]    FIXED   Redhat_Automation\run_nightly.bat: .pyc now started with the matching Python (old file .repairbak)
+
+[10:31:48] == Program files
+[10:31:48]    ...     no good copy saved yet (menu 3) - broken files can only be reported
+[10:31:48]    OK      program files are fine
+
+[10:31:48] == config.ini, Excel file, Chrome
+[10:31:48]    OK      Redhat_Automation\config.ini reads fine
+[10:31:48]    OK      Excel file found: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[10:31:48]    OK      automation Chrome (port 9222) answers
+
+[10:31:48] == Windows Task Scheduler
+[10:31:56]    OK      task 'RedHat Nightly 1140PM' is on - last run 11/19/2026 07:45:15 result 0x0 OK
+
+[10:31:56] == Saving the good copy
+[10:32:08]    FIXED   good copy saved (27 files, incl. scheduled tasks) in Repair\good_copy
+
+[10:32:08] ======================================================================
+[10:32:08] FIXED: 8    PROBLEMS LEFT: 0
+[10:32:08] Everything is fine - the automation can run.
+[10:32:08] Log: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\Repair\logs\repair_20261119_103135.txt

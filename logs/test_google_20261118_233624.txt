@@ -1,0 +1,23 @@
+[23:36:26] Sheet SEP: 2 person(s) without a LinkedIn Id on 09-Sep-2026
+[23:36:26]   row 45: Paul Jonathan Raj A | jonathanpaul2595@gmail.com | Infosys
+[23:36:26]   row 47: Vignesh Durairaj | vigneshbarani28@gmail.com | Pioneer
+[23:36:30] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[23:36:31] Waking up Chrome tabs
+[23:36:43] Connected to Chrome
+[23:36:44] Clicked New mail
+[23:36:48] [1/2] Paul Jonathan Raj A | jonathanpaul2595@gmail.com
+[23:36:56]     error: StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+[23:36:56]     LinkedIn: (not found)
+[23:36:58] [2/2] Vignesh Durairaj | vigneshbarani28@gmail.com
+[23:37:14]     no 'See profile on LinkedIn' (no LinkedIn match for this email?)
+[23:37:14]     LinkedIn: (not found)
+[23:37:17] --- Google search for 2 person(s) still without a LinkedIn Id
+[23:37:17] [Google 1/2] Paul Jonathan Raj A: Paul Jonathan Raj A @ Infosys linkedin profile
+[23:38:07]     match: 'Paul Raj' at Infosys -> https://www.linkedin.com/in/paul-raj2828/
+[23:38:15] [Google 2/2] Vignesh Durairaj: Vignesh Durairaj @ Pioneer linkedin profile
+[23:38:45]     not a match - profile 'Vignesh Kumar Durairaj': name ok, company not found - skipped
+[23:38:57] Draft discarded
+[23:38:57] LinkedIn found for 1 of 2 person(s) (1 by Google search)
+[23:38:57]   ! not found: Vignesh Durairaj | vigneshbarani28@gmail.com | Pioneer
+[23:38:57] Dry run - Excel file NOT saved
+[23:38:57] Done

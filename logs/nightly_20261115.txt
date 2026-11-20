@@ -1,0 +1,67 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:15] Date: 15-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:15] 
+[23:45:15] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[23:45:18] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:21] Closed 3 old tab(s) of individualexamscheduler
+[23:45:21] Waking up Chrome tabs
+[23:45:34] Connected to Chrome
+[23:45:36] Clicked menu > Exam Deliveries
+[23:45:38] Status = Completed
+[23:45:41] Time Zone = Asia/Calcutta
+[23:45:42] From = 2026-11-15
+[23:45:43] To = 2026-11-15
+[23:45:46] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2093
+[23:45:46] Searching location 2093
+[23:45:53]   0 of 0 result(s)
+[23:45:57] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2337
+[23:45:57] Searching location 2337
+[23:46:04]   0 of 0 result(s)
+[23:46:06] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2394
+[23:46:06] Searching location 2394
+[23:46:12]   0 of 0 result(s)
+[23:46:12] 0 completed exam(s) on 15-Nov-2026
+[23:46:12] No completed exams found - nothing to write
+[23:46:12] 
+[23:46:12] ========== Step 2/4: Feedback (Google Sheet) ==========
+[23:46:16] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[23:46:20] Waking up Chrome tabs
+[23:46:29] Connected to Chrome
+[23:47:17] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[23:47:17] Feedback timestamps are month/day
+[23:47:18] 0 feedback response(s) on 15-Nov-2026
+[23:47:18] No feedback that day - nothing to write
+[23:47:18] 
+[23:47:18] ========== Step 3/4: LinkedIn (Outlook) ==========
+[23:47:21] Sheet NOV: 0 email(s) without a LinkedIn Id on 15-Nov-2026
+[23:47:21] 
+[23:47:21] ========== Step 4/4: Excel check ==========
+[23:47:21] Excel complete for 15-Nov-2026: 0 row(s) in sheet NOV, 0 found on Red Hat
+[23:47:21] 
+[23:47:21] ========== Summary ==========
+[23:47:21]   Exams (Red Hat + Adv Pro): OK
+[23:47:21]   Feedback (Google Sheet): OK
+[23:47:21]   LinkedIn (Outlook): OK
+[23:47:21]   Excel check: OK
+[23:47:21] Done

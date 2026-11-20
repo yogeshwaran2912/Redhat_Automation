@@ -1,0 +1,32 @@
+[
+  {
+    "location": "2337",
+    "name": "yesuraja s",
+    "email": "yryesuraja@gmail.com",
+    "phone": "9566820572",
+    "code": "EX280",
+    "status": "y",
+    "eligibility": "LMS-2936147",
+    "our_student": "y"
+  },
+  {
+    "location": "2337",
+    "name": "Ann Sunil",
+    "email": "ann.s.madathumpadikal@gmail.com",
+    "phone": "7510843931",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2940654",
+    "our_student": "n"
+  },
+  {
+    "location": "2394",
+    "name": "Pooja Chandrasekaran",
+    "email": "pujac2820@gmail.com",
+    "phone": "9043179871",
+    "code": "EX294",
+    "status": "y",
+    "eligibility": "LMS-2880506",
+    "our_student": "y"
+  }
+]

@@ -1,0 +1,100 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[23:45:40] Date: 18-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[23:45:40] 
+[23:45:40] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[23:45:47] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[23:45:49] Closed 0 old tab(s) of individualexamscheduler
+[23:45:49] Waking up Chrome tabs
+[23:46:09] Connected to Chrome
+[23:46:11] Clicked menu > Exam Deliveries
+[23:46:13] Status = Completed
+[23:46:16] Time Zone = Asia/Calcutta
+[23:46:17] From = 2026-11-18
+[23:46:18] To = 2026-11-18
+[23:46:20] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2093
+[23:46:20] Searching location 2093
+[23:46:26]   1 - 2 of 2 result(s)
+[23:46:26]   skipped (status No Show): Sindhuja Mohan
+[23:46:26]   GOKULNATH PL | 9940264072 | gokulnath297@gmail.com | EX200 | LMS-2968584 -> y
+[23:46:28] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2337
+[23:46:28] Searching location 2337
+[23:46:35]   0 of 0 result(s)
+[23:46:37] Location = Advantage Pro – (Vectra Technosoft Pvt. Ltd)- 2394
+[23:46:37] Searching location 2394
+[23:46:44]   0 of 0 result(s)
+[23:46:44] 1 completed exam(s) on 18-Nov-2026
+[23:46:52] Opening Adv Pro
+[23:46:56] Adv Pro: logged in
+[23:46:58] Adv Pro: Master > Registration > Display
+[23:46:59] Adv Pro: Filter By = PresentPhoneNo
+[23:47:02]   Adv Pro 9940264072 GOKULNATH PL: y
+[23:47:03]   row 50: GOKULNATH PL | 9940264072 | gokulnath297@gmail.com | EX200 | y | our student y  (2093)
+[23:47:03] Sheet NOV: 1 row(s) added
+[23:47:03] Backup saved: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\backups\redhat exam 2026_20261118_234703.xlsx
+[23:47:05] Excel file saved
+[23:47:05] 
+[23:47:05] ========== Step 2/4: Feedback (Google Sheet) ==========
+[23:47:11] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[23:47:12] Waking up Chrome tabs
+[23:48:35] Connected to Chrome
+[23:48:39] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[23:48:39] Feedback timestamps are month/day
+[23:48:40] 7 feedback response(s) on 18-Nov-2026
+[23:48:45] 7 response(s) not in the Red Hat sheet (Pearson VUE or other exams):
+[23:48:45]     - Aruna N | 8939150095 | nagalakshmi.nainappan@gmail.com
+[23:48:45]     - Hari Kishore M | 9585833202 | kishorehari228@gmail.com
+[23:48:45]     - jeevitha | 9884850111 | gjeevitha89@gmail.com
+[23:48:45]     - Madhuri gopal | 988492257 | gopal.madhuri@gmail.com
+[23:48:45]     - Madhavan R | 6383413857 | rangansubamadhavan@gmail.com
+[23:48:45]     - Duvvuri Avinash | 6380258120 | avinashhazarathbabu@gmail.com
+[23:48:45]     - Abdul Rahman | 9791094468 | abdulasifrahman94@gmail.com
+[23:48:45] Sheet NOV: 0 row(s) updated with feedback
+[23:48:45] Nothing changed - Excel file not saved
+[23:48:45] 
+[23:48:45] ========== Step 3/4: LinkedIn (Outlook) ==========
+[23:48:47] Sheet NOV: 1 person(s) without a LinkedIn Id on 18-Nov-2026
+[23:48:47]   row 50: GOKULNATH PL | gokulnath297@gmail.com | (no company)
+[23:49:16] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[23:49:18] Waking up Chrome tabs
+[23:50:00] Connected to Chrome
+[23:50:00] Clicked New mail
+[23:50:04] [1/1] GOKULNATH PL | gokulnath297@gmail.com
+[23:50:23]     no 'See profile on LinkedIn' (no LinkedIn match for this email?)
+[23:50:23]     LinkedIn: (not found)
+[23:50:37] --- Google search for 1 person(s) still without a LinkedIn Id
+[23:50:37] [Google 1/1] GOKULNATH PL: no usable company name in the sheet ('') - skipped
+[23:50:41] Draft discarded
+[23:50:41] LinkedIn found for 0 of 1 person(s)
+[23:50:41]   ! not found: GOKULNATH PL | gokulnath297@gmail.com | (no company)
+[23:50:41] No LinkedIn URLs found - Excel file not changed
+[23:50:41] 
+[23:50:41] ========== Step 4/4: Excel check ==========
+[23:50:45] Excel complete for 18-Nov-2026: 1 row(s) in sheet NOV, 1 found on Red Hat
+[23:50:45] 
+[23:50:45] ========== Summary ==========
+[23:50:45]   Exams (Red Hat + Adv Pro): OK
+[23:50:45]   Feedback (Google Sheet): OK
+[23:50:45]   LinkedIn (Outlook): OK
+[23:50:45]   Excel check: OK
+[23:50:45] Done

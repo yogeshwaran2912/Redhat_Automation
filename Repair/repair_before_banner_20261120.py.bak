@@ -1,0 +1,639 @@
+"""
+REPAIR TOOL - stops, cleans, checks and fixes the automation in the folder above this one.
+
+The same file is in Redhat_Automation\\Repair, PearsonVUE_Automation\\Repair and
+Daily_automation\\Repair. It only touches its own project (the folder above Repair).
+
+  1. Quick repair   stop the stuck program, clear locks, clean temp files, check Python +
+                    packages, .bat launchers, program files, config.ini, Chrome, scheduled tasks
+  2. Full reset     quick repair + put back every program file from the "good copy"
+                    (like a fresh install; the files it replaces are kept in Repair\\replaced_*)
+  3. Save good copy save the programs as they are now (when everything works) for Full reset
+  4. Repair + start quick repair, then start the automation
+
+Excel files, logs, reports and backups are never deleted. config.ini is only put back when
+it is broken (it holds links the programs saved themselves).
+
+Usage
+  Repair.bat                 menu
+  Repair.bat --quick | --full | --save-good | --start
+"""
+import configparser
+import datetime as dt
+import filecmp
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import time
+import urllib.request
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent          # ...\Repair
+ROOT = HERE.parent                              # the project
+AUTOMATION = ROOT.parent                        # Desktop\Automation
+GOOD = HERE / "good_copy"
+LOGS = HERE / "logs"
+SKIP_DIRS = {"logs", "backups", "downloads", "reports", "chrome_profiles", "__pycache__", "vault", "repair"}
+CODE_EXT = {".py", ".pyc", ".bat", ".vbs", ".ini", ".ps1"}
+IMPORT_NAME = {"pillow": "PIL", "websocket-client": "websocket", "pywin32": "win32api"}
+NO_WINDOW = 0x08000000
+
+LOGS.mkdir(exist_ok=True)
+LOG_FILE = LOGS / f"repair_{dt.datetime.now():%Y%m%d_%H%M%S}.txt"
+fixed, problems = [], []
+
+
+def log(msg=""):
+    line = f"[{dt.datetime.now():%H:%M:%S}] {msg}" if msg else ""
+    print(line, flush=True)
+    with open(LOG_FILE, "a", encoding="utf-8") as fh:
+        fh.write(line + "\n")
+
+
+def ok(msg):
+    log(f"   OK      {msg}")
+
+
+def fix(msg):
+    fixed.append(msg)
+    log(f"   FIXED   {msg}")
+
+
+def bad(msg):
+    problems.append(msg)
+    log(f"   PROBLEM {msg}")
+
+
+def title(msg):
+    log()
+    log(f"== {msg}")
+
+
+def run(cmd, timeout=120):
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, creationflags=NO_WINDOW,
+                           encoding="utf-8", errors="replace")
+        return r.returncode, (r.stdout or "") + (r.stderr or "")
+    except FileNotFoundError:
+        return -1, "not found"
+    except subprocess.TimeoutExpired:
+        return -2, "timed out"
+
+
+def powershell(script, timeout=120):
+    return run(["powershell", "-NoProfile", "-NonInteractive", "-Command", script], timeout)
+
+
+def ask(question):
+    if not sys.stdin or not sys.stdin.isatty():
+        return False
+    try:
+        return input(f"   ?       {question} (y/N): ").strip().lower().startswith("y")
+    except EOFError:
+        return False
+
+
+def programs():
+    """The project folder itself, or (Daily_automation) its sub-folders that have a config.ini."""
+    if (ROOT / "config.ini").exists():
+        return [ROOT]
+    return sorted(d for d in ROOT.iterdir() if d.is_dir() and (d / "config.ini").exists())
+
+
+def code_files(folder):
+    return sorted(f for f in folder.iterdir() if f.is_file() and
+                  (f.suffix.lower() in CODE_EXT or f.name.lower() == "requirements.txt"))
+
+
+def load_cfg(folder):
+    cp = configparser.ConfigParser(interpolation=None, strict=True)
+    cp.read(folder / "config.ini", encoding="utf-8")
+    return cp
+
+
+def psutil_mod():
+    try:
+        import psutil
+        return psutil
+    except ImportError:
+        log("   ...     installing psutil (needed to find stuck programs)")
+        run([sys.executable, "-m", "pip", "install", "--quiet", "psutil"], 300)
+        try:
+            import psutil
+            return psutil
+        except ImportError:
+            return None
+
+
+def inside(path, folder):
+    p, f = str(path).lower().rstrip("\\") + "\\", str(folder).lower().rstrip("\\") + "\\"
+    return p.startswith(f)
+
+
+# ---------------------------------------------------------------- 1. stop
+
+def stop_programs():
+    title("Stopping the automation if it is stuck")
+    progs = programs()
+    for p in progs:
+        (p / "logs").mkdir(exist_ok=True)
+        (p / "logs" / "stop_requested").write_text("stop")
+    time.sleep(6)  # the program's own clean stop (stop.bat does the same)
+    ps = psutil_mod()
+    if not ps:
+        bad("psutil could not be installed - stuck programs not checked (close their windows by hand)")
+    else:
+        me = ps.Process()
+        mine = {me.pid} | {a.pid for a in me.parents()}
+        killed = 0
+        for pr in ps.process_iter(["pid", "name", "cmdline"]):
+            try:
+                if pr.pid in mine:
+                    continue
+                name = (pr.info["name"] or "").lower()
+                if not (name.startswith("python") or name in ("py.exe", "pyw.exe", "cmd.exe", "wscript.exe")):
+                    continue
+                cmd = " ".join(pr.info["cmdline"] or [])
+                try:
+                    cwd = pr.cwd()
+                except Exception:
+                    cwd = ""
+                if not (inside(cwd, ROOT) or str(ROOT).lower() in cmd.lower()):
+                    continue
+                kids = [k for k in pr.children(recursive=True) if (k.name() or "").lower() == "chromedriver.exe"]
+                for k in kids:
+                    k.kill()
+                log(f"   ...     closing stuck {name} (pid {pr.pid}) {cmd[:90]}")
+                pr.kill()
+                killed += 1
+            except (ps.NoSuchProcess, ps.AccessDenied):
+                continue
+        fix(f"{killed} stuck program window(s) closed") if killed else ok("no automation program was running")
+    for p in progs:  # or the next run stops straight away
+        try:
+            (p / "logs" / "stop_requested").unlink()
+        except FileNotFoundError:
+            pass
+
+
+# ---------------------------------------------------------------- 2. locks
+
+def pid_alive(pid):
+    ps = psutil_mod()
+    if ps:
+        return ps.pid_exists(pid)
+    code, out = run(["tasklist", "/FI", f"PID eq {pid}", "/NH"])
+    return str(pid) in out
+
+
+def clear_locks():
+    title("Locks")
+    lock = AUTOMATION / ".nightly_running"  # Red Hat / Pearson take turns on Chrome
+    if lock.exists():
+        try:
+            pids = [int(x) for x in (lock / "owner.txt").read_text().split()]
+        except Exception:
+            pids = []
+        alive = [p for p in pids if pid_alive(p)]
+        if alive:
+            ok(f"Chrome turn lock is held by a running program (pid {alive[0]}) - left alone")
+        else:
+            shutil.rmtree(lock, ignore_errors=True)
+            fix("old Chrome turn lock (.nightly_running) removed")
+    else:
+        ok("no Chrome turn lock")
+    daily = AUTOMATION / "Daily_automation" / ".chrome_in_use.lock"
+    if daily.exists():
+        try:
+            daily.unlink()
+            fix("old Daily Chrome lock (.chrome_in_use.lock) removed")
+        except PermissionError:
+            ok("Daily Chrome lock is in use by a running Daily program - left alone")
+    for p in programs():
+        cfg = load_cfg_safe(p)
+        xl = cfg.get("excel", "path", fallback="") if cfg else ""
+        if not xl:
+            continue
+        owner = Path(xl).parent / ("~$" + Path(xl).name)
+        try:
+            if owner.exists():
+                raw = owner.read_bytes()[:120]
+                who = re.sub(r"[^\w .-]", "", raw[1:1 + raw[0]].decode("latin-1", "ignore")) if raw else "?"
+                bad(f"Excel file is open by '{who}' ({Path(xl).name}) - it must be closed before the run saves")
+        except OSError:
+            pass
+
+
+def load_cfg_safe(p):
+    try:
+        return load_cfg(p)
+    except Exception:
+        return None
+
+
+# ---------------------------------------------------------------- 3. clean
+
+def clean():
+    title("Cleaning temporary files")
+    n = 0
+    for p in programs():
+        for d in [p / "__pycache__", HERE / "__pycache__"]:
+            if d.exists():
+                shutil.rmtree(d, ignore_errors=True)
+                n += 1
+        for pat in ("*.crdownload", "*.tmp"):
+            for f in (p / "downloads").glob(pat) if (p / "downloads").exists() else []:
+                try:
+                    f.unlink()
+                    n += 1
+                except OSError:
+                    pass
+        for f in p.glob("*.xlsx.tmp*"):
+            try:
+                f.unlink()
+                n += 1
+            except OSError:
+                pass
+    fix(f"{n} temporary item(s) removed") if n else ok("nothing to clean")
+
+
+# ---------------------------------------------------------------- 4. python
+
+def launchers():
+    """'python' and/or 'py -3.11' ... as used in the .bat files."""
+    used = set()
+    for p in programs():
+        for b in p.glob("*.bat"):
+            t = b.read_text(encoding="utf-8", errors="ignore")
+            used |= set(re.findall(r"\b(py -3\.\d+|python)\s+[\w.]+\.pyc?\b", t))
+    return sorted(used) or ["python"]
+
+
+def cmd_of(launcher):
+    """The program a .bat would start. Windows looks next to THIS Python first, so 'python'
+    must be found on PATH like cmd.exe does, not left to CreateProcess."""
+    parts = launcher.split()
+    exe = shutil.which(parts[0])
+    return [exe or parts[0]] + parts[1:]
+
+
+def interp_info(launcher):
+    code, out = run(cmd_of(launcher) + ["-c", "import sys,importlib.util;"
+                                        "print(sys.version.split()[0], importlib.util.MAGIC_NUMBER.hex())"], 60)
+    parts = out.split()
+    return (parts[0], parts[1]) if code == 0 and len(parts) >= 2 else None
+
+
+def requirements(p):
+    f = p / "requirements.txt"
+    names = []
+    if f.exists():
+        for line in f.read_text(encoding="utf-8", errors="ignore").splitlines():
+            line = line.split("#")[0].strip()
+            if line:
+                names.append(re.split(r"[<>=!~;\[\s]", line)[0])
+    return names
+
+
+def check_python():
+    title("Python and packages")
+    infos = {}
+    for la in launchers():
+        info = interp_info(la)
+        if not info:
+            bad(f"'{la}' does not start - Python is missing or broken (reinstall Python)")
+            continue
+        infos[la] = info
+        ok(f"'{la}' = Python {info[0]}")
+        for p in programs():
+            req = requirements(p)
+            mods = [IMPORT_NAME.get(r.lower(), r.replace("-", "_")) for r in req]
+            if not mods:
+                continue
+            test = ";".join(f"import {m}" for m in mods)
+            code, out = run(cmd_of(la) + ["-c", test], 120)
+            if code == 0:
+                ok(f"'{la}' has all packages for {p.name}")
+                continue
+            log(f"   ...     '{la}' is missing packages for {p.name} - installing")
+            run(cmd_of(la) + ["-m", "pip", "install", "--quiet", "-r", str(p / "requirements.txt")], 900)
+            code, out = run(cmd_of(la) + ["-c", test], 120)
+            if code == 0:
+                fix(f"packages installed in '{la}' for {p.name}")
+            else:
+                bad(f"'{la}' still misses packages for {p.name}: {out.strip().splitlines()[-1][:120]}")
+    return infos
+
+
+def check_launchers(infos):
+    """A locked program runs from its .pyc, which only works with the Python version it was built with."""
+    title(".bat launchers (.pyc Python version)")
+    every = dict(infos)
+    for la in ("py -3.11", "py -3.12", "py -3.13", "py -3.14", "py -3.15", "python"):
+        if la not in every:
+            info = interp_info(la)
+            if info:
+                every[la] = info
+    by_magic = {}
+    for la, (ver, magic) in every.items():
+        by_magic.setdefault(magic, la)
+    changed = 0
+    for p in programs():
+        for b in sorted(p.glob("*.bat")):
+            text = b.read_text(encoding="utf-8", errors="ignore")
+            new = text
+            for la, pyc in set(re.findall(r"\b(py -3\.\d+|python)\s+([\w.]+\.pyc)\b", text)):
+                f = p / pyc
+                if not f.exists():
+                    continue
+                magic = f.read_bytes()[:4].hex()
+                if la in every and every[la][1] == magic:
+                    continue
+                right = by_magic.get(magic)
+                if not right:
+                    bad(f"{p.name}\\{pyc} was made by a Python that is not installed - run unlock.bat then lock.bat")
+                    continue
+                new = re.sub(rf"\b{re.escape(la)}(\s+{re.escape(pyc)})\b", lambda m: right + m.group(1), new)
+            if new != text:
+                shutil.copy2(b, b.with_name(b.name + ".repairbak"))
+                b.write_text(new, encoding="utf-8")
+                changed += 1
+                fix(f"{p.name}\\{b.name}: .pyc now started with the matching Python (old file .repairbak)")
+    if not changed:
+        ok("every .bat starts its .pyc with the right Python")
+
+
+# ---------------------------------------------------------------- 5. program files
+
+def compiles(path):
+    try:
+        compile(path.read_text(encoding="utf-8"), str(path), "exec")
+        return None
+    except Exception as e:
+        return f"{type(e).__name__}: {e}"
+
+
+def check_files(full=False):
+    title("Program files")
+    have_good = GOOD.exists() and any(GOOD.rglob("*"))
+    if not have_good:
+        log("   ...     no good copy saved yet (menu 3) - broken files can only be reported")
+    stamp = f"{dt.datetime.now():%Y%m%d_%H%M%S}"
+    replaced = 0
+    for p in programs():
+        rel = p.relative_to(ROOT)
+        good_dir = GOOD / rel
+        # files of the good copy that are missing / changed
+        if have_good and good_dir.exists():
+            for g in sorted(x for x in good_dir.iterdir() if x.is_file()):
+                cur = p / g.name
+                if cur.exists() and filecmp.cmp(cur, g, shallow=False):
+                    continue
+                if g.suffix == ".py" and not cur.exists() and (p / "vault" / (g.name + ".enc")).exists():
+                    continue  # locked on purpose (lock.bat) - the .pyc runs
+                if g.name.lower() == "config.ini" and cur.exists() and load_cfg_safe(p) is not None:
+                    continue  # a working config is kept (it holds saved links)
+                broken = (not cur.exists()) or (cur.suffix == ".py" and compiles(cur)) or \
+                         (cur.name.lower() == "config.ini" and load_cfg_safe(p) is None)
+                if not (full or broken):
+                    continue
+                if cur.exists():
+                    keep = HERE / f"replaced_{stamp}" / rel
+                    keep.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(cur, keep / cur.name)
+                shutil.copy2(g, cur)
+                replaced += 1
+                fix(f"{p.name}\\{g.name} put back from the good copy"
+                    + (" (was broken)" if broken else ""))
+        for f in sorted(p.glob("*.py")):
+            err = compiles(f)
+            if err:
+                bad(f"{p.name}\\{f.name} has an error: {err[:150]}")
+        for b in sorted(p.glob("*.bat")):
+            for target in re.findall(r"\bif exist ([\w.]+\.py)\b.*?else \([^)]*?([\w.]+\.pyc)", b.read_text(errors="ignore")):
+                if not (p / target[0]).exists() and not (p / target[1]).exists():
+                    bad(f"{p.name}\\{b.name}: neither {target[0]} nor {target[1]} exists")
+    if replaced:
+        log(f"   ...     the replaced files are kept in Repair\\replaced_{stamp}")
+    elif not problems or full:
+        ok("program files are fine")
+
+
+# ---------------------------------------------------------------- 6. config
+
+def check_config():
+    title("config.ini, Excel file, Chrome")
+    desktop = Path(os.path.expanduser("~")) / "Desktop"
+    for p in programs():
+        try:
+            cfg = load_cfg(p)
+        except Exception as e:
+            bad(f"{p.name}\\config.ini is broken: {str(e).splitlines()[0][:150]}")
+            continue
+        ok(f"{p.name}\\config.ini reads fine")
+        xl = cfg.get("excel", "path", fallback="")
+        if xl:
+            (ok if Path(xl).exists() else bad)(
+                f"Excel file {'found' if Path(xl).exists() else 'NOT reachable (network / 192.168.0.129 off?)'}: {xl}")
+        chrome = cfg.get("chrome", "path", fallback="")
+        if chrome and not Path(chrome).exists():
+            bad(f"Chrome not found at {chrome}")
+        for sec in cfg.sections():
+            lnk = cfg.get(sec, "shortcut", fallback="")
+            if lnk and not (desktop / lnk).exists() and not Path(lnk).exists():
+                bad(f"[{sec}] shortcut '{lnk}' is not on the Desktop")
+
+
+def check_chrome():
+    ports = set()
+    for p in programs():
+        cfg = load_cfg_safe(p)
+        if cfg and cfg.has_option("chrome", "debug_port"):
+            ports.add(cfg.getint("chrome", "debug_port"))
+    for port in sorted(ports):
+        try:
+            urllib.request.urlopen(f"http://127.0.0.1:{port}/json/version", timeout=6).read()
+            ok(f"automation Chrome (port {port}) answers")
+            continue
+        except Exception:
+            pass
+        ps = psutil_mod()
+        hung = []
+        if ps:
+            for pr in ps.process_iter(["pid", "name", "cmdline"]):
+                try:
+                    if (pr.info["name"] or "").lower() == "chrome.exe" and \
+                            f"--remote-debugging-port={port}" in " ".join(pr.info["cmdline"] or []):
+                        hung.append(pr)
+                except (ps.NoSuchProcess, ps.AccessDenied):
+                    pass
+        if not hung:
+            ok(f"automation Chrome (port {port}) is closed - the program opens it itself")
+        elif ask(f"Chrome on port {port} is open but not answering. Close it so it starts fresh?"):
+            for pr in hung:
+                try:
+                    pr.kill()
+                except Exception:
+                    pass
+            fix(f"frozen automation Chrome (port {port}) closed")
+        else:
+            bad(f"Chrome on port {port} is open but not answering - close all Chrome windows and run again")
+
+
+# ---------------------------------------------------------------- 7. scheduled tasks
+
+def my_tasks():
+    root = str(ROOT).lower().replace("'", "''")
+    code, out = powershell(
+        "Get-ScheduledTask | ForEach-Object { $a = ($_.Actions | ForEach-Object { \"$($_.Execute) $($_.Arguments)\" }) -join ';';"
+        f" if ($a.ToLower().Contains('{root}')) {{ $i = $_ | Get-ScheduledTaskInfo;"
+        " [pscustomobject]@{Name=$_.TaskName; Path=$_.TaskPath; State=\"$($_.State)\"; Result=$i.LastTaskResult; Last=\"$($i.LastRunTime)\"} } }"
+        " | ConvertTo-Json -Compress")
+    try:
+        data = json.loads(out.strip() or "[]")
+    except json.JSONDecodeError:
+        return None
+    return [data] if isinstance(data, dict) else data
+
+
+def check_tasks():
+    title("Windows Task Scheduler")
+    tasks = my_tasks()
+    if tasks is None:
+        bad("Task Scheduler could not be read")
+        return
+    names = {t["Name"]: t for t in tasks}
+    saved = {x.stem: x for x in (GOOD / "tasks").glob("*.xml")} if (GOOD / "tasks").exists() else {}
+    for name, xml in saved.items():
+        if name not in names:
+            x = str(xml).replace("'", "''")
+            code, out = powershell(f"Register-ScheduledTask -TaskName '{name}' -Xml (Get-Content -Raw '{x}') | Out-Null")
+            (fix if code == 0 else bad)(f"task '{name}' was missing - " + ("created again" if code == 0 else
+                                                                             f"could not create it: {out.strip()[:120]}"))
+    for name, t in names.items():
+        if t["State"] == "Disabled":
+            code, out = powershell(f"Enable-ScheduledTask -TaskName '{name}' | Out-Null")
+            (fix if code == 0 else bad)(f"task '{name}' was turned off - " + ("turned on" if code == 0 else out[:100]))
+        else:
+            res = int(t.get("Result") or 0) & 0xFFFFFFFF
+            note = {0: "OK", 0x41301: "running now", 0xC000013A: "was stopped / window closed",
+                    0x1: "the program ended with an error - see its logs", 0x41303: "not run yet"}.get(res, "")
+            log(f"   OK      task '{name}' is on - last run {t.get('Last')} result 0x{res:X} {note}")
+    if not names and not saved:
+        log("   ...     no scheduled task points to this folder")
+
+
+# ---------------------------------------------------------------- good copy
+
+def save_good():
+    title("Saving the good copy")
+    for p in programs():
+        for f in p.glob("*.py"):
+            err = compiles(f)
+            if err:
+                bad(f"{p.name}\\{f.name} has an error - good copy NOT saved: {err[:120]}")
+                return
+        if load_cfg_safe(p) is None:
+            bad(f"{p.name}\\config.ini is broken - good copy NOT saved")
+            return
+    if GOOD.exists():
+        old = HERE / "good_copy_previous"
+        shutil.rmtree(old, ignore_errors=True)
+        GOOD.rename(old)
+    n = 0
+    for p in programs():
+        dest = GOOD / p.relative_to(ROOT)
+        dest.mkdir(parents=True, exist_ok=True)
+        for f in code_files(p):
+            shutil.copy2(f, dest / f.name)
+            n += 1
+    (GOOD / "tasks").mkdir(parents=True, exist_ok=True)
+    for t in my_tasks() or []:
+        path = (t.get("Path") or "\\").replace("'", "''")
+        code, out = powershell(f"Export-ScheduledTask -TaskName '{t['Name']}' -TaskPath '{path}'")
+        if code == 0 and "<Task" in out:
+            (GOOD / "tasks" / f"{t['Name']}.xml").write_text(out[out.index("<"):], encoding="utf-16")
+            n += 1
+    (GOOD / "saved.txt").write_text(f"Good copy saved {dt.datetime.now():%d-%m-%Y %H:%M}\n", encoding="utf-8")
+    fix(f"good copy saved ({n} files, incl. scheduled tasks) in Repair\\good_copy")
+
+
+# ---------------------------------------------------------------- start
+
+def start_program():
+    title("Starting the automation")
+    bat = ROOT / "run_all.bat"
+    if bat.exists():
+        subprocess.Popen(["cmd", "/c", "start", "", str(bat)], cwd=str(ROOT))
+        fix("run_all.bat started in its own window")
+    else:
+        log("   ...     this project runs from its scheduled task (12:00 AM / 12:06 AM);"
+            " run_test.bat in each folder makes a test report without WhatsApp")
+
+
+# ---------------------------------------------------------------- main
+
+def repair(full=False):
+    stop_programs()
+    clear_locks()
+    clean()
+    infos = check_python()
+    check_launchers(infos)
+    check_files(full)
+    check_config()
+    check_chrome()
+    check_tasks()
+    if not GOOD.exists() and not problems:
+        save_good()
+
+
+def summary():
+    log()
+    log("=" * 70)
+    log(f"FIXED: {len(fixed)}    PROBLEMS LEFT: {len(problems)}")
+    for p in problems:
+        log(f"  - {p}")
+    log("Everything is fine - the automation can run." if not problems else
+        "Fix the problems above (or send this log to support), then run Repair again.")
+    log(f"Log: {LOG_FILE}")
+
+
+def main():
+    print("=" * 70)
+    print(f"  REPAIR TOOL - {ROOT.name}")
+    print("=" * 70)
+    arg = sys.argv[1] if len(sys.argv) > 1 else ""
+    if not arg:
+        print("  1. Quick repair   (stop, unlock, clean, check and fix)")
+        print("  2. Full reset     (quick repair + all program files back from the good copy)")
+        print("  3. Save good copy (do this when everything works)")
+        print("  4. Quick repair, then start the automation")
+        print("  0. Exit")
+        try:
+            arg = {"1": "--quick", "2": "--full", "3": "--save-good", "4": "--start"}.get(input("  Choose: ").strip(), "")
+        except EOFError:
+            arg = "--quick"
+        if not arg:
+            return
+    log(f"Repair tool {arg} - {ROOT}")
+    if arg == "--save-good":
+        save_good()
+    elif arg == "--full":
+        if not GOOD.exists():
+            bad("no good copy saved yet - doing a quick repair instead")
+        repair(full=True)
+    else:
+        repair()
+        if arg == "--start":
+            if problems:
+                log("   ...     not started - fix the problems first")
+            else:
+                start_program()
+    summary()
+
+
+if __name__ == "__main__":
+    main()

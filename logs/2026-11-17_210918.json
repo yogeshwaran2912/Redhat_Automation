@@ -1,0 +1,22 @@
+[
+  {
+    "location": "2093",
+    "name": "Rajesh S",
+    "email": "srajesh2907@gmail.com",
+    "phone": "9566136463",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2935367",
+    "our_student": "y"
+  },
+  {
+    "location": "2093",
+    "name": "Purushothaman B",
+    "email": "purub1806@gmail.com",
+    "phone": "01723193899",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "RHLS-608484",
+    "our_student": "n"
+  }
+]

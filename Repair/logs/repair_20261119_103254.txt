@@ -1,0 +1,38 @@
+[10:32:54] Repair tool --quick - C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation
+
+[10:32:54] == Stopping the automation if it is stuck
+[10:33:02]    OK      no automation program was running
+
+[10:33:02] == Locks
+[10:33:02]    OK      no Chrome turn lock
+
+[10:33:02] == Cleaning temporary files
+[10:33:02]    OK      nothing to clean
+
+[10:33:02] == Python and packages
+[10:33:02]    OK      'python' = Python 3.15.2
+[10:33:03]    ...     'python' is missing packages for Redhat_Automation - installing
+[10:34:18]    FIXED   packages installed in 'python' for Redhat_Automation
+
+[10:34:18] == .bat launchers (.pyc Python version)
+[10:34:19]    OK      every .bat starts its .pyc with the right Python
+
+[10:34:19] == Program files
+[10:34:19]    ...     no good copy saved yet (menu 3) - broken files can only be reported
+[10:34:19]    OK      program files are fine
+
+[10:34:19] == config.ini, Excel file, Chrome
+[10:34:19]    OK      Redhat_Automation\config.ini reads fine
+[10:34:19]    OK      Excel file found: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[10:34:19]    OK      automation Chrome (port 9222) answers
+
+[10:34:19] == Windows Task Scheduler
+[10:34:25]    OK      task 'RedHat Nightly 1140PM' is on - last run 11/19/2026 07:45:15 result 0x0 OK
+
+[10:34:25] == Saving the good copy
+[10:34:36]    FIXED   good copy saved (27 files, incl. scheduled tasks) in Repair\good_copy
+
+[10:34:36] ======================================================================
+[10:34:36] FIXED: 2    PROBLEMS LEFT: 0
+[10:34:36] Everything is fine - the automation can run.
+[10:34:36] Log: C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\Repair\logs\repair_20261119_103254.txt

@@ -1,0 +1,203 @@
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:25:45] Date: 17-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:25:45] 
+[00:25:45] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:25:50] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:25:51] Closed 0 old tab(s) of individualexamscheduler
+[00:25:51] Waking up Chrome tabs
+[00:25:54] Connected to Chrome
+[00:25:56] Clicked menu > Exam Deliveries
+[00:25:57] !! Step 1 failed: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72B2E38A5+3004357]
+	(No symbol) [0x00007FF72AF79970]
+	(No symbol) [0x00007FF72AE2582A]
+	(No symbol) [0x00007FF72ADFFA75]
+	(No symbol) [0x00007FF72AEA2C77]
+	(No symbol) [0x00007FF72AEBB351]
+	(No symbol) [0x00007FF72AE9B983]
+	(No symbol) [0x00007FF72AE67628]
+	(No symbol) [0x00007FF72AE68791]
+	GetHandleVerifier [0x00007FF72B30A00D+3161901]
+	GetHandleVerifier [0x00007FF72B35E060+3506048]
+	GetHandleVerifier [0x00007FF72B35400D+3465005]
+	GetHandleVerifier [0x00007FF72B0D0EEB+830987]
+	(No symbol) [0x00007FF72AF8467F]
+	(No symbol) [0x00007FF72AF809D4]
+	(No symbol) [0x00007FF72AF80B6D]
+	(No symbol) [0x00007FF72AF70149]
+	BaseThreadInitThunk [0x00007FFED25D7374+20]
+	RtlUserThreadStart [0x00007FFED395CC91+33]
+
+[00:25:57]    details saved in logs\error_20261118_002557.txt - going to the next step
+[00:25:57] 
+[00:25:57] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:26:00] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:26:02] Waking up Chrome tabs
+[00:26:03] Connected to Chrome
+[00:26:10] !! Step 2 failed: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72B2E38A5+3004357]
+	(No symbol) [0x00007FF72AF79970]
+	(No symbol) [0x00007FF72AE2582A]
+	(No symbol) [0x00007FF72ADFFA75]
+	(No symbol) [0x00007FF72AEA2C77]
+	(No symbol) [0x00007FF72AEBB351]
+	(No symbol) [0x00007FF72AE9B983]
+	(No symbol) [0x00007FF72AE67628]
+	(No symbol) [0x00007FF72AE68791]
+	GetHandleVerifier [0x00007FF72B30A00D+3161901]
+	GetHandleVerifier [0x00007FF72B35E060+3506048]
+	GetHandleVerifier [0x00007FF72B35400D+3465005]
+	GetHandleVerifier [0x00007FF72B0D0EEB+830987]
+	(No symbol) [0x00007FF72AF8467F]
+	(No symbol) [0x00007FF72AF809D4]
+	(No symbol) [0x00007FF72AF80B6D]
+	(No symbol) [0x00007FF72AF70149]
+	BaseThreadInitThunk [0x00007FFED25D7374+20]
+	RtlUserThreadStart [0x00007FFED395CC91+33]
+
+[00:26:10]    details saved in logs\error_20261118_002610.txt - going to the next step
+[00:26:10] 
+[00:26:10] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:26:14] Sheet NOV: 1 email(s) without a LinkedIn Id on 17-Nov-2026
+[00:26:14]   row 49: Purushothaman B | purub1806@gmail.com
+[00:26:18] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[00:26:19] Waking up Chrome tabs
+[00:26:24] Connected to Chrome
+[00:26:27] Clicked New mail
+[00:26:30] [1/1] Purushothaman B | purub1806@gmail.com
+[00:26:50]     error: NoSuchWindowException: Message: no such window: target window already closed
+[00:26:50]     Outlook tab was closed - opening it again
+[00:26:56] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[00:26:57] Waking up Chrome tabs
+[00:27:02] Could not connect to Chrome (try 1 of 3): NoSuchWindowException: Message: no such window
+[00:27:05] Could not connect to Chrome (try 2 of 3): NoSuchWindowException: Message: no such window
+[00:27:10] Could not connect to Chrome (try 3 of 3): NoSuchWindowException: Message: no such window
+[00:27:10] Could not discard the draft - delete it from Outlook Drafts
+[00:27:10] LinkedIn found for 0 of 1 email(s)
+[00:27:10]   ! not found: Purushothaman B | purub1806@gmail.com
+[00:27:10] No LinkedIn URLs found - Excel file not changed
+[00:27:10] !! Step 3 failed: RuntimeError: Could not connect to Chrome after 3 tries: NoSuchWindowException: Message: no such window
+[00:27:10]    details saved in logs\error_20261118_002710.txt - going to the next step
+[00:27:10] 
+[00:27:10] ========== Step 4/4: Excel check ==========
+[00:27:13] Excel complete for 17-Nov-2026: 2 row(s) in sheet NOV, 2 found on Red Hat
+[00:27:13] 
+[00:27:13] ========== Summary ==========
+[00:27:13]   Exams (Red Hat + Adv Pro): FAILED: NoSuchWindowException: Message: no such window: target window already closed
+[00:27:13]   Feedback (Google Sheet): FAILED: NoSuchWindowException: Message: no such window: target window already closed
+[00:27:13]   LinkedIn (Outlook): FAILED: RuntimeError: Could not connect to Chrome after 3 tries: NoSuchWindowException: Message: no such window
+[00:27:13]   Excel check: OK
+[00:27:13] Done
+    
+                 ____    _____   ____    _   _      _      _____
+                |  _ \  | ____| |  _ \  | | | |    / \    |_   _|
+                | |_) | |  _|   | | | | | |_| |   / _ \     | |
+                |  _ <  | |___  | |_| | |  _  |  / ___ \    | |
+                |_| \_\ |_____| |____/  |_| |_| /_/   \_\   |_|
+
+    _      _   _   _____    ___    __  __      _      _____   ___    ___    _   _
+   / \    | | | | |_   _|  / _ \  |  \/  |    / \    |_   _| |_ _|  / _ \  | \ | |
+  / _ \   | | | |   | |   | | | | | |\/| |   / _ \     | |    | |  | | | | |  \| |
+ / ___ \  | |_| |   | |   | |_| | | |  | |  / ___ \    | |    | |  | |_| | | |\  |
+/_/   \_\  \___/    |_|    \___/  |_|  |_| /_/   \_\   |_|   |___|  \___/  |_| \_|
+
+                                                      YOGESHWARAN TL
+                                                      Version = 0.1
+======================================================================
+  Red Hat exams -> redhat exam 2026.xlsx
+  The date you give is used for every step:
+    1. Red Hat Exam Scheduler (Advantage pro Chrome) + Adv Pro check
+    2. ADV PRO FEEDBACK Google Sheet (Ranjit Chrome)
+    3. LinkedIn from Outlook (Arish Chrome)
+======================================================================
+[00:29:16] Date: 17-Nov-2026 for all steps   Excel: \\192.168.0.129\test\Exam count\redhat exam 2026.xlsx
+[00:29:16] 
+[00:29:16] ========== Step 1/4: Exams (Red Hat + Adv Pro) ==========
+[00:29:21] Opening Chrome profile 'Profile 37' (Advantage pro - Chrome.lnk)
+[00:29:22] Closed 0 old tab(s) of individualexamscheduler
+[00:29:22] Waking up Chrome tabs
+[00:29:27] Connected to Chrome
+[00:29:29] Clicked menu > Exam Deliveries
+[00:29:30] Status = Completed
+[00:29:33] Time Zone = Asia/Calcutta
+[00:29:34] !! Step 1 failed: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60C9238A5+3004357]
+	(No symbol) [0x00007FF60C5B9970]
+	(No symbol) [0x00007FF60C46582A]
+	(No symbol) [0x00007FF60C43FA75]
+	(No symbol) [0x00007FF60C4E2C77]
+	(No symbol) [0x00007FF60C4FB351]
+	(No symbol) [0x00007FF60C4DB983]
+	(No symbol) [0x00007FF60C4A7628]
+	(No symbol) [0x00007FF60C4A8791]
+	GetHandleVerifier [0x00007FF60C94A00D+3161901]
+	GetHandleVerifier [0x00007FF60C99E060+3506048]
+	GetHandleVerifier [0x00007FF60C99400D+3465005]
+	GetHandleVerifier [0x00007FF60C710EEB+830987]
+	(No symbol) [0x00007FF60C5C467F]
+	(No symbol) [0x00007FF60C5C09D4]
+	(No symbol) [0x00007FF60C5C0B6D]
+	(No symbol) [0x00007FF60C5B0149]
+	BaseThreadInitThunk [0x00007FFED25D7374+20]
+	RtlUserThreadStart [0x00007FFED395CC91+33]
+
+[00:29:34]    details saved in logs\error_20261118_002933.txt - going to the next step
+[00:29:34] 
+[00:29:34] ========== Step 2/4: Feedback (Google Sheet) ==========
+[00:29:38] Opening Chrome profile 'Profile 5' (Ranjit - Chrome.lnk)
+[00:29:39] Waking up Chrome tabs
+[00:29:59] Connected to Chrome
+[00:30:02] Feedback sheet columns found: {'ts': 'Timestamp', 'name': 'Name', 'phone': 'Phone number', 'email': 'Email Address', 'company': 'Your Company name', 'designation': 'Your Designation ', 'experience': 'Let others know about your experience by leaving a Advantage Pro review'}
+[00:30:02] Feedback timestamps are month/day
+[00:30:02] 9 feedback response(s) on 17-Nov-2026
+[00:30:08] 9 response(s) not in the Red Hat sheet (Pearson VUE or other exams):
+[00:30:08]     - Monisha | 7402353712 | monishaparamasivam95@gmail.com
+[00:30:08]     - Shuba T | 7845816699 | tshuba90@gmail.com
+[00:30:08]     - Yugendran Sunder | 9500577046 | yugendran.sunder@gmail.com
+[00:30:08]     - Theertha Shree R | 9789940448 | theesan829@gmail.com
+[00:30:08]     - Neeraj | 8825982895 | phneeraj18@gmail.com
+[00:30:08]     - Shanthakumar S | 7904593204 | skshanthakumar181004@gmail.com
+[00:30:08]     - Gowsalya Ganesan | 7339621183 | gowsalya23g@gmail.com
+[00:30:08]     - Shyamkrishnan B | 9344214661 | badbomb@gmail.com
+[00:30:08]     - Baranitharan K C | 9840126076 | barani.kc@gmail.com
+[00:30:08] Sheet NOV: 0 row(s) updated with feedback
+[00:30:08] Nothing changed - Excel file not saved
+[00:30:08] 
+[00:30:08] ========== Step 3/4: LinkedIn (Outlook) ==========
+[00:30:08] Sheet NOV: 1 email(s) without a LinkedIn Id on 17-Nov-2026
+[00:30:08]   row 49: Purushothaman B | purub1806@gmail.com
+[00:30:14] Opening Chrome profile 'Profile 38' (Arish - Chrome.lnk)
+[00:30:15] Waking up Chrome tabs
+[00:30:26] Connected to Chrome
+[00:30:27] Clicked New mail
+[00:30:30] [1/1] Purushothaman B | purub1806@gmail.com

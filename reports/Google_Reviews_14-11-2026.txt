@@ -1,0 +1,20 @@
+===== Google Review report - 14-Nov-2026 (sheet NOV) =====
+                        Day   Month
+Total candidates          0      15
+Genuine reviews           0       0
+Pending                   0      15
+Reminder Sent             0       0
+Unable to Verify          0       0
+Review percentage         -      0%
+New reviews received this run: 0
+Reviews not matched to a candidate: 10
+   ? Subramaniam Ravishankar - 4 star - 56 minutes ago
+   ? Bharath Krishna - 5 star - 12 hours ago
+   ? Madhuri Gopal - 5 star - a day ago
+   ? Aruna Nainappan - 5 star - Edited a day ago
+   ? Sadhan Kumar K - 5 star - 3 days ago
+   ? Deepika M - 5 star - 4 days ago
+   ? Harish S - 4 star - 4 days ago
+   ? G Nagalingam - 5 star - 4 days ago
+   ? Gowri S - 5 star - 5 days ago
+   ? Akshay J P - 5 star - 6 days ago

@@ -1,0 +1,32 @@
+[
+  {
+    "location": "2093",
+    "name": "Barty Srujan",
+    "email": "bartysrujan5739@gmail.com",
+    "phone": "7879860107",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2940645",
+    "our_student": "n"
+  },
+  {
+    "location": "2337",
+    "name": "Balaji S",
+    "email": "balaji.s@nokia.com",
+    "phone": "8939623954",
+    "code": "EX200",
+    "status": "y",
+    "eligibility": "LMS-2540584",
+    "our_student": "n"
+  },
+  {
+    "location": "2337",
+    "name": "SARAVANAKUMAR SANTHANAM",
+    "email": "ohmsaravana@gmail.com",
+    "phone": "9578213425",
+    "code": "EX267",
+    "status": "y",
+    "eligibility": "RHLS-605824",
+    "our_student": "y"
+  }
+]

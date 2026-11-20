@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+    step()
+    ~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 102, in <lambda>
+    lambda: linkedin_from_outlook.run(cfg, date, date, ask=args.ask, dry_run=args.dry_run)),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\linkedin_from_outlook.py", line 399, in run
+    driver, outlook_tab = start_outlook()
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\linkedin_from_outlook.py", line 386, in start_outlook
+    open_compose(d)
+    ~~~~~~~~~~~~^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\linkedin_from_outlook.py", line 168, in open_compose
+    ask_user("Could not open a new mail. Click 'New mail' in Outlook.")
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 62, in ask_user
+    raise RuntimeError(f"Needs a person at the computer: {msg}")
+RuntimeError: Needs a person at the computer: Could not open a new mail. Click 'New mail' in Outlook.

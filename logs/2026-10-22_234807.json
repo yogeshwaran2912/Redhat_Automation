@@ -1,0 +1,42 @@
+[
+  {
+    "location": "2093",
+    "name": "Sathyanarayanan Thiyagarajan",
+    "email": "sathyanarayanant@outlook.com",
+    "phone": "9962260009",
+    "code": "EX200",
+    "status": "retake",
+    "eligibility": "LMS-2862884-RETAKE.1",
+    "our_student": "n"
+  },
+  {
+    "location": "2337",
+    "name": "sugesh kumar",
+    "email": "sugeshkumar888@gmail.com",
+    "phone": "9750573309",
+    "code": "EX200",
+    "status": "retake",
+    "eligibility": "LMS-2935521-RETAKE.1",
+    "our_student": "n"
+  },
+  {
+    "location": "2337",
+    "name": "Pradeep Kumar T K",
+    "email": "pradeepkumartk90@gmail.com",
+    "phone": "8668046594",
+    "code": "EX294",
+    "status": "y",
+    "eligibility": "LMS-2961302",
+    "our_student": "y"
+  },
+  {
+    "location": "2394",
+    "name": "Joeal Chrish H",
+    "email": "joealchrish@gmail.com",
+    "phone": "9025491098",
+    "code": "EX294",
+    "status": "y",
+    "eligibility": "LMS-2885851",
+    "our_student": "y"
+  }
+]

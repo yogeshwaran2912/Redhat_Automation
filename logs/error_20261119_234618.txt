@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 119, in run_date
+    step()
+    ~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 93, in <lambda>
+    lambda: google_reviews.run(cfg, date, redhat_automation, dry_run=args.dry_run)),
+            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\google_reviews.py", line 519, in run
+    reviews = read_reviews(cfg, h, max(cfg.getfloat("review", "hours", fallback=24), round(since + 1)))
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\google_reviews.py", line 175, in read_reviews
+    if not wait_js(driver, CLICK_REVIEWS_TAB_JS, 25):
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\google_reviews.py", line 155, in wait_js
+    r = driver.execute_script(js)
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\webdriver.py", line 677, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\webdriver.py", line 566, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\ADV PRO\AppData\Roaming\Python\Python315\site-packages\selenium\webdriver\remote\errorhandler.py", line 234, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: script timeout
+  (Session info: chrome=130.0.6723.119)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7198738A5+3004357]
+	(No symbol) [0x00007FF719509970]
+	(No symbol) [0x00007FF7193B5659]
+	(No symbol) [0x00007FF71944CD56]
+	(No symbol) [0x00007FF71942BBDA]
+	(No symbol) [0x00007FF71944BA4C]
+	(No symbol) [0x00007FF71942B983]
+	(No symbol) [0x00007FF7193F7628]
+	(No symbol) [0x00007FF7193F8791]
+	GetHandleVerifier [0x00007FF71989A00D+3161901]
+	GetHandleVerifier [0x00007FF7198EE060+3506048]
+	GetHandleVerifier [0x00007FF7198E400D+3465005]
+	GetHandleVerifier [0x00007FF719660EEB+830987]
+	(No symbol) [0x00007FF71951467F]
+	(No symbol) [0x00007FF7195109D4]
+	(No symbol) [0x00007FF719510B6D]
+	(No symbol) [0x00007FF719500149]
+	BaseThreadInitThunk [0x00007FFED25D7374+20]
+	RtlUserThreadStart [0x00007FFED395CC91+33]
+

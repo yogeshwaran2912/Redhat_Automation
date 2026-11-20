@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 121, in main
+    step()
+    ~~~~^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\main.py", line 98, in <lambda>
+    lambda: redhat_automation.run(cfg, date, skip_advpro=args.skip_advpro, dry_run=args.dry_run)),
+            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADV PRO\Desktop\Automation\Redhat_Automation\redhat_automation.py", line 1058, in run
+    raise RuntimeError(f"'Our Student' not checked in Adv Pro for: {', '.join(unchecked)}")
+RuntimeError: 'Our Student' not checked in Adv Pro for: Pooja Chandrasekaran

@@ -1,0 +1,18 @@
+# Packages needed to run redhat_automation.py (tested with Python 3.11)
+# Install with:  python -m pip install -r requirements.txt
+#
+# Also needed (not pip packages):
+#   - Google Chrome installed (path is set in config.ini)
+#   - ChromeDriver is downloaded automatically by Selenium the first time (needs internet)
+
+# Controls Chrome (Red Hat Exam Scheduler)
+selenium>=4.11,<5
+
+# Reads and writes the Excel file
+openpyxl>=3.1,<4
+
+# Controls the Adv Pro desktop program (also installs pywin32)
+pywinauto>=0.6.8,<0.7
+
+# Screenshot of the Adv Pro result list (backup check)
+pillow>=10
